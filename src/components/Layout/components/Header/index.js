@@ -6,12 +6,11 @@ import React, { useEffect, useState } from 'react';
 import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/components/Layout/components/Popper';
 import SearchItem from '~/components/Layout/components/SearchItem';
-import CategoryItem from '~/components/Layout/components/CategoryItem';
+import CategoryList from '~/components/Layout/components/CategoryList';
 
 // Tippy
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
-import CategoryList from '../CategoryList';
 
 const cx = classNames.bind(styles);
 

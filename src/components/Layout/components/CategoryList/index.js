@@ -20,12 +20,17 @@ function CategoryList({}) {
 
                 <div className={cx('main-category-list')}>
                     <CategoryItem img={icons.mobile} name="Điện Thoại" />
+                    <CategoryItem img={icons.tablet} name="Máy Tính Bảng" />
                     <CategoryItem img={icons.laptop} name="Laptop" />
-                    <CategoryItem img={icons.headphone} name="Phụ Kiện" />
+                    <CategoryItem img={icons.smartwatch} name="Đồng Hồ Thông Minh" />
                 </div>
 
                 <div className={cx('orther-category-list')}>
-                    <CategoryItem img={icons.category_4} name="TV" />
+                    <CategoryItem img={icons.TV} name="TV" />
+                    <CategoryItem img={icons.washer} name="Máy Giặt" />
+                    <CategoryItem img={icons.fridge} name="Tủ Lạnh" />
+                    <CategoryItem img={icons.computercomponents} name="Linh Kiện Máy Tính" />
+                    <CategoryItem img={icons.headphone} name="Phụ Kiện" />
                 </div>
             </PopperWrapper>
         </div>
