@@ -1,0 +1,23 @@
+.wrapper{
+    width: 450px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.category-title{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 5px;
+    padding-left: 20px;
+    color: #888888;
+    border-bottom: 1px solid #e0e0e0;
+    user-select: none;
+}
+
+.main-category-list,
+.orther-category-list{
+    border-bottom: 1px solid #e0e0e0;
+}

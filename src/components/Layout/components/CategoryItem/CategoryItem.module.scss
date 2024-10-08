@@ -1,0 +1,29 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+
+
+    &:hover {
+        background-color: rgb(230, 230, 230);
+    }
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    object-fit: cover;
+}
+
+.info {
+    margin-left: 10px;
+}
+
+.name {
+    margin-left: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
