@@ -8,6 +8,7 @@
     //default layout header
     --default-layout-header-height: 85px;
     --default-layout-header-width: 1400px;
+    --color-primary: linear-gradient(to right, #101638, #313d7d, #40d5e5);
 }
 
 *{
@@ -29,4 +30,22 @@ body {
 button, input, [tabindex]{
     outline: none;
     border: none;
+}
+
+::-webkit-scrollbar { 
+    width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 50%; 
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #88888888; 
+    border: 3px solid #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #44444444; 
 }

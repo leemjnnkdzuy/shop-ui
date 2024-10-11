@@ -5,7 +5,6 @@ import images from "~/assets/images";
 const cx = classNames.bind(style);
 
 function CategoryItem({ img, name }) {
-    const isName = name ? name : "Tên";
     return (
         <div className={cx('wrapper')}>
             <img
