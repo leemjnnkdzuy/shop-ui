@@ -6,8 +6,36 @@
 .img{
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover; 
     border-radius: 30px;
     align-items: center;
     justify-content: center;
     display: flex;
+    box-shadow: rgb(247, 247, 247) 0px 0px 20px;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.img:hover{
+    animation: shadowEffect 2s infinite;
+}
+
+
+@keyframes shadowEffect {
+    0% {
+        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.6); /* Bắt đầu với màu đỏ */
+    }
+    25% {
+        box-shadow: 0 0 10px 5px rgba(194, 223, 255, 0.6); /* Đổi màu xanh lá */
+    }
+    50% {
+        box-shadow: 0 0 10px 5px rgba(178, 224, 255, 0.6); /* Đổi màu xanh dương */
+    }
+    75% {
+        box-shadow: 0 0 10px 5px rgba(191, 248, 255, 0.6); /* Đổi màu vàng */
+    }
+    100% {
+        box-shadow: 0 0 10px 5px rgba(182, 250, 255, 0.6); /* Quay lại màu đỏ */
+    }
 }

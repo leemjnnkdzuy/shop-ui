@@ -7,12 +7,13 @@
 }
 
 .name{
-    margin-top: 8px;
+    margin-top: 15px;
     margin-left: 20px;
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 400;
 }
 .img{
+    margin-top: -15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,8 +23,8 @@
     transition: transform 0.5s;
 }
 .img img{
-    width: 80%;
-    height: 85%;
+    width: 150px;
+    height: 150px;
 }
 
 .img:hover{

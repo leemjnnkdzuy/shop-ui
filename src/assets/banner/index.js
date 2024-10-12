@@ -6,7 +6,7 @@ const banner = {
     banner5: require('~/assets/banner/5.png'),
     banner6: require('~/assets/banner/6.png'),
     banner7: require('~/assets/banner/7.png'),
-
+    banner8: require('~/assets/banner/8.png'),
 }
 
 export default banner;

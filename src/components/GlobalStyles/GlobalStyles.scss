@@ -37,13 +37,14 @@ button, input, [tabindex]{
 }
 
 ::-webkit-scrollbar-track {
-    border-radius: 50%; 
+    border-radius: 20px;
     background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
     background: #88888888; 
-    border: 3px solid #f1f1f1; 
+    border: 3px solid #f1f1f1;
+    border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

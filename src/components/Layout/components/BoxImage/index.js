@@ -4,14 +4,15 @@ import images from "~/assets/images";
 
 const cx = classNames.bind(style);
 
-function BoxImage({ img }) {
+function BoxImage({ img, alt }) {
     return (
         <div>
             <div className={cx('wrapper')}>
-            <img
-                className={cx('img')}
-                src={img ? img : images.loading}
-            />
+                <img
+                    alt={ alt } 
+                    className={cx('img')}
+                    src={img ? img : images.loading}
+                />
             </div>
         </div>
     );

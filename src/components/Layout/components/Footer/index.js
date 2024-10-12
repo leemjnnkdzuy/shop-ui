@@ -1,8 +1,6 @@
 import classNames from "classnames/bind";
 import style from "./Footer.module.scss";
-import { icon } from "@fortawesome/fontawesome-svg-core";
 import icons from "~/assets/icons";
-import { hover } from "@testing-library/user-event/dist/hover";
 
 const cx = classNames.bind(style);
 

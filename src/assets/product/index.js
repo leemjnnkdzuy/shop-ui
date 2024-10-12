@@ -6,6 +6,11 @@ const products = {
     tablet: require('~/assets/product/tablet.png'),
     TV: require('~/assets/product/TV.png'),
     washer: require('~/assets/product/washer.png'),
+    smartwacth: require('~/assets/product/smartwatch.png'),
+    moniter: require('~/assets/product/moniter.png'),
+    linhkienmaytinh: require('~/assets/product/linhkienmaytinh.png'),
+    tulanh: require('~/assets/product/tulanh.png'),
+    pcdesktop: require('~/assets/product/pcdesktop.png'),
 }
 
 export default products;
