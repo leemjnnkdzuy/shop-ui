@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 // Images
 import images from '~/assets/images';
@@ -15,6 +16,10 @@ import 'tippy.js/dist/tippy.css';
 const cx = classNames.bind(styles);
 
 function Header() {
+
+  const navigate = useNavigate();  
+  const handleNavigate = (path) => { navigate(path); };
+
   const [searchResult, setSearchResult] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [category, setCategory] = useState(false);
@@ -47,7 +52,7 @@ function Header() {
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
 
-        <div className={cx('logo')}>
+        <div onClick={() => handleNavigate('/')} className={cx('logo')}>
           <img className={cx('img-logo')} src={images.logo_1} alt='logo' />
         </div>
 

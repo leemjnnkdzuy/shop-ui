@@ -1,10 +1,16 @@
 import classNames from "classnames/bind";
 import style from "./Footer.module.scss";
 import icons from "~/assets/icons";
+import { useNavigate } from "react-router-dom";
 
 const cx = classNames.bind(style);
 
 function Footer() {
+  
+  const navigate = useNavigate();  
+  const handleNavigate = (path) => { navigate(path); };
+  const handleNavigateExternal = (url) => {window.open(url, "_blank");};
+  
 return (
     <footer className={cx('wrapper')}>
       <div className={cx('container')}>
@@ -13,39 +19,44 @@ return (
             KẾT NỐI VỚI PIXELSHOP
           </div>
           <div className={cx('content-icon')}>
-            <img src={icons.facebook} alt='facebook' />
-            <img src={icons.zalo} alt='instagram' />
-            <img src={icons.tiktok} alt='zalo' />
-            <img src={icons.youtube} alt='tiktok' />
+            <img onClick={() => handleNavigateExternal('https://www.facebook.com/leemjnnkdzuy')} src={icons.facebook} alt='facebook' />
+            <img onClick={() => handleNavigateExternal('https://zaloapp.com/qr/p/o4o9fecxo3s4')} src={icons.zalo} alt='zalo' />
+            <img onClick={() => handleNavigateExternal('#')} src={icons.tiktok} alt='zalo' />
+            <img onClick={() => handleNavigateExternal('#')} src={icons.youtube} alt='tiktok' />
           </div>
+        <div className={cx('about-us')}>
+          <div className={cx('content-item')}>
+            <button onClick={() => handleNavigate('/AboutUs')} className={cx('button')}>DEV INFO</button>
+          </div>
+        </div>
         </div>
         <div className={cx('inner')}>
           <div className={cx('title')}>
             VỀ CHÚNG TÔI
           </div>
           <div className={cx('content')}>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('/OrderPages/Gioi_Thieu_Ve_Cong_Ty')} className={cx('content-item')}>
               Giới thiệu về công ty
             </div>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('/OrderPages/Quy_Che_Hoat_Dong')} className={cx('content-item')}>
               Quy chế hoạt động
             </div>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('#')}  className={cx('content-item')}>
               Tin tức khuyến mại
             </div>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('/OrderPages/Gioi_Thieu_May_Doi_Tra')} className={cx('content-item')}>
               Giới thiệu máy đổi trả
             </div>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('/OrderPages/Huong_Dan_Mua_Hang_Va_Thanh_Toan_Online')} className={cx('content-item')}>
               Hướng dẫn mua hàng & thanh toán online
             </div>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('/OrderPages/Gioi_Thieu_Ve_Cong_Ty')} className={cx('content-item')}>
               Tra cứu hoá đơn điện tử
             </div>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('/OrderPages/Gioi_Thieu_Ve_Cong_Ty')} className={cx('content-item')}>
               Tra cứu bảo hành
             </div>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('/OrderPages/Cau_Hoi_Thuong_Gap')} className={cx('content-item')}>
               Câu hỏi thường gặp
             </div>
           </div>

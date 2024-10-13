@@ -1,0 +1,8 @@
+export { default as Chinh_Sach_Bao_Hanh } from './Chinh_Sach_Bao_Hanh'
+export { default as Chinh_Sach_Doi_Tra } from './Chinh_Sach_Doi_Tra'
+export { default as Chinh_Sach_Bao_Mat } from './Chinh_Sach_Bao_Mat'
+export { default as Chinh_Sach_Tra_Gop } from './Chinh_Sach_Tra_Gop'
+export { default as Chinh_Sach_Khui_Hop_San_Pham } from './Chinh_Sach_Khui_Hop_San_Pham'
+export { default as Chinh_Sach_Thu_Thap_Va_Xu_Ly_Du_Lieu_Ca_Nhan } from './Chinh_Sach_Thu_Thap_Va_Xu_Ly_Du_Lieu_Ca_Nhan'
+export { default as Chinh_Sach_Giao_Hang_Va_Lap_Dat } from './Chinh_Sach_Giao_Hang_Va_Lap_Dat'
+export { default as Quy_Dinh_Ve_Ho_Tro_Ky_Thuat_Va_Sao_Luu_Du_Lieu } from './Quy_Dinh_Ve_Ho_Tro_Ky_Thuat_Va_Sao_Luu_Du_Lieu'

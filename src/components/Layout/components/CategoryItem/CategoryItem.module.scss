@@ -4,10 +4,12 @@
     align-items: center;
     cursor: pointer;
     padding: 10px;
+    border-radius: 8px;
 
 
     &:hover {
         background-color: rgb(230, 230, 230);
+        border-radius: 8px;
     }
 }
 

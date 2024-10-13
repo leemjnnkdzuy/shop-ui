@@ -3,6 +3,7 @@ const images = {
     logo_no_text: require('~/assets/images/logo-no-text.png'),
     logo_1: require('~/assets/images/logo_1.png'),
     loading: require('~/assets/images/Loading.svg').default,
+    avatar: require('~/assets/images/avatar.png'),
 }
 
 

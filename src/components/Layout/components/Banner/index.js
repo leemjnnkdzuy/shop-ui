@@ -174,7 +174,7 @@ function Banner() {
                         <BoxImage img={background.background6} alt={"#"} />
                         <div className={cx('text-banner')}>
                             <h1 className={cx('text')}>
-                                Bản Tin Công Nghệ
+                                Hướng Dẫn Mua Hàng & Thanh Toán Online
                             </h1>
                         </div>
                     </div>
@@ -184,7 +184,7 @@ function Banner() {
                         <BoxImage img={background.background4} alt={"#"}/>
                         <div className={cx('text-banner')}>
                             <h1 className={cx('text')}>
-                                Hướng Dẫn Mua Hàng
+                                Bản Tin Công Nghệ
                             </h1>
                         </div>
                     </div>
@@ -192,7 +192,7 @@ function Banner() {
                         <BoxImage img={background.background5} alt={"#"}/>
                         <div className={cx('text-banner')}>
                             <h1 className={cx('text')}>
-                                Hướng Dẫn Thanh Toán
+                                Tra Cứu Thông Tin
                             </h1>
                         </div>
                     </div>
