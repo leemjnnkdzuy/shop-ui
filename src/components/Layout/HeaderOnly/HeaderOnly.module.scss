@@ -6,7 +6,7 @@
 }
 
 .container{
-    width: 100%;
+    width: var(--default-layout-header-width);
     display: flex;
 }
 

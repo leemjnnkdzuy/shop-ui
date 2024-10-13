@@ -9,6 +9,7 @@ import ShoppingCart from "~/pages/ShoppingCart";
 import Profile from "~/pages/Profile";
 import Admin from "~/pages/Admin";
 import AboutUs from "~/pages/AboutUs";
+import Login from "~/pages/Login";
 
 import {
     Quy_Che_Hoat_Dong,
@@ -38,6 +39,7 @@ const publicRoutes = [
     { path: "/Profile", component: Profile, Layout: HeaderOnly},
     { path: "/Admin", component: Admin, Layout: null },
     { path: "/AboutUs", component: AboutUs, Layout: HeaderOnly },
+    { path: "/Login", component: Login, Layout: HeaderOnly },
 
     //order pages
     { path: "/OrderPages/Cau_Hoi_Thuong_Gap", component: Cau_Hoi_Thuong_Gap, Layout: HeaderOnly },

@@ -9,7 +9,7 @@ function Home() {
     return (
         <div className={cx('wrapper')}>
             <div>
-                <img className={cx('background')} src={background.background2} alt='logo' />
+                <img className={cx('background')} src={background.background10} alt='logo' />
             </div>
             <div className={cx('container')}>
                 <div><Banner /></div>

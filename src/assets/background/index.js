@@ -8,6 +8,7 @@ const background = {
     background7: require('~/assets/background/bk7.png'),
     background8: require('~/assets/background/bk8.png'),
     background9: require('~/assets/background/bk9.png'),
+    background10: require('~/assets/background/bk10.png'),
 }
 
 export default background;

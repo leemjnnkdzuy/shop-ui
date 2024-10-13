@@ -11,6 +11,7 @@ const icons = {
     fridge: require('~/assets/icons/fridge.svg').default,
     facebook: require('~/assets/icons/facebook.svg').default,
     zalo: require('~/assets/icons/zalo.svg').default,
+    google: require('~/assets/icons/google.svg').default,
     youtube: require('~/assets/icons/youtube.svg').default,
     tiktok: require('~/assets/icons/tiktok.svg').default,
     reactjs: require('~/assets/icons/reactjs.svg').default,

@@ -145,7 +145,7 @@ function Header() {
               </button>
             </div>
           </Tippy>
-          <button className={cx('icon-cart')}>
+          <button onClick={() => handleNavigate('/ShoppingCart')} className={cx('icon-cart')}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="35"
@@ -159,7 +159,7 @@ function Header() {
             </svg>
             <span>Giỏ Hàng</span>
           </button>
-          <button className={cx('icon-user')}>
+          <button onClick={() => handleNavigate('/Login')} className={cx('icon-user')}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="35"
