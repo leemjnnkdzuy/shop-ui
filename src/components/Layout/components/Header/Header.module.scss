@@ -103,10 +103,12 @@
     background-color: transparent;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+    transition: background-color 0.2s ease-in-out;
     cursor: pointer;
 
     &:hover{
-        background-color: rgb(200, 200, 200);
+        background-color: #888888;
+        transition: background-color 0.2s ease-in-out;
     }
 }
 
@@ -133,9 +135,11 @@
     border-radius: 50px;
     display: flex;
     padding-left: 13px;
+    transition: background-color 0.4s ease-in-out;
 
     &:hover{
         background-color: rgb(200, 200, 200);
+        transition: background-color 0.4s ease-in-out;
     }
 }
 

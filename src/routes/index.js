@@ -2,16 +2,23 @@
 import { HeaderOnly } from "~/components/Layout";
 
 
-//pages import
+//main pages
 import Home from "~/pages/Home";
 import Phone from "~/pages/Phone";
-import ShoppingCart from "~/pages/ShoppingCart";
 import Profile from "~/pages/Profile";
 import Admin from "~/pages/Admin";
 import AboutUs from "~/pages/AboutUs";
 import Login from "~/pages/Login";
-import Error  from "~/pages/Error";
+import Error from "~/pages/Error";
 
+//shopping cart pages
+import {
+    Cart,
+    Ship,
+    Bought
+} from "~/pages/ShoppingCart";
+
+//order pages
 import {
     Quy_Che_Hoat_Dong,
     Gioi_Thieu_Ve_Cong_Ty,
@@ -20,6 +27,7 @@ import {
     Huong_Dan_Mua_Hang_Va_Thanh_Toan_Online
 } from "~/pages/OrderPages"
 
+//policy pages
 import {
     Chinh_Sach_Bao_Hanh,
     Chinh_Sach_Doi_Tra,
@@ -32,16 +40,23 @@ import {
 } from "~/pages/PolicyPages";
 
 const publicRoutes = [
+    //ShoppingCart
+    { path: "/Cart", component: Cart, Layout: HeaderOnly },
+    { path: "/Ship", component: Ship, Layout: HeaderOnly },
+    { path: "/Bought", component: Bought, Layout: HeaderOnly },
+
     //main pages
     { path: "/", component: Home, Layout: HeaderOnly},
     { path: "/Home", component: Home, Layout: HeaderOnly},
     { path: "/Phone", component: Phone, Layout: HeaderOnly},
-    { path: "/ShoppingCart", component: ShoppingCart },
+    { path: "/Cart", component: Cart, Layout: HeaderOnly },
     { path: "/Profile", component: Profile, Layout: HeaderOnly},
     { path: "/Admin", component: Admin, Layout: null },
     { path: "/AboutUs", component: AboutUs, Layout: HeaderOnly },
     { path: "/Login", component: Login, Layout: HeaderOnly },
     { path: "*", component: Error, Layout: HeaderOnly },
+
+    //product pages
 
     //order pages
     { path: "/OrderPages/Cau_Hoi_Thuong_Gap", component: Cau_Hoi_Thuong_Gap, Layout: HeaderOnly },
