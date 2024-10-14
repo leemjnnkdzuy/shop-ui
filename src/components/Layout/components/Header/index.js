@@ -53,7 +53,7 @@ function Header() {
       <div className={cx('inner')}>
 
         <div onClick={() => handleNavigate('/')} className={cx('logo')}>
-          <img className={cx('img-logo')} src={images.logo_1} alt='logo' />
+          <img className={cx('img-logo')} src={images.logo_only_text} alt='logo' />
         </div>
 
         <Tippy

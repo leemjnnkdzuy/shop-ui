@@ -10,6 +10,7 @@ import Profile from "~/pages/Profile";
 import Admin from "~/pages/Admin";
 import AboutUs from "~/pages/AboutUs";
 import Login from "~/pages/Login";
+import Error  from "~/pages/Error";
 
 import {
     Quy_Che_Hoat_Dong,
@@ -40,6 +41,7 @@ const publicRoutes = [
     { path: "/Admin", component: Admin, Layout: null },
     { path: "/AboutUs", component: AboutUs, Layout: HeaderOnly },
     { path: "/Login", component: Login, Layout: HeaderOnly },
+    { path: "*", component: Error, Layout: HeaderOnly },
 
     //order pages
     { path: "/OrderPages/Cau_Hoi_Thuong_Gap", component: Cau_Hoi_Thuong_Gap, Layout: HeaderOnly },
