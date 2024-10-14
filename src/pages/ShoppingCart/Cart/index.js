@@ -10,7 +10,7 @@ function Cart() {
             <div className={cx('container')}>   
                 <Sidebar title={'Giỏ hàng của bạn'}/>
                 <div className={cx('content')}>
-
+                    
                 </div>
             </div>
         </div>
