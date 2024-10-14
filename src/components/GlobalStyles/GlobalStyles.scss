@@ -32,21 +32,27 @@ button, input, [tabindex]{
     border: none;
 }
 
+
+
 ::-webkit-scrollbar { 
-    width: 12px; 
+    width: 12px;
 }
+
 
 ::-webkit-scrollbar-track {
     border-radius: 20px;
     background: #f1f1f1;
 }
 
+
 ::-webkit-scrollbar-thumb {
-    background: #88888888; 
+    background: rgba(136, 136, 136, 0.8);
     border: 3px solid #f1f1f1;
     border-radius: 20px;
+    cursor: grab;
 }
 
+
 ::-webkit-scrollbar-thumb:hover {
-    background: #44444444; 
+    background: rgba(68, 68, 68, 0.8);
 }
