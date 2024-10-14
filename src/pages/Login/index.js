@@ -68,13 +68,13 @@ function Login() {
                 <div className={cx('toggle-container')}>
                     <div className={cx('toggle')}>
                         <div className={cx('toggle-panel', 'toggle-left')}>
-                            <h1>Chào Mừng <br/> Bạn Trở Lại!</h1>
-                            <p>Đăng nhập tài khoản cá nhân của bạn để tiếp tục mua hàng trên trang web.</p>
+                            <h1>Chào Mừng <br/> Bạn Mới!</h1>
+                            <p>Nếu bạn đã có tài khoản cá nhân hãy đăng nhập với thông tin cá nhân của bạn để tiếp tục mua hàng trên trang web.</p>
                             <button className={cx('hidden')} id="login" onClick={handleLoginClick}>ĐĂNG NHẬP</button>
                         </div>
                         <div className={cx('toggle-panel', 'toggle-right')}>
-                            <h1>Chào Mừng <br/> Bạn Mới!</h1>
-                            <p>Đăng ký với thông tin cá nhân của bạn để tiếp tục mua hàng trên trang web.</p>
+                            <h1>Chào Mừng <br/> Bạn Trở Lại!</h1>
+                            <p>Nếu bạn chưa có tài khoản cá nhân hãy tạo một cái riêng của bạn để tiếp tục mua hàng trên trang web.</p>
                             <button className={cx('hidden')} id="register" onClick={handleRegisterClick}>TẠO TÀI KHOẢN</button>
                         </div>
                     </div>
