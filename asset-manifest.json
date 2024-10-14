@@ -1,10 +1,9 @@
 {
   "files": {
-    "main.css": "/shop-ui/static/css/main.3dea0a28.css",
-    "main.js": "/shop-ui/static/js/main.0abaec73.js",
+    "main.css": "/shop-ui/static/css/main.0e659aa5.css",
+    "main.js": "/shop-ui/static/js/main.0fba4e1b.js",
     "static/js/453.3dbb07f5.chunk.js": "/shop-ui/static/js/453.3dbb07f5.chunk.js",
     "static/media/bk2.png": "/shop-ui/static/media/bk2.36e428ebdcf0f7643ccc.png",
-    "static/media/avatar.png": "/shop-ui/static/media/avatar.48cadb59958ffdc787e4.png",
     "static/media/bk10.png": "/shop-ui/static/media/bk10.c36463e6e099c7bf0b60.png",
     "static/media/5.png": "/shop-ui/static/media/5.44b10c151a3796e5dcd0.png",
     "static/media/1.png": "/shop-ui/static/media/1.449726c011f59f507ce5.png",
@@ -19,6 +18,7 @@
     "static/media/logo.png": "/shop-ui/static/media/logo.defafbf5fa35853f5af1.png",
     "static/media/logo-only-text.png": "/shop-ui/static/media/logo-only-text.30515a06ff2036fcb2b7.png",
     "static/media/logo_1.png": "/shop-ui/static/media/logo_1.1da618b9d653daf87b67.png",
+    "static/media/avatar.png": "/shop-ui/static/media/avatar.fe2681ab38d267a3a51a.png",
     "static/media/error.png": "/shop-ui/static/media/error.f3f839b7e8d1abb1b81a.png",
     "static/media/zalo.svg": "/shop-ui/static/media/zalo.424650b12a185d5c48881ef2373e4707.svg",
     "static/media/bk5.png": "/shop-ui/static/media/bk5.3982f6b279a71764d1c7.png",
@@ -61,12 +61,12 @@
     "static/media/fridge.svg": "/shop-ui/static/media/fridge.fd093ce48582b597ba07c048dbab4d72.svg",
     "static/media/laptop.svg": "/shop-ui/static/media/laptop.9e592a2a95ba7bbf5bc01088d9b856e4.svg",
     "static/media/tablet.svg": "/shop-ui/static/media/tablet.b89f95a6312f04f02328a53012370feb.svg",
-    "main.3dea0a28.css.map": "/shop-ui/static/css/main.3dea0a28.css.map",
-    "main.0abaec73.js.map": "/shop-ui/static/js/main.0abaec73.js.map",
+    "main.0e659aa5.css.map": "/shop-ui/static/css/main.0e659aa5.css.map",
+    "main.0fba4e1b.js.map": "/shop-ui/static/js/main.0fba4e1b.js.map",
     "453.3dbb07f5.chunk.js.map": "/shop-ui/static/js/453.3dbb07f5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3dea0a28.css",
-    "static/js/main.0abaec73.js"
+    "static/css/main.0e659aa5.css",
+    "static/js/main.0fba4e1b.js"
   ]
 }
