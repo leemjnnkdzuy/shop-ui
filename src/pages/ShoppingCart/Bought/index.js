@@ -8,9 +8,11 @@ function Bought() {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('container')}>   
-                <Sidebar title={'Sản phẩm bạn đã mua'}/>
-                <div className={cx('content')}>
+                <Sidebar title={'Sản phẩm bạn đã mua'} />
+                <div className={cx('temp')}>
+                    <div className={cx('inner')}>
                     
+                    </div>
                 </div>
             </div>
         </div>

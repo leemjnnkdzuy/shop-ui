@@ -8,9 +8,11 @@ function Ship() {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('container')}>   
-                <Sidebar title={'Sản phẩm đang giao đến bạn'}/>
-                <div className={cx('content')}>
-                    
+                <Sidebar title={'Sản phẩm đang giao đến bạn'} />
+                <div className={cx('temp')}>
+                    <div className={cx('inner')}>
+                        
+                    </div>
                 </div>
             </div>
         </div>
