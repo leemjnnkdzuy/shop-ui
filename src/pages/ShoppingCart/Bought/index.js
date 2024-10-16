@@ -10,38 +10,20 @@ const cx = classNames.bind(style);
 
 function Bought() {
     const [boughtItem] = useState([
-        {
-            id: 1,
-            img: products.laptop,
-            name: 'Laptop',
-            description: 'aaaaaaaaaa',
-            quantity: 1,
-            price: 10000000,
-            date: '2021-10-10',
-        },
-        {
-            id: 2,
-            img: products.laptop,
-            name: 'Laptop',
-            description: 'aaaaaaaaaa',
-            quantity: 1,
-            price: 10000000,
-            date: '2021-10-10',
-        },
-        {
-            id: 3,
-            img: products.laptop,
-            name: 'Laptop',
-            description: 'aaaaaaaaaa',
-            quantity: 1,
-            price: 10000000,
-            date: '2021-10-10',
-        }
+        // {
+        //     id: 1,
+        //     img: products.laptop,
+        //     name: 'Laptop',
+        //     description: 'aaaaaaaaaa',
+        //     quantity: 1,
+        //     price: 10000000,
+        //     date: '2021-10-10',
+        // }
     ]);
 
     const renderCartItems = () => {
         if (boughtItem.length === 0) {
-            return <div className={cx('empty-cart')}>Không tìm thấy sản phẩm bạn đã mua trước đó</div>;
+            return <div className={cx('empty-cart')}>Không tìm thấy sản phẩm bạn đã từng giao đến bạn</div>;
         }
 
         return boughtItem.map(item => (

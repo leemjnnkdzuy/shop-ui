@@ -11,38 +11,14 @@ const cx = classNames.bind(style);
 
 function Cart() {
     const [cartItems, setCartItems] = useState([
-        {
-            id: 1,
-            img: products.laptop,
-            name: 'Laptop',
-            description: 'aaaaaaaaaa',
-            quantity: 1,
-            price: 10000000
-        },
-        {
-            id: 2,
-            img: products.laptop,
-            name: 'Laptop',
-            description: 'aaaaaaaaaa',
-            quantity: 1,
-            price: 10000000
-        },
-        {
-            id: 3,
-            img: products.laptop,
-            name: 'Laptop',
-            description: 'aaaaaaaaaa',
-            quantity: 1,
-            price: 10000000
-        },
-        {
-            id: 4,
-            img: products.laptop,
-            name: 'Laptop',
-            description: 'aaaaaaaaaa',
-            quantity: 1,
-            price: 10000000
-        }
+        // {
+        //     id: 1,
+        //     img: products.laptop,
+        //     name: 'Laptop',
+        //     description: 'aaaaaaaaaa',
+        //     quantity: 1,
+        //     price: 10000000
+        // }
     ]);
 
     const handleQuantityChange = (id, newQuantity) => {
@@ -87,7 +63,7 @@ function Cart() {
                                     />
                                 ))
                             ) : (
-                                <div className={cx('empty-cart')}>Chưa có sản phẩm trong giỏ hàng</div>
+                                <div className={cx('empty-cart')}>Không tìm thấy sản phẩm bạn trong giỏ hàng</div>
                             )}
                         </div>
                     </div>

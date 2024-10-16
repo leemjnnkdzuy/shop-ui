@@ -10,33 +10,15 @@ const cx = classNames.bind(style);
 
 function Ship() {
     const [shipItem] = useState([
-        {
-            id: 1,
-            img: products.laptop,
-            name: 'Laptop',
-            description: 'aaaaaaaaaa',
-            quantity: 1,
-            price: 10000000,
-            date: '2021-10-10',
-        },
-        {
-            id: 2,
-            img: products.laptop,
-            name: 'Laptop',
-            description: 'aaaaaaaaaa',
-            quantity: 1,
-            price: 10000000,
-            date: '2021-10-10',
-        },
-        {
-            id: 3,
-            img: products.laptop,
-            name: 'Laptop',
-            description: 'aaaaaaaaaa',
-            quantity: 1,
-            price: 10000000,
-            date: '2021-10-10',
-        }
+        // {
+        //     id: 1,
+        //     img: products.laptop,
+        //     name: 'Laptop',
+        //     description: 'aaaaaaaaaa',
+        //     quantity: 1,
+        //     price: 10000000,
+        //     date: '2021-10-10',
+        // }
     ]);
 
     const renderCartItems = () => {
