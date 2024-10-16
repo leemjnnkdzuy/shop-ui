@@ -24,9 +24,10 @@
     width: 100%;
     display: flex;
     margin-top: 70px;
-    font-size: 1.3em;
+    font-size: 1.5em;
     color: rgb(0, 0, 0);
     font-weight: 700;
+    margin-bottom: 30px;
 }
 .content{
     display: flex;
@@ -42,30 +43,8 @@
     font-size: 0.7em;
     color: rgb(0, 0, 0);
     font-weight: 400;
-    margin-top: 20px;
+    margin-top: 10px;
 }
-
-
 .content h5{
-    margin-top: 30px;
-}
-
-table{
-    width: 90%;
-    border-collapse: collapse;
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-thead{
-    width: auto;
-    height: 40px;
-    background-color: rgb(145, 145, 145);
-    color: rgb(255, 255, 255);
-    font-size: 0.8em;
-    font-weight: 700;
-    align-items: center;
-    text-align: center;
+    margin-top: 10px;
 }

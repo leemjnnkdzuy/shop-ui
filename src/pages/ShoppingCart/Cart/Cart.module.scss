@@ -120,3 +120,41 @@
     background-color: #0f49dd;
     transition: 0.5s;
 }
+
+select{
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.method-payment select {
+    padding-bottom: 10px;
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    text-align-last: center;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+    background-position: calc(100% - 15px) center; 
+    padding-right: 40px;
+}
+
+.method-payment select:focus {
+    border-color: #0f49dd;
+    box-shadow: 0 0 5px #0f49dd;
+    outline: none;
+}
+
+.method-payment select:hover {
+    border-color: #0f49dd;
+    box-shadow: 0 0 5px #0f49dd;
+}

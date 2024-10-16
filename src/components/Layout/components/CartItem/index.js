@@ -7,11 +7,28 @@ const cx = classNames.bind(style);
 function CartItem({ img, name, description, quantity, price, onQuantityChange }) {
     const [currentQuantity, setCurrentQuantity] = useState(quantity);
 
-    const handleQuantityChange = (e) => {
-        const value = parseInt(e.target.value, 10);
-        if (value >= 1) {
-            setCurrentQuantity(value);
-            onQuantityChange(value);  
+    const handleQuantityChange = (value) => {
+        const parsedValue = value === '' ? '' : parseInt(value, 10);
+        
+        if (parsedValue >= 1) {
+            setCurrentQuantity(parsedValue);
+            onQuantityChange(parsedValue);
+        } else if (value === '') {
+            setCurrentQuantity(1);
+            onQuantityChange(1);
+        } else {
+            setCurrentQuantity('');
+            onQuantityChange(0);
+        }
+    };
+
+    const increaseQuantity = () => {
+        handleQuantityChange(currentQuantity + 1);
+    };
+
+    const decreaseQuantity = () => {
+        if (currentQuantity > 1) {
+            handleQuantityChange(currentQuantity - 1);
         }
     };
 
@@ -31,12 +48,16 @@ function CartItem({ img, name, description, quantity, price, onQuantityChange })
                     <div className={cx('price')}>
                         {(price || 0).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}
                     </div>
-                    <input 
-                        type="number" 
-                        value={currentQuantity} 
-                        onChange={handleQuantityChange} 
-                        min="1" 
-                    />
+                    <div className={cx('quantity-controls')}>
+                        <button onClick={increaseQuantity}>+</button>
+                        <input 
+                            type="number" 
+                            value={currentQuantity} 
+                            onChange={e => handleQuantityChange(e.target.value)} 
+                            min="1" 
+                        />
+                        <button onClick={decreaseQuantity}>-</button>
+                    </div>
                     <div className={cx('total')}>
                         {(price * currentQuantity || 0).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}
                     </div>

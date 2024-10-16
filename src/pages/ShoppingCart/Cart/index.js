@@ -1,6 +1,8 @@
 import { useState } from "react";
 import classNames from "classnames/bind";
 import style from "./Cart.module.scss";
+
+
 import Sidebar from "~/components/Layout/components/Sidebar";
 import CartItem from "~/components/Layout/components/CartItem";
 import products from "~/assets/product";
@@ -9,43 +11,39 @@ const cx = classNames.bind(style);
 
 function Cart() {
     const [cartItems, setCartItems] = useState([
-        // {
-        //     id: 1,
-        //     img: products.laptop,
-        //     name: 'Laptop',
-        //     description: 'aaaaaaaaaa',
-        //     quantity: 1,
-        //     price: 10000000
-        // },
-        // {
-        //     id: 2,
-        //     img: products.laptop,
-        //     name: 'Laptop',
-        //     description: 'aaaaaaaaaa',
-        //     quantity: 1,
-        //     price: 10000000
-        // },
-        // {
-        //     id: 3,
-        //     img: products.laptop,
-        //     name: 'Laptop',
-        //     description: 'aaaaaaaaaa',
-        //     quantity: 1,
-        //     price: 10000000
-        // },
-        // {
-        //     id: 4,
-        //     img: products.laptop,
-        //     name: 'Laptop',
-        //     description: 'aaaaaaaaaa',
-        //     quantity: 1,
-        //     price: 10000000
-        // }
+        {
+            id: 1,
+            img: products.laptop,
+            name: 'Laptop',
+            description: 'aaaaaaaaaa',
+            quantity: 1,
+            price: 10000000
+        },
+        {
+            id: 2,
+            img: products.laptop,
+            name: 'Laptop',
+            description: 'aaaaaaaaaa',
+            quantity: 1,
+            price: 10000000
+        },
+        {
+            id: 3,
+            img: products.laptop,
+            name: 'Laptop',
+            description: 'aaaaaaaaaa',
+            quantity: 1,
+            price: 10000000
+        },
+        {
+            id: 4,
+            img: products.laptop,
+            name: 'Laptop',
+            description: 'aaaaaaaaaa',
+            quantity: 1,
+            price: 10000000
+        }
     ]);
-
-    const [paymentMethod, setPaymentMethod] = useState('cash');
-
-    const totalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
     const handleQuantityChange = (id, newQuantity) => {
         setCartItems(prevItems =>
@@ -54,6 +52,10 @@ function Cart() {
             )
         );
     };
+
+    const [paymentMethod, setPaymentMethod] = useState('cash');
+
+    const totalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
     const handlePaymentMethodChange = (e) => {
         setPaymentMethod(e.target.value);

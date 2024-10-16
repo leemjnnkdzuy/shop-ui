@@ -6,7 +6,14 @@ const cx = classNames.bind(style);
 function Chinh_Sach_Doi_Tra() {
     return (
         <div className={cx('wrapper')}>
-            aaaaaaaaa
+            <div className={cx('inner')}>
+                <div className={cx('title')}>
+                Chính sách bảo hành
+                </div>
+                <div className={cx('content')}>
+                    
+                </div>
+            </div>
         </div>
     );
 }

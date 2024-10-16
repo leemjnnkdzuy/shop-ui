@@ -8,31 +8,31 @@ function Quy_Che_Hoat_Dong() {
         <div className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('title')}>
-                    QUY CHẾ HOẠT ĐỘNG WEBSITE CUNG CẤP DỊCH VỤ TMĐT FPTSHOP.COM.VN
+                    QUY CHẾ HOẠT ĐỘNG WEBSITE CUNG CẤP DỊCH VỤ TMĐT pixelshop.COM.VN
                 </div>
                 <div className={cx('content')}>
                     <h5>I. Nguyên tắc chung</h5>
                     <h6>
-                        - Website thương mại điện tử FPTshop.com.vn do Công ty Cổ Phần Bán lẻ kỹ thuật số FPT (“Công ty”) thực hiện hoạt động và vận hành. Đối tượng phục vụ là tất cả khách hàng trên 63 tỉnh thành Việt Nam có nhu cầu mua hàng nhưng không có thời gian đến shop hoặc đặt trước để khi đến shop là đảm bảo có hàng.
+                        - Website thương mại điện tử pixelshop.com.vn do Công ty Cổ Phần Bán lẻ kỹ thuật số Pixel Shop (“Công ty”) thực hiện hoạt động và vận hành. Đối tượng phục vụ là tất cả khách hàng trên 63 tỉnh thành Việt Nam có nhu cầu mua hàng nhưng không có thời gian đến shop hoặc đặt trước để khi đến shop là đảm bảo có hàng.
                     </h6>
                     <h6>
-                        - Sản phẩm được kinh doanh tại www.FPTshop.com.vn phải đáp ứng đầy đủ các quy định của pháp luật, không bán hàng nhái, hàng không rõ nguồn gốc, hàng xách tay.
+                        - Sản phẩm được kinh doanh tại www.pixelshop.com.vn phải đáp ứng đầy đủ các quy định của pháp luật, không bán hàng nhái, hàng không rõ nguồn gốc, hàng xách tay.
                     </h6>
                     <h6>
-                        - Hoạt động mua bán tại FPTshop.com.vn phải được thực hiện công khai, minh bạch, đảm bảo quyền lợi của người tiêu dùng.
+                        - Hoạt động mua bán tại pixelshop.com.vn phải được thực hiện công khai, minh bạch, đảm bảo quyền lợi của người tiêu dùng.
                     </h6>
                     <h5>II. Quy định chung</h5>
                     <h6>
                         <u>Tên Miền website Thương mại Điện tử:</u>
                     </h6>
                     <h6>
-                        <h6>Website thương mại điện tử FPTshop.com.vn do Công ty Cổ phần bán lẻ kỹ thuật số phát triển với tên miền giao dịch là: www.FPTshop.com.vn (sau đây gọi tắt là: “FPTshop.com.vn”)</h6>
+                        <h6>Website thương mại điện tử pixelshop.com.vn do Công ty Cổ phần bán lẻ kỹ thuật số phát triển với tên miền giao dịch là: www.pixelshop.com.vn (sau đây gọi tắt là: “pixelshop.com.vn”)</h6>
                     </h6>
                     <h6>
                         <u>Định nghĩa chung:</u>
                     </h6>
                     <h6>
-                        Người bán là Công ty Cổ phần Bán lẻ kỹ thuật số FPT
+                        Người bán là Công ty Cổ phần Bán lẻ kỹ thuật số Pixel Shop
                     </h6>
                     <h6>
                         Người mua là công dân Việt Nam trên khắp 63 tỉnh thành. Người mua có quyền đăng ký tài khoản hoặc không cần đăng ký để thực hiện giao dịch.
@@ -41,11 +41,11 @@ function Quy_Che_Hoat_Dong() {
                         Thành viên là bao gồm cả người mua và người tham khảo thông tin, thảo luận tại website.
                     </h6>
                     <h6>
-                        Nội dung bản Quy chế này tuân thủ theo các quy định hiện hành của Việt Nam. Thành viên khi tham gia website TMĐT FPTshop.com.vn phải tự tìm hiểu trách nhiệm pháp lý của mình đối với luật pháp hiện hành của Việt Nam và cam kết thực hiện đúng những nội dung trong Quy chế này.
+                        Nội dung bản Quy chế này tuân thủ theo các quy định hiện hành của Việt Nam. Thành viên khi tham gia website TMĐT pixelshop.com.vn phải tự tìm hiểu trách nhiệm pháp lý của mình đối với luật pháp hiện hành của Việt Nam và cam kết thực hiện đúng những nội dung trong Quy chế này.
                     </h6>
                     <h5>III. Quy trình giao dịch</h5>
                     <h6>
-                        <u>Dành cho người mua hàng tại website TMĐT FPTshop.com.vn</u>
+                        <u>Dành cho người mua hàng tại website TMĐT pixelshop.com.vn</u>
                     </h6>
                     <h6>Bước 1: Tìm kiếm và chọn sản phẩm cần mua.</h6>
                     <h6>
@@ -70,37 +70,37 @@ function Quy_Che_Hoat_Dong() {
                         Bước 4: Sau  khi đã nhập đầy đủ thông tin, quý khách click “Đặt hàng” để hoàn tất đặt hàng
                     </h6>
                     <h6>
-                        Bước 5: Sau khi nhận đơn hàng của người mua, FPTshop.com.vn sẽ liên lạc với khách hàng qua thông tin số điện quý khách hàng cung cấp từ số điện thoại 028 7300 6601 để xác thực thông tin đơn hàng.
+                        Bước 5: Sau khi nhận đơn hàng của người mua, pixelshop.com.vn sẽ liên lạc với khách hàng qua thông tin số điện quý khách hàng cung cấp từ số điện thoại 028 7300 6601 để xác thực thông tin đơn hàng.
                     </h6>
                     <h6>
-                        Bước 6:FPTshop.com.vn giao hàng tận nhà đến cho khách hàng hoặc khách hàng đến trực tiếp các cửa hàng trên toàn quốc để nhận hàng.
+                        Bước 6:pixelshop.com.vn giao hàng tận nhà đến cho khách hàng hoặc khách hàng đến trực tiếp các cửa hàng trên toàn quốc để nhận hàng.
                     </h6>
                     <h6>
-                        <u>Dành cho bên bán hàng là FPTshop.com.vn</u>
+                        <u>Dành cho bên bán hàng là pixelshop.com.vn</u>
                     </h6>
                     <h6>
                         - Chuẩn bị sản xuất nội dung gồm: hình ảnh sản phẩm chụp thực tế hoặc hình ảnh do hãng sản xuất cung cấp, bài viết giới thiệu, thông tin cấu hình sản phẩm.
                     </h6>
                     <h6>
-                        - Nhập liệu bằng công cụ quản lý riêng dành cho nhân viênFPTshop.com.vn
+                        - Nhập liệu bằng công cụ quản lý riêng dành cho nhân viênpixelshop.com.vn
                     </h6>
                     <h6>- Định dạng hình ảnh sử dụng trên website: jpg, png.</h6>
                     <h6>
                         <u>Quy trình giao nhận vận chuyển</u>
                     </h6>
                     <h6>
-                        - FPTshop.com.vn thực hiện giao hàng trên toàn quốc. Khi nhận đơn hàng từ người mua và sau khi đã xác nhận thông tin mua hàng qua điện thoại, FPTshop.com.vn sẽ tiến hành giao hàng theo yêu cầu của quý khách hàng:
+                        - pixelshop.com.vn thực hiện giao hàng trên toàn quốc. Khi nhận đơn hàng từ người mua và sau khi đã xác nhận thông tin mua hàng qua điện thoại, pixelshop.com.vn sẽ tiến hành giao hàng theo yêu cầu của quý khách hàng:
                     </h6>
                     <h6>
-                        - Giữ hàng tại các cửa hàng của FPTShop trên toàn quốc và người mua sẽ đến trực tiếp cửa hàng kiểm tra và nhận hàng.
+                        - Giữ hàng tại các cửa hàng của pixelshop trên toàn quốc và người mua sẽ đến trực tiếp cửa hàng kiểm tra và nhận hàng.
                     </h6>
                     <h6>- Giao hàng tận nơi trên toàn bộ 63 tỉnh thành</h6>
                     <h6>
-                        - FPT Shop nhận giao đơn hàng có thời gian hẹn giao tại nhà trước 21h00 đối với Điện thoại, Máy tính bảng và trước 20h00 đối với Máy tính xách tay.
+                        - Pixel Shop nhận giao đơn hàng có thời gian hẹn giao tại nhà trước 21h00 đối với Điện thoại, Máy tính bảng và trước 20h00 đối với Máy tính xách tay.
                     </h6>
                     <h6>- Miễn phí giao hàng trong bán kính 20km có đặt shop.</h6>
                     <h6>
-                        - Với khoảng cách lớn hơn 20km, nhân viên FPTShop sẽ tư vấn chi tiết về cách thức giao nhận thuận tiện nhất
+                        - Với khoảng cách lớn hơn 20km, nhân viên pixelshop sẽ tư vấn chi tiết về cách thức giao nhận thuận tiện nhất
                     </h6>
                     <h6>
                         - Với những đơn hàng giao tại nhà và có giá trị từ 50 triệu đồng trở lên,
@@ -126,12 +126,12 @@ function Quy_Che_Hoat_Dong() {
                                         <tr>
                                             <td>
                                                 
-                                                    1 ĐỔI 1 sản phẩm cùng model, cùng màu, cùng dung lượng. Trong tình huống sản phẩm đổi hết hàng, khách hàng có thể đổi sang một sản phẩm khác tương đương hoặc cao hơn về giá trị so với sản phẩm lỗi. Hoặc Khách hàng muốn trả sản phẩm: FPTShop sẽ kiểm tra tình trạng máy và thông báo đến Khách hàng về giá trị thu lại sản phẩm ngay tại cửa hàng.
+                                                    1 ĐỔI 1 sản phẩm cùng model, cùng màu, cùng dung lượng. Trong tình huống sản phẩm đổi hết hàng, khách hàng có thể đổi sang một sản phẩm khác tương đương hoặc cao hơn về giá trị so với sản phẩm lỗi. Hoặc Khách hàng muốn trả sản phẩm: pixelshop sẽ kiểm tra tình trạng máy và thông báo đến Khách hàng về giá trị thu lại sản phẩm ngay tại cửa hàng.
                                                 
                                             </td>
                                             <td>
                                                 
-                                                    GỬI MÁY ĐI BẢO HÀNH THEO QUI ĐỊNH CỦA HÃNG Hoặc Khách hàng muốn đổi sang sản phẩm khác hoặc trả sản phẩm: FPTShop sẽ kiểm tra tình trạng máy và thông báo đến Khách hàng về giá trị thu lại sản phẩm ngay tại cửa hàng.
+                                                    GỬI MÁY ĐI BẢO HÀNH THEO QUI ĐỊNH CỦA HÃNG Hoặc Khách hàng muốn đổi sang sản phẩm khác hoặc trả sản phẩm: pixelshop sẽ kiểm tra tình trạng máy và thông báo đến Khách hàng về giá trị thu lại sản phẩm ngay tại cửa hàng.
                                                 
                                             </td>
                                         </tr>
@@ -142,7 +142,7 @@ function Quy_Che_Hoat_Dong() {
                                         </tr>
                                         <tr>
                                             <td>
-                                                Khách hàng muốn đổi sang sản phẩm khác hoặc trả sản phẩm: FPTShop sẽ kiểm tra tình trạng máy và thông báo đến Khách hàng về giá trị thu lại sản phẩm ngay tại cửa hàng.
+                                                Khách hàng muốn đổi sang sản phẩm khác hoặc trả sản phẩm: pixelshop sẽ kiểm tra tình trạng máy và thông báo đến Khách hàng về giá trị thu lại sản phẩm ngay tại cửa hàng.
                                             </td>
                                         </tr>
                                         <tr>
@@ -154,13 +154,13 @@ function Quy_Che_Hoat_Dong() {
                                             <td>
                                                 Không áp dụng đổi trả với sản phẩm:
                                                 - Máy không còn giữ nguyên 100% hình dạng ban đầu, bao gồm: có dấu hiệu va chạm mạnh, cấn móp, bị vào nước...
-                                                - Không đủ điều kiện bảo hành theo chính sách của hãng.Trong trường hợp này, FPT Shop hỗ trợ chuyển TTBH và khách hàng chịu phí sửa chữa.
+                                                - Không đủ điều kiện bảo hành theo chính sách của hãng.Trong trường hợp này, Pixel Shop hỗ trợ chuyển TTBH và khách hàng chịu phí sửa chữa.
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             
-                                Phí đổi trả khác nếu có: FPTShop sẽ kiểm tra tình trạng máy và thông báo đến khách hàng về mức phí phải thu ngay tại cửa hàng.
+                                Phí đổi trả khác nếu có: pixelshop sẽ kiểm tra tình trạng máy và thông báo đến khách hàng về mức phí phải thu ngay tại cửa hàng.
                             
                                 <i>Lưu ý với sản phẩm mua trả góp:</i>
                             <ul>
@@ -189,10 +189,10 @@ function Quy_Che_Hoat_Dong() {
                                 </tr>
                                 <tr>
                                     <td>
-                                        Miễn phí đổi sản phẩm tương đương: cùng model, cùng dung lượng, cùng thời gian bảo hành…Trường hợp không có sản phẩm tương đương, FPT Shop hoàn lại tiền 100%
+                                        Miễn phí đổi sản phẩm tương đương: cùng model, cùng dung lượng, cùng thời gian bảo hành…Trường hợp không có sản phẩm tương đương, Pixel Shop hoàn lại tiền 100%
                                     </td>
                                     <td>
-                                        FPT Shop gửi máy đi bảo hành theo chính sách của hãng hoặc bảo nhành của FPTShop.com.vn
+                                        Pixel Shop gửi máy đi bảo hành theo chính sách của hãng hoặc bảo nhành của pixelshop.com.vn
                                     </td>
                                 </tr>
                                 <tr>
@@ -216,7 +216,7 @@ function Quy_Che_Hoat_Dong() {
                                             Không áp dụng đổi trả với sản phẩm:
                                         
                                              
-                                            - Không đủ điều kiện bảo hành theo chính sách của hãng.Trong trường hợp này, FPT Shop hỗ trợ chuyển TTBH và khách hàng chịu phí sửa chữa.
+                                            - Không đủ điều kiện bảo hành theo chính sách của hãng.Trong trường hợp này, Pixel Shop hỗ trợ chuyển TTBH và khách hàng chịu phí sửa chữa.
                                         
                                         
                                             - Máy không còn giữ nguyên 100% hình dạng ban đầu, bao gồm: có dấu hiệu va chạm mạnh, cấn móp, bị vào nước...        
@@ -225,7 +225,7 @@ function Quy_Che_Hoat_Dong() {
                                 </tr>
                             </tbody>
                             </table>
-                                Phí đổi trả khác nếu có: FPTShop sẽ kiểm tra tình trạng máy và thông báo đến khách hàng về mức phí phải thu ngay tại cửa hàng.
+                                Phí đổi trả khác nếu có: pixelshop sẽ kiểm tra tình trạng máy và thông báo đến khách hàng về mức phí phải thu ngay tại cửa hàng.
                         </div>
                         <div>
                             <h5>
@@ -250,13 +250,13 @@ function Quy_Che_Hoat_Dong() {
           
                                     - KH được đổi sang sản phẩm khác model bằng hoặc cao tiền hơn, thanh toán thêm phần chênh lệch, và phí đổi trả tính như sau:
                                     + Nếu sản phẩm KH đã mua hết hàng \(trên toàn hệ thống): Không mất phí đổi trả
-                                    + Nếu sản phẩm KH đã mua còn hàng: FPTShop sẽ kiểm tra tình trạng máy và thông báo đến Khách hàng về giá trị thu lại sản phẩm ngay tại cửa hàng.
+                                    + Nếu sản phẩm KH đã mua còn hàng: pixelshop sẽ kiểm tra tình trạng máy và thông báo đến Khách hàng về giá trị thu lại sản phẩm ngay tại cửa hàng.
                 
                                 </td>
                                 <td>
                 
                                     Gửi bảo hành theo chính sách Hãng 
-                                    - Trường hợp không sửa chữa được hoặc bảo hành trễ hẹn so với cam kết (tối đa 30 ngày): KH được đổi sản phẩm mới, thanh toán thêm phần chênh lệch. Sản phẩm cũ được FPTShop sẽ kiểm tra tình trạng máy và thông báo đến Khách hàng về giá trị thu lại sản phẩm ngay tại cửa hàng.
+                                    - Trường hợp không sửa chữa được hoặc bảo hành trễ hẹn so với cam kết (tối đa 30 ngày): KH được đổi sản phẩm mới, thanh toán thêm phần chênh lệch. Sản phẩm cũ được pixelshop sẽ kiểm tra tình trạng máy và thông báo đến Khách hàng về giá trị thu lại sản phẩm ngay tại cửa hàng.
 
                                 </td>
                                 </tr>
@@ -277,7 +277,7 @@ function Quy_Che_Hoat_Dong() {
                                 </tr>
                                 <tr>
                                     <td>
-                                        FPTShop hỗ trợ chuyển TTBH hãng sửa chữa (có tính phí).
+                                        pixelshop hỗ trợ chuyển TTBH hãng sửa chữa (có tính phí).
                                     </td>
                                 </tr>
                             </tbody>
@@ -288,10 +288,10 @@ function Quy_Che_Hoat_Dong() {
                                 - Đồng hồ thời trang chỉ được hưởng chính sách bảo hành, đổi trả khi còn phiếu bảo hành
                             </li>
                             <li>
-                                - Phí đổi trả khác nếu có: FPTShop sẽ kiểm tra tình trạng máy và thông báo đến khách hàng về mức phí phải thu ngay tại cửa hàng
+                                - Phí đổi trả khác nếu có: pixelshop sẽ kiểm tra tình trạng máy và thông báo đến khách hàng về mức phí phải thu ngay tại cửa hàng
                             </li>
                             <li>
-                                - Đối với vòng đeo tay: khi trả hoặc đổi sản phẩm khác, khách hàng phải trả lại sạc, nếu không còn sạc FPTShop chỉ tiếp nhận bảo hành
+                                - Đối với vòng đeo tay: khi trả hoặc đổi sản phẩm khác, khách hàng phải trả lại sạc, nếu không còn sạc pixelshop chỉ tiếp nhận bảo hành
                             </li>
                             </ul>
         
@@ -429,7 +429,7 @@ function Quy_Che_Hoat_Dong() {
                                 </tr>
                                 <tr>
                                 <td>
-                                    Không áp dụng đổi trả, bảo hành, FPT Shop hỗ trợ chuyển TTBH
+                                    Không áp dụng đổi trả, bảo hành, Pixel Shop hỗ trợ chuyển TTBH
                                     Hãng sửa chữa (có tính phí), bao gồm:+ Vỡ, nứt thân máy,
                                     trầy xước, gãy chốt hộp mực, khách hàng tự mở máy đế sửa chữa+
                                     Máy không dư nguyên 100% hình dạng ban đầu
@@ -444,7 +444,7 @@ function Quy_Che_Hoat_Dong() {
                                 hộp, chỉ áp dụng bảo hành, không đổi máy mới.
                             </li>
                             <li>
-                                • Phí đổi trả khác nếu có:  FPTShop sẽ
+                                • Phí đổi trả khác nếu có:  pixelshop sẽ
                                 kiểm tra tình trạng máy và thông báo đến khách hàng về mức phí phải
                                 thu ngay tại cửa hàng
                             </li>
@@ -544,15 +544,15 @@ function Quy_Che_Hoat_Dong() {
                             </li>
                             <li>
                                 Đối với phụ kiện ốp lưng, bao da mua kèm máy (Điện thoại di động/
-                                Máy tính bảng): FPT Shop hỗ trợ nhập trả lại phụ kiện trong trường
+                                Máy tính bảng): Pixel Shop hỗ trợ nhập trả lại phụ kiện trong trường
                                 hợp khách hàng trả hàng do lỗi NSX.
                             </li>
                             <li>
                                 Miếng dán màn hình mua kèm máy: trong trường hợp khách hàng đổi máy
-                                do lỗi NSX, FPT Shop đổi miếng dán mới cho Khách hàng.
+                                do lỗi NSX, Pixel Shop đổi miếng dán mới cho Khách hàng.
                             </li>
                             <li>
-                                Combo phụ kiện: FPT Shop bảo hành cho sản phẩm bị lỗi theo chính
+                                Combo phụ kiện: Pixel Shop bảo hành cho sản phẩm bị lỗi theo chính
                                 sách phụ kiện mua lẻ
                             </li>
                             <li>
@@ -562,7 +562,7 @@ function Quy_Che_Hoat_Dong() {
                             </li>
                             <li>
                                 Đối với PK chính hãng Apple: Khách hàng mang sản phẩm đến tất cả các
-                                cửa hàng FPTShop/F.Studio by FPT trên toàn quốc để được hỗ trợ
+                                cửa hàng pixelshop/F.Studio by Pixel Shop trên toàn quốc để được hỗ trợ
                                 chuyển tới Trung tâm bảo hành uỷ quyền của Apple. Việc xác định tình
                                 trạng lỗi có thuộc diện bảo hành hay không sẽ do Apple quyết định.
                             </li>
@@ -576,13 +576,13 @@ function Quy_Che_Hoat_Dong() {
                             <li>
                                 <div>
                                 <h5>
-                                    ĐẦU THU KỸ THUẬT SỐ FPT PLAYBOX
+                                    ĐẦU THU KỸ THUẬT SỐ Pixel Shop PLAYBOX
                                 </h5>
                                 
                                     30 ngày đầu tiên: Miễn phí 1 đổi 1 khi sản phẩm
                                     lỗi NSX.
                                 
-                                    Tháng thứ 2-12: FPT Shop hỗ trợ chuyển trung
+                                    Tháng thứ 2-12: Pixel Shop hỗ trợ chuyển trung
                                     tâm bảo hành NSX.
                                 </div>
                             </li>
@@ -590,7 +590,7 @@ function Quy_Che_Hoat_Dong() {
                                 <div>
                                     Phần mềm dịch vụ (không bao gồm các phần mềm Microsoft)
                                 
-                                    FPT Shop hoàn lại tiền 100% trong 31 ngày đầu nếu khách hàng
+                                    Pixel Shop hoàn lại tiền 100% trong 31 ngày đầu nếu khách hàng
                                     không còn nhu cầu sử dụng sản phẩm.
                                 </div>
                             </li>
@@ -605,16 +605,16 @@ function Quy_Che_Hoat_Dong() {
                     </ul>
                     <div>
                     <h6>
-                        <u>Đối với giao dịch của FPTshop.com.vn</u>
+                        <u>Đối với giao dịch của pixelshop.com.vn</u>
                         </h6>
                         <h6>
-                        FPTshop.com.vn tiếp nhận khiếu nại qua
+                        pixelshop.com.vn tiếp nhận khiếu nại qua
                         các hình thức sau:
                         </h6>
                         <h6>- Tại website liên hệ, bình luận khách hàng</h6>
                         <h6>- Qua tổng đài giải quyết khiếu nại: 1800 6616</h6>
-                        <h6>- Email: fptshop@fpt.com.vn</h6>
-                        <h6>- Trực tiếp tại các cửa hàng FPTShop</h6>
+                        <h6>- Email: pixelshop@pixelshop.com.vn</h6>
+                        <h6>- Trực tiếp tại các cửa hàng pixelshop</h6>
                         <h6>- Tại văn phòng công ty: Lầu 3, 261 Khánh Hội, P2, Q4, TP. Hồ Chí Minh</h6>
                         <h6>IV. Quy trình thanh toán</h6>
                         <h6>
@@ -628,7 +628,7 @@ function Quy_Che_Hoat_Dong() {
                         <h6>
                         - Bước 1: Người mua tìm hiểu thông tin về sản phẩm, dịch vụ được đăng tin.
                         </h6>
-                        <h6>- Bước 2: Người mua đến địa chỉ bán hàng là các cửa hàng FPTShop</h6>
+                        <h6>- Bước 2: Người mua đến địa chỉ bán hàng là các cửa hàng pixelshop</h6>
                         <h6>
                         - Bước 3: Người mua thanh toán bằng tiền mặt, thẻ ATM nội địa hoặc thẻ tín
                         dụng và nhận hàng.
@@ -662,13 +662,13 @@ function Quy_Che_Hoat_Dong() {
                         <h6>
                         - Ban quản lý đã sử dụng các dịch vụ để bảo vệ thông tin về nội dung mà
                         người bán đăng  sản phẩm trên
-                        FPTshop.com.vn. Để đảm bảo các giao
+                        pixelshop.com.vn. Để đảm bảo các giao
                         dịch được tiến hành thành công, hạn chế tối đa rủi ro có thể phát sinh.
                         </h6>
                         <h6>
                         - Người mua nên cung cấp thông tin đầy đủ (tên, địa chỉ, số điện thoại,
                         email) khi tham gia mua hàng của
-                        FPTshop.com.vn đểFPTshop.com.vn
+                        pixelshop.com.vn đểpixelshop.com.vn
                         có thể liên hệ nhanh lại với người mua trong trường hợp xảy ra lỗi.
                         </h6>
                         <h6>
@@ -678,7 +678,7 @@ function Quy_Che_Hoat_Dong() {
                         </h6>
                         <h6>
                         - Khi thanh toán trực tuyến bằng thẻ ATM nội địa, Visa, Master người mua nên
-                        tự mình thực hiện và không được để lộ thông tin thẻ.FPTshop.com.vn
+                        tự mình thực hiện và không được để lộ thông tin thẻ.pixelshop.com.vn
                         không lưu trữ thông tin thẻ của người mua sau khi thanh toán, mà thông qua
                         hệ thống của ngân hàng liên kết. Nên tuyệt đối bảo mật thông tin thẻ cho
                         khách hàng.
@@ -690,7 +690,7 @@ function Quy_Che_Hoat_Dong() {
                         </h6>
                         <h6>VI. Bảo vệ thông tin cá nhân khách hàng</h6>
                         <h6>
-                        FPTshop.com.vn cam kết sẽ bảo mật những
+                        pixelshop.com.vn cam kết sẽ bảo mật những
                         thông tin mang tính riêng tư của bạn. Bạn vui lòng đọc bản “Chính sách bảo
                         mật” dưới đây để hiểu hơn những cam kết mà chúng tôi thực hiện, nhằm tôn
                         trọng và bảo vệ quyền lợi của người truy cập:
@@ -698,24 +698,24 @@ function Quy_Che_Hoat_Dong() {
                         <h6>1. Mục đích và phạm vi thu thập</h6>
                         <h6>
                         - Để truy cập và sử dụng một số dịch vụ tại
-                        FPTshop.com.vn, bạn có thể sẽ được yêu
+                        pixelshop.com.vn, bạn có thể sẽ được yêu
                         cầu đăng ký với chúng tôi thông tin cá nhân (Email, Họ tên, Số ĐT liên
                         lạc…). Mọi thông tin khai báo phải đảm bảo tính chính xác và hợp pháp.
-                        FPTshop.com.vn không chịu mọi trách
+                        pixelshop.com.vn không chịu mọi trách
                         nhiệm liên quan đến pháp luật của thông tin khai báo. 
                         </h6>
                         <h6>
                         - Chúng tôi cũng có thể thu thập thông tin về số lần viếng thăm, bao gồm số
                         trang bạn xem, số links (liên kết) bạn click và những thông tin khác liên
-                        quan đến việc kết nối đến site Fptshop.com.vn. Chúng tôi cũng thu thập các
+                        quan đến việc kết nối đến site pixelshop.com.vn. Chúng tôi cũng thu thập các
                         thông tin mà trình duyệt Web (Browser) bạn sử dụng mỗi khi truy cập vào
-                        FPTshop.com.vn, bao gồm: địa chỉ IP,
+                        pixelshop.com.vn, bao gồm: địa chỉ IP,
                         loại Browser, ngôn ngữ sử dụng, thời gian và những địa chỉ mà Browser truy
                         xuất đến.
                         </h6>
                         <h6>2 Phạm vi sử dụng thông tin</h6>
                         <h6>
-                        - FPTshop.com.vn thu thập và sử dụng
+                        - pixelshop.com.vn thu thập và sử dụng
                         thông tin cá nhân bạn với mục đích phù hợp và hoàn toàn tuân thủ nội dung
                         của “Chính sách bảo mật” này. Khi cần thiết, chúng tôi có thể sử dụng những
                         thông tin này để liên hệ trực tiếp với bạn dưới các hình thức như: gởi thư
@@ -730,7 +730,7 @@ function Quy_Che_Hoat_Dong() {
                         Dữ liệu cá nhân của Thành viên sẽ được lưu trữ cho đến khi có yêu cầu hủy bỏ
                         hoặc tự thành viên đăng nhập và thực hiện hủy bỏ. Còn lại trong mọi trường
                         hợp thông tin cá nhân thành viên sẽ được bảo mật trên máy chủ của
-                        FPTshop.com.vn.
+                        pixelshop.com.vn.
                         </h6>
                         <h6>
                         4. Địa chỉ của đơn vị thu thập và quản lý thông tin cá nhân
@@ -756,16 +756,16 @@ function Quy_Che_Hoat_Dong() {
                         sửa thay người dùng
                         </h6>
                         <h6>
-                        - Để lại bình luận hoặc gửi góp ý trực tiếp từ website FPTshop.com.vn, quản trị viên kiểm tra thông tin và liên lạc lại với người dùng để xác
+                        - Để lại bình luận hoặc gửi góp ý trực tiếp từ website pixelshop.com.vn, quản trị viên kiểm tra thông tin và liên lạc lại với người dùng để xác
                         nhận thông tin 1 lần nữa và quản trị viên chỉnh sửa thông tin cho người
                         dùng.
                         </h6>
                         <h6>6. Cam kết bảo mật thông tin cá nhân khách hàng</h6>
                         <h6>
                         - Thông tin cá nhân của thành viên trên
-                        FPTshop.com.vn đượcFPTshop.com.vn
+                        pixelshop.com.vn đượcpixelshop.com.vn
                         cam kết bảo mật tuyệt đối theo chính sách bảo vệ thông tin cá nhân của
-                        FPTshop.com.vn. Việc thu thập và sử
+                        pixelshop.com.vn. Việc thu thập và sử
                         dụng thông tin của mỗi thành viên chỉ được thực hiện khi có sự đồng ý của
                         khách hàng đó trừ những trường hợp pháp luật có quy định khác.
                         </h6>
@@ -777,21 +777,21 @@ function Quy_Che_Hoat_Dong() {
                         <h6>
                         - Trong trường hợp máy chủ lưu trữ thông tin bị hacker tấn công dẫn đến mất
                         mát dữ liệu cá nhân thành viên,
-                        FPTshop.com.vn sẽ có trách nhiệm thông
+                        pixelshop.com.vn sẽ có trách nhiệm thông
                         báo vụ việc cho cơ quan chức năng điều tra xử lý kịp thời và thông báo cho
                         thành viên được biết.
                         </h6>
                         <h6>
                         - Bảo mật tuyệt đối mọi thông tin giao dịch trực tuyến của Thành viên bao
                         gồm thông tin hóa đơn kế toán chứng từ số hóa tại khu vực dữ liệu trung tâm
-                        an toàn cấp 1 của Fptshop.com.vn.
+                        an toàn cấp 1 của pixelshop.com.vn.
                         </h6>
                         <h6>
-                        - Ban quản lý Fptshop.com.vn yêu cầu các cá nhân khi đăng ký/mua hàng là
+                        - Ban quản lý pixelshop.com.vn yêu cầu các cá nhân khi đăng ký/mua hàng là
                         thành viên, phải cung cấp đầy đủ thông tin cá nhân có liên quan như: Họ và
                         tên, địa chỉ liên lạc, email, số chứng minh nhân dân, điện thoại, số tài
                         khoản, số thẻ thanh toán …., và chịu trách nhiệm về tính pháp lý của những
-                        thông tin trên. Ban quản lý Fptshop.com.vn không chịu trách nhiệm cũng như
+                        thông tin trên. Ban quản lý pixelshop.com.vn không chịu trách nhiệm cũng như
                         không giải quyết mọi khiếu nại có liên quan đến quyền lợi của Thành viên đó
                         nếu xét thấy tất cả thông tin cá nhân của thành viên đó cung cấp khi đăng ký
                         ban đầu là không chính xác
@@ -802,31 +802,31 @@ function Quy_Che_Hoat_Dong() {
                         - Thành viên sẽ tự chịu trách nhiệm về bảo mật và lưu giữ mọi hoạt động sử
                         dụng dịch vụ dưới tên đăng ký, mật khẩu của mình. Thành viên có trách nhiệm
                         thông báo kịp thời cho website TMĐT
-                        FPTshop.com.vn về những hành vi sử dụng
+                        pixelshop.com.vn về những hành vi sử dụng
                         trái phép, lạm dụng, vi phạm bảo mật, lưu giữ tên đăng ký và mật khẩu của
                         bên thứ ba để có biện pháp giải quyết phù hợp.
                         </h6>
                         <h6>
                         - Thành viên không được thay đổi, chỉnh sửa, gán gép, copy, truyền bá, phân
                         phối, cung cấp và tạo những công cụ tương tự của dịch vụ do website TMĐT
-                        FPTshop.com.vn cung cấp cho một bên thứ
+                        pixelshop.com.vn cung cấp cho một bên thứ
                         ba nếu không được sự đồng ý của website TMĐT
-                        FPTshop.com.vn trong bản Quy chế này.
+                        pixelshop.com.vn trong bản Quy chế này.
                         </h6>
                         <h6>
                         - Thành viên không được hành động gây mất uy tín của website MTĐT
-                        FPTshop.com.vn dưới mọi hình thức như
+                        pixelshop.com.vn dưới mọi hình thức như
                         gây mất đoàn kết giữa các thành viên bằng cách sử dụng tên đăng ký thứ hai,
                         thông qua một bên thứ ba hoặc tuyên truyền, phổ biến những thông tin không
-                        có lợi cho uy tín của website TMĐTFPTshop.com.vn.
+                        có lợi cho uy tín của website TMĐT Pixel Shop.
                         </h6>
                         <h6>
                         VIII. Trách nhiệm trong trường hợp phát sinh lỗi kỹ thuật
                         </h6>
                         <h6>
-                        - Website TMĐT FPTshop.com.vn cam
+                        - Website TMĐT pixelshop.com.vn cam
                         kết nỗ lực đảm bảo sự an toàn và ổn định của toàn bộ hệ thống kỹ thuật. Tuy
-                        nhiên, trong trường hợp xảy ra sự cố do lỗi của FPTshop.com.vn, FPTshop.com.vn sẽ ngay lập tức áp
+                        nhiên, trong trường hợp xảy ra sự cố do lỗi của pixelshop.com.vn, pixelshop.com.vn sẽ ngay lập tức áp
                         dụng các biện pháp để đảm bảo quyền lợi cho người mua hàng.
                         </h6>
                         <h6>
@@ -835,63 +835,63 @@ function Quy_Che_Hoat_Dong() {
                         </h6>
                         <h6>
                         - Ban quản lý website TMĐT
-                        FPTshop.com.vn cam kết cung cấp chất
+                        pixelshop.com.vn cam kết cung cấp chất
                         lượng dịch vụ tốt nhất cho các thành viên tham gia giao dịch. Trường hợp
                         phát sinh lỗi kỹ thuật, lỗi phần mềm hoặc các lỗi khách quan khác dẫn đến
                         thành viên không thể tham gia giao dịch được thì các thành viên thông báo
-                        cho Ban quản lý website TMĐT qua địa chỉ email fptshop@fpt.com.vn
+                        cho Ban quản lý website TMĐT qua địa chỉ email pixelshop@pixelshop.com.vn
                         hoặc qua điện thoại 1800 6616 (từ 8:00 – 22:00 hằng ngày) chúng tôi sẽ khắc
                         phục lỗi trong thời gian sớm nhất, tạo điều kiện cho các thành viên tham
                         gia website TMĐT
-                        FPTshop.com.vn.
+                        pixelshop.com.vn.
                         </h6>
                         <h6>
                         - Tuy nhiên, Ban quản lý website TMĐT
-                        FPTshop.com.vn sẽ không chịu trách
+                        pixelshop.com.vn sẽ không chịu trách
                         nhiệm giải quyết trong trường hợp thông báo của các thành viên không đến
                         được Ban quản lý, phát sinh từ lỗi kỹ thuật, lỗi đường truyền, phần mềm hoặc
                         các lỗi khác không do Ban quản lý gây ra.
                         </h6>
                         <h6>
                         IX. Quyền và nghĩa vụ của Ban quản lý website TMĐT
-                        FPTshop.com.vn
+                        pixelshop.com.vn
                         </h6>
                         <h6>
                         1. Quyền của Ban quản lý
-                        FPTshop.com.vn:
+                        pixelshop.com.vn:
                         </h6>
                         <h6>
-                        - Website TMĐT FPTshop.com.vn sẽ
+                        - Website TMĐT pixelshop.com.vn sẽ
                         tiến hành cung cấp các dịch vụ, sản phẩm cho khách hàng sau khi đã hoàn
                         thành các thủ tục và các điều kiện bắt buộc mà nêu ra. 
                         </h6>
                         <h6>
-                        - FPTshop.com.vn sẽ tiến hành xây dựng
+                        - pixelshop.com.vn sẽ tiến hành xây dựng
                         các chính sách dịch vụ trên Trang web. Các chính sách này sẽ được công bố
-                        trên FPTshop.com.vn. 
+                        trên pixelshop.com.vn. 
                         </h6>
                         <h6>
                         - Trong trường hợp có cơ sở để chứng minh thành viên cung cấp thông tin cho
                         Sàn giao dịch điện tử
-                        FPTshop.com.vn không chính xác, sai
+                        pixelshop.com.vn không chính xác, sai
                         lệch, không đầy đủ hoặc có dấu hiệu vi phạm pháp luật hay thuần phong mỹ tục
                         Việt Nam thì Sàn giao dịch điện tử
-                        FPTshop.com.vn có quyền từ chối, tạm
+                        pixelshop.com.vn có quyền từ chối, tạm
                         ngừng hoặc chấm dứt quyền sử dụng dịch vụ của thành viên. 
                         </h6>
                         <h6>
-                        - Website TMĐT FPTshop.com.vn có thể chấm dứt quyền thành viên và quyền sử dụng một hoặc tất cả các
+                        - Website TMĐT pixelshop.com.vn có thể chấm dứt quyền thành viên và quyền sử dụng một hoặc tất cả các
                         dịch vụ của thành viên trong trường hợp thành viên vi phạm các Quy chế
-                        của Website TMĐT FPTshop.com.vn, hoặc có những hành vi ảnh hưởng đến hoạt động kinh doanh
-                        trên Website TMĐT FPTshop.com.vn. 
+                        của Website TMĐT pixelshop.com.vn, hoặc có những hành vi ảnh hưởng đến hoạt động kinh doanh
+                        trên Website TMĐT pixelshop.com.vn. 
                         </h6>
                         <h6>
-                        - Website TMĐT FPTshop.com.vn có thể chấm dứt ngay quyền sử dụng dịch vụ và quyền thành viên của
-                        thành viên nếu Website TMĐT FPTshop.com.vn phát hiện thành viên đã phá sản, bị kết án hoặc đang trong thời gian
+                        - Website TMĐT pixelshop.com.vn có thể chấm dứt ngay quyền sử dụng dịch vụ và quyền thành viên của
+                        thành viên nếu Website TMĐT pixelshop.com.vn phát hiện thành viên đã phá sản, bị kết án hoặc đang trong thời gian
                         thụ án, trong trường hợp thành viên tiếp tục hoạt động có thể gây
-                        cho Website TMĐT FPTshop.com.vn trách nhiệm pháp lý, có những hoạt động lừa đảo, giả mạo, gây rối
+                        cho Website TMĐT pixelshop.com.vn trách nhiệm pháp lý, có những hoạt động lừa đảo, giả mạo, gây rối
                         loạn thị trường, gây mất đoàn kết đối với các thành viên khác
-                        của Website TMĐT FPTshop.com.vn, hoạt  động vi phạm pháp luật hiện hành của Việt Nam. 
+                        của Website TMĐT pixelshop.com.vn, hoạt  động vi phạm pháp luật hiện hành của Việt Nam. 
                         </h6>
                         <h6>
                         - Trong trường hợp chấm dứt quyền thành viên và quyền sử dụng dịch vụ thì
@@ -899,60 +899,60 @@ function Quy_Che_Hoat_Dong() {
                         giá trị và bị chấm dứt.
                         </h6>
                         <h6>
-                        - Website TMĐT FPTshop.com.vn giữ bản quyền sử dụng dịch vụ và các nội dung trên Website
-                        TMĐT FPTshop.com.vn theo các
+                        - Website TMĐT pixelshop.com.vn giữ bản quyền sử dụng dịch vụ và các nội dung trên Website
+                        TMĐT pixelshop.com.vn theo các
                         quy định pháp luật về bảo hộ sở hữu trí tuệ tại Việt Nam. Tất cả các biểu
                         tượng, nội dung theo các ngôn ngữ khác nhau đều thuộc quyền sở hữu
-                        của Website TMĐT FPTshop.com.vn. Nghiêm cấm mọi hành vi sao chép, sử dụng và phổ biến bất hợp pháp các
+                        của Website TMĐT pixelshop.com.vn. Nghiêm cấm mọi hành vi sao chép, sử dụng và phổ biến bất hợp pháp các
                         quyền sở hữu trên. 
                         </h6>
                         <h6>
-                        - Website TMĐT FPTshop.com.vn giữ quyền được thay đổi bảng, biểu giá dịch vụ và phương thức thanh
+                        - Website TMĐT pixelshop.com.vn giữ quyền được thay đổi bảng, biểu giá dịch vụ và phương thức thanh
                         toán trong thời gian cung cấp dịch vụ cho thành viên theo nhu cầu và điều
-                        kiện khả năng của Website TMĐT FPTshop.com.vn và sẽ báo trước cho thành viên thời hạn là một (01) tháng.
+                        kiện khả năng của Website TMĐT pixelshop.com.vn và sẽ báo trước cho thành viên thời hạn là một (01) tháng.
                         </h6>
-                        <h6>2. Nghĩa vụ của Ban quản lý FPTSHOP.COM.VN</h6>
+                        <h6>2. Nghĩa vụ của Ban quản lý pixelshop.COM.VN</h6>
                         <h6>
-                        - Website TMĐT FPTshop.com.vn chịu trách nhiệm xây dựng dịch vụ bao gồm một số công việc chính như:
+                        - Website TMĐT pixelshop.com.vn chịu trách nhiệm xây dựng dịch vụ bao gồm một số công việc chính như:
                         nghiên cứu, thiết kế, mua sắm các thiết bị phần cứng và phần mềm, kết nối
                         Internet, xây dựng chính sách phục vụ cho hoạt động Website
-                        TMĐT FPTshop.com.vn trong
+                        TMĐT pixelshop.com.vn trong
                         điều kiện và phạm vi cho phép. 
                         </h6>
                         <h6>
-                        - Website TMĐT FPTshop.com.vn sẽ tiến hành triển khai và hợp tác với các đối tác trong việc xây
+                        - Website TMĐT pixelshop.com.vn sẽ tiến hành triển khai và hợp tác với các đối tác trong việc xây
                         dựng hệ thống các dịch vụ, các công cụ tiện ích phục vụ cho việc giao dịch
-                        của các thành viên tham gia và người sử dụng trên Website TMĐT FPTshop.com.vn
+                        của các thành viên tham gia và người sử dụng trên Website TMĐT pixelshop.com.vn
                         </h6>
                         <h6>
-                        - Website TMĐT FPTshop.com.vn chịu trách nhiệm xây dựng, bổ sung hệ thống các kiến thức, thông tin
+                        - Website TMĐT pixelshop.com.vn chịu trách nhiệm xây dựng, bổ sung hệ thống các kiến thức, thông tin
                         về: nghiệp vụ ngoại thương, thương mại điện tử, hệ thống văn bản pháp luật
                         thương mại trong nước và quốc tế, thị trường nước ngoài, cũng như các tin
-                        tức có liên quan đến hoạt động của Website TMĐT FPTshop.com.vn 
+                        tức có liên quan đến hoạt động của Website TMĐT pixelshop.com.vn 
                         </h6>
                         <h6>
-                        - Website TMĐT FPTshop.com.vn sẽ tiến hành các hoạt động xúc tiến, quảng bá Website
-                        TMĐT FPTshop.com.vn ra thị
+                        - Website TMĐT pixelshop.com.vn sẽ tiến hành các hoạt động xúc tiến, quảng bá Website
+                        TMĐT pixelshop.com.vn ra thị
                         trường nước ngoài trong phạm vi và điều kiện cho phép, góp phần mở rộng, kết
                         nối đáp ứng các nhu cầu tìm kiếm bạn hàng và phát triển thị trường nước
-                        ngoài của các thành viên tham gia Website TMĐT FPTshop.com.vn 
+                        ngoài của các thành viên tham gia Website TMĐT pixelshop.com.vn 
                         </h6>
                         <h6>
-                        - Website TMĐT FPTshop.com.vn sẽ cố gắng đến mức cao nhất trong phạm vi và điều kiện có thể để duy
-                        trì hoạt động bình thường của Website TMĐT FPTshop.com.vn và khắc phục các sự cố như: sự cố kỹ thuật về máy móc, lỗi phần mềm,
+                        - Website TMĐT pixelshop.com.vn sẽ cố gắng đến mức cao nhất trong phạm vi và điều kiện có thể để duy
+                        trì hoạt động bình thường của Website TMĐT pixelshop.com.vn và khắc phục các sự cố như: sự cố kỹ thuật về máy móc, lỗi phần mềm,
                         hệ thống đường truyền internet, nhân sự, các biến động xã hội, thiên tai,
                         mất điện, các quyết định của cơ quan nhà nước hay một tổ chức liên quan thứ
                         ba. Tuy nhiên nếu những sự cố trên xảy ra nằm ngoài khả năng kiểm soát, là
                         những trường hợp bất khả kháng mà gây thiệt hại cho thành viên
-                        thì Website TMĐT FPTshop.com.vn không phải chịu trách nhiệm liên đới.
+                        thì Website TMĐT pixelshop.com.vn không phải chịu trách nhiệm liên đới.
                         </h6>
                         <h6>
-                        Website TMĐT FPTshop.com.vn phải có
+                        Website TMĐT pixelshop.com.vn phải có
                         trách nhiệm:
                         </h6>
                         <h6>
                         - Xây dựng và thực hiện cơ chế để đảm bảo việc đăng thông tin
-                        trên Website TMĐT FPTshop.com.vn được thực hiện chính xác. 
+                        trên Website TMĐT pixelshop.com.vn được thực hiện chính xác. 
                         </h6>
                         <h6>
                         - Không đăng tải những thông tin bán hàng hóa, dịch vụ thuộc danh mục hàng
@@ -960,70 +960,70 @@ function Quy_Che_Hoat_Dong() {
                         kinh doanh theo quy định tại Thông tư 47/2014/TT-BCT.
                         </h6>
                         <h6>
-                        X. Quyền và trách nhiệm thành viên tham gia website TMĐTFPTshop.com.vn
+                        X. Quyền và trách nhiệm thành viên tham gia website TMĐTpixelshop.com.vn
                         </h6>
                         <h6>
                         1. Quyền của Thành viên Website TMĐT
-                        FPTshop.com.vn
+                        pixelshop.com.vn
                         </h6>
                         <h6>
                         - Khi đăng ký trở thành thành viên của
-                        FPTshop.com.vn và đượcFPTshop.com.vn
+                        pixelshop.com.vn và đượcpixelshop.com.vn
                         đồng ý, thành viên sẽ được tham gia thảo luận, đánh giá sản phẩm, mua hàng
-                        tại FPTshop.com.vn .
+                        tại pixelshop.com.vn .
                         </h6>
                         <h6>
-                        - Thành viên có quyền đóng góp ý kiến cho Website TMĐT FPTshop.com.vn trong quá trình hoạt động. Các kiến nghị được gửi trực tiếp bằng thư,
-                        fax hoặc email đến cho Website TMĐT FPTshop.com.vn
+                        - Thành viên có quyền đóng góp ý kiến cho Website TMĐT pixelshop.com.vn trong quá trình hoạt động. Các kiến nghị được gửi trực tiếp bằng thư,
+                        fax hoặc email đến cho Website TMĐT pixelshop.com.vn
                         </h6>
                         <h6>
                         
                         Nghĩa vụ của Thành viên Website TMĐT
-                        FPTshop.com.vn
+                        pixelshop.com.vn
                         </h6>
                         <h6>
                         - Thành viên sẽ tự chịu trách nhiệm về bảo mật và lưu giữ và mọi hoạt động
                         sử dụng dịch vụ dưới tên đăng ký, mật khẩu và hộp thư điện tử của mình.
                         </h6>
                         <h6>
-                        - Thành viên cam kết những thông tin cung cấp cho Website TMĐT FPTshop.com.vn và những thông tin đang tải lên Website TMĐT FPTshop.com.vn là chính xác.
+                        - Thành viên cam kết những thông tin cung cấp cho Website TMĐT pixelshop.com.vn và những thông tin đang tải lên Website TMĐT pixelshop.com.vn là chính xác.
                         </h6>
                         <h6>
                         - Thành viên cam kết không được thay đổi, chỉnh sửa, sao chép, truyền bá,
                         phân phối, cung cấp và tạo những công cụ tương tự của dịch vụ
-                        do Website TMĐT FPTshop.com.vn cung cấp cho một bên thứ ba nếu không được sự đồng ý của Website
-                        TMĐT FPTshop.com.vn trong Quy
+                        do Website TMĐT pixelshop.com.vn cung cấp cho một bên thứ ba nếu không được sự đồng ý của Website
+                        TMĐT pixelshop.com.vn trong Quy
                         định này.
                         </h6>
                         <h6>
                         - Thành viên không được hành động gây mất uy tín của Website
-                        TMĐT FPTshop.com.vn dưới mọi
+                        TMĐT pixelshop.com.vn dưới mọi
                         hình thức như gây mất đoàn kết giữa các thành viên bằng cách sử dụng tên
                         đăng ký thứ hai, thông qua một bên thứ ba hoặc tuyên truyền, phổ biến những
-                        thông tin không có lợi cho uy tín của Website TMĐT FPTshop.com.vn
+                        thông tin không có lợi cho uy tín của Website TMĐT pixelshop.com.vn
                         </h6>
                         <h6>XI. Điều khoản áp dụng</h6>
                         <h6>
-                        - Mọi tranh chấp phát sinh giữa Website TMĐT FPTshop.com.vn và thành viên sẽ được giải quyết trên cơ sở thương lượng. Trường hợp
+                        - Mọi tranh chấp phát sinh giữa Website TMĐT pixelshop.com.vn và thành viên sẽ được giải quyết trên cơ sở thương lượng. Trường hợp
                         không đạt được thỏa thuận như mong muốn, một trong hai bên có quyền
                         đưa vụ việc ra Tòa án nhân dân có thẩm quyền tại Thành phố Hồ Chí Minh
                         để giải quyết.
                         </h6>
                         <h6>
-                        - Quy chế của Website TMĐT FPTshop.com.vn chính thức có hiệu lực thi hành kể từ ngày ký Quyết định ban hành kèm
-                        theo Quy chế này. Website TMĐT FPTshop.com.vn có quyền và có thể thay đổi Quy chế này bằng cách thông báo
-                        lên Website TMĐT FPTshop.com.vn cho các thành viên biết. Quy chế sửa đổi có hiệu lực kể từ ngày Quyết
+                        - Quy chế của Website TMĐT pixelshop.com.vn chính thức có hiệu lực thi hành kể từ ngày ký Quyết định ban hành kèm
+                        theo Quy chế này. Website TMĐT pixelshop.com.vn có quyền và có thể thay đổi Quy chế này bằng cách thông báo
+                        lên Website TMĐT pixelshop.com.vn cho các thành viên biết. Quy chế sửa đổi có hiệu lực kể từ ngày Quyết
                         định về việc sửa đổi Quy chế có hiệu lực. Việc thành viên tiếp tục sử dụng
                         dịch vụ sau khi Quy chế sửa đổi được công bố và thực thi đồng nghĩa với việc
                         họ đã chấp nhận Quy chế sửa đổi này.
                         </h6>
                         <h5>XII. Điều khoản cam kết</h5>
-                        <h6>Địa chỉ liên lạc chính thức của Website TMĐT FPTshop.com.vn:</h6>
-                        <h6>- Website TMĐT FPTshop.com.vn</h6>
+                        <h6>Địa chỉ liên lạc chính thức của Website TMĐT pixelshop.com.vn:</h6>
+                        <h6>- Website TMĐT pixelshop.com.vn</h6>
                         <h6>- Công ty/Tổ chức : Công ty Cổ Phần Bán lẻ kỹ thuật số FPT</h6>
                         <h6>- Địa chỉ: 261 – 263 Khánh Hội, P2, Q4, TP. Hồ Chí Minh</h6>
                         <h6>- Văn phòng: Lầu 3, 261 – 263 Khánh Hội, P2, Q4, TP. Hồ Chí Minh</h6>
-                        <h6>- Tel: 028 730 23456  Email: fptshop@fpt.com.vn</h6>
+                        <h6>- Tel: 028 730 23456  Email: pixelshop@pixelshop.com.vn</h6>
                     </div> 
                 </div>
             </div>

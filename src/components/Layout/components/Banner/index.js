@@ -1,17 +1,24 @@
 
 import classNames from 'classnames/bind';
+import { useNavigate } from "react-router-dom";
 import style from './Banner.module.scss';
+
+// Components
 import BoxImage from '~/components/Layout/components/BoxImage';
-import banner from '~/assets/banner';
 import BoxImageText from '~/components/Layout/components/BoxImageText';
-import products from '~/assets/product';
 import SaleItem from '~/components/Layout/components/SaleItem';
+
+// Images
 import background from '~/assets/background';
+import products from '~/assets/product';
+import banner from '~/assets/banner';
+import { Huong_Dan_Mua_Hang_Va_Thanh_Toan_Online } from '~/pages/OrderPages';
 
 const cx = classNames.bind(style);
 
 function Banner() {
-    
+    const navigate = useNavigate();  
+    const handleNavigate = (path) => { navigate(path); };
     
     return (
         <div className={cx('wrapper')}>
@@ -170,7 +177,7 @@ function Banner() {
             </div>
             <div className={cx('banner-list-3')}>
                 <div className={cx('banner-list-3-line')}>
-                    <div className={cx('banner-3-1')}>
+                    <div onClick={() => handleNavigate('/OrderPages/Huong_Dan_Mua_Hang_Va_Thanh_Toan_Online')} className={cx('banner-3-1')}>
                         <BoxImage img={background.background6} alt={"#"} />
                         <div className={cx('text-banner')}>
                             <h1 className={cx('text')}>

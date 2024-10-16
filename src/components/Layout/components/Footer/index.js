@@ -66,28 +66,28 @@ return (
             CHÍNH SÁCH
           </div>
           <div className={cx('content')}>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('/Policy/Chinh_Sach_Bao_Hanh')} className={cx('content-item')}>
               Chính sách bảo hành
             </div>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('/Policy/Chinh_Sach_Doi_Tra')} className={cx('content-item')}>
               Chính sách đổi trả
             </div>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('/Policy/Chinh_Sach_Bao_Mat')} className={cx('content-item')}>
               Chính sách bảo mật
             </div>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('/Policy/Chinh_Sach_Tra_Gop')} className={cx('content-item')}>
               Chính sách trả góp
             </div>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('/Policy/Chinh_Sach_Khui_Hop_San_Pham')} className={cx('content-item')}>
               Chính sách khui hộp sản phẩm
             </div>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('/Policy/Chinh_Sach_Giao_Hang_Va_Lap_Dat')} className={cx('content-item')}>
               Chính sách giao hàng & lắp đặt
             </div>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('/Policy/Chinh_Sach_Thu_Thap_Va_Xu_Ly_Du_Lieu_Ca_Nhan')} className={cx('content-item')}>
               Chính sách thu thập & xử lý dữ liệu cá nhân
             </div>
-            <div className={cx('content-item')}>
+            <div onClick={() => handleNavigate('/Policy/Quy_Dinh_Ve_Ho_Tro_Ky_Thuat_Va_Sao_Luu_Du_Lieu')} className={cx('content-item')}>
               Quy định về hỗ trợ kỹ thuật & sao lưu dữ liệu
             </div>
           </div>
