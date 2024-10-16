@@ -10,6 +10,7 @@ import Admin from "~/pages/Admin";
 import AboutUs from "~/pages/AboutUs";
 import Login from "~/pages/Login";
 import Error from "~/pages/Error";
+import Support from "~/pages/Support";
 
 //shopping cart pages
 import {
@@ -55,6 +56,7 @@ const publicRoutes = [
     { path: "/AboutUs", component: AboutUs, Layout: HeaderOnly },
     { path: "/Login", component: Login, Layout: HeaderOnly },
     { path: "*", component: Error, Layout: HeaderOnly },
+    { path: "/Support", component: Support, Layout: HeaderOnly },
 
     //product pages
 

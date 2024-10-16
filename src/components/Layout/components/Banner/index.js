@@ -12,7 +12,6 @@ import SaleItem from '~/components/Layout/components/SaleItem';
 import background from '~/assets/background';
 import products from '~/assets/product';
 import banner from '~/assets/banner';
-import { Huong_Dan_Mua_Hang_Va_Thanh_Toan_Online } from '~/pages/OrderPages';
 
 const cx = classNames.bind(style);
 
@@ -221,7 +220,7 @@ function Banner() {
                             </h1>
                         </div>
                     </div>
-                    <div className={cx('banner-3-3')}>
+                    <div onClick={() => handleNavigate("/Support")} className={cx('banner-3-3')}>
                         <BoxImage img={background.background9} alt={"#"}/>
                         <div className={cx('text-banner')}>
                             <h1 className={cx('text')}>

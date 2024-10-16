@@ -6,6 +6,7 @@ const images = {
     avatar: require('~/assets/images/avatar.png'),
     logo_only_text: require('~/assets/images/logo-only-text.png'),
     error: require('~/assets/images/error.png'),
+    cskh: require('~/assets/images/cskh.png'),
 }
 
 
