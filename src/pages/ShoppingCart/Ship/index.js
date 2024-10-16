@@ -41,7 +41,7 @@ function Ship() {
 
     return (
         <div className={cx('wrapper')}>
-            <Sidebar title={'Giỏ hàng của bạn'} />
+            <Sidebar title={'Sản phẩm đang giao đến bạn'} />
             <div className={cx('container')}>
                 <div className={cx('temp')}>
                     <div className={cx('inner')}>

@@ -41,7 +41,7 @@ function Bought() {
 
     return (
         <div className={cx('wrapper')}>
-            <Sidebar title={'Giỏ hàng của bạn'} />
+            <Sidebar title={'Sản phẩm bạn đã mua'} />
             <div className={cx('container')}>
                 <div className={cx('temp')}>
                     <div className={cx('inner')}>
