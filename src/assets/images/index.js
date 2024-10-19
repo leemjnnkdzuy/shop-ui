@@ -9,7 +9,4 @@ const images = {
     cskh: require('~/assets/images/cskh.png'),
 }
 
-
-
-
 export default images;

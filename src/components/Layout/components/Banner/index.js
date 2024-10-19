@@ -11,22 +11,53 @@ import SaleItem from '~/components/Layout/components/SaleItem';
 // Images
 import background from '~/assets/background';
 import products from '~/assets/product';
-import banner from '~/assets/banner';
+import banner1 from '~/assets/banner1';
+import BannerProduct from '~/components/Layout/components/BannerProduct';
+import BannerProductTripble from '~/components/Layout/components/BannerProductTripble';
+import banner2 from '~/assets/banner2';
 
 const cx = classNames.bind(style);
 
 function Banner() {
     const navigate = useNavigate();  
     const handleNavigate = (path) => { navigate(path); };
+
+    const banners1 = [
+        banner1.banner1,
+        banner1.banner6,
+        banner1.banner7,
+    ];
+
+    const banners2 = [
+        banner1.banner8,
+        banner1.banner9,
+        banner1.banner10,
+    ];
+
+    const banners3 = [
+        banner1.banner5,
+        banner1.banner2,
+        banner1.banner3,
+        banner1.banner4,
+    ];
+
+    const banners4 = [
+        banner2.banner1,
+        banner2.banner2,
+        banner2.banner3,
+        banner2.banner4,
+        banner2.banner5,
+        banner2.banner7,
+    ];
     
     return (
         <div className={cx('wrapper')}>
             <div className={cx('banner-list-1')}>
                 <div className={cx('banner-1')}>
-                    <BoxImage img={banner.banner2} alt={"banner2"}/>
+                    <BannerProduct ListBanner={banners1}/>
                 </div>
                 <div className={cx('banner-1')}>
-                    <BoxImage img={banner.banner1} alt={"banner1"} />
+                    <BannerProduct ListBanner={banners2}/>
                 </div>
             </div>
             <div className={cx('title')}>
@@ -77,15 +108,7 @@ function Banner() {
                 </div>
             </div>
             <div className={cx('banner-list-2')}>
-                <div className={cx('banner-2')}>
-                    <BoxImage img={banner.banner3} alt={"#"}/>
-                </div>
-                <div className={cx('banner-2')}>
-                    <BoxImage img={banner.banner4} alt={"#"}/>
-                </div>
-                <div className={cx('banner-2')}>
-                    <BoxImage img={banner.banner5} alt={"#"}/>
-                </div>
+                <BannerProductTripble ListBanner={banners4}/>
             </div>
             <div className={cx('title')}>
                 Sản Phẩm Khác
@@ -111,7 +134,7 @@ function Banner() {
                 </div>
             </div>
             <div className={cx('banner')}>
-                <BoxImage img={banner.banner6} alt={"#"}/>
+                <BannerProduct ListBanner={banners3}/>
             </div>
             <div className={cx('title')}>
                 Sản Phẩm Siêu Khuyến Mãi
