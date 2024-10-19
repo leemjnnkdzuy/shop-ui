@@ -1,0 +1,12 @@
+export { default as Laptop } from "~/pages/ProductPages/Laptop";
+export { default as Phone } from "~/pages/ProductPages/Phone";
+export { default as Acessory } from "~/pages/ProductPages/Acessory";
+export { default as Fridge } from "~/pages/ProductPages/Fridge";
+export { default as Tablet } from "~/pages/ProductPages/Tablet";
+export { default as Watch } from "~/pages/ProductPages/Watch";
+export { default as TV } from "~/pages/ProductPages/TV";
+export { default as LinhKien } from "~/pages/ProductPages/LinhKien";
+export { default as Washer } from "~/pages/ProductPages/Washer";
+export { default as DustCollector } from "~/pages/ProductPages/DustCollector";
+export { default as Moniter } from "~/pages/ProductPages/Moniter";
+export { default as PC } from "~/pages/ProductPages/PC";

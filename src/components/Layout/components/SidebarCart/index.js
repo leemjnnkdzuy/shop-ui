@@ -1,10 +1,10 @@
-import styles from './Sidebar.module.scss';
+import styles from './SidebarCart.module.scss';
 import classNames from 'classnames/bind';
 import { useNavigate } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 
-function Sidebar({ title }) {
+function SidebarCart({ title }) {
     const navigate = useNavigate();  
 
     const handleNavigate = (path) => { 
@@ -68,4 +68,4 @@ function Sidebar({ title }) {
     );
 }
 
-export default Sidebar;
+export default SidebarCart;

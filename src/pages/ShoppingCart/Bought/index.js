@@ -2,8 +2,7 @@ import classNames from "classnames/bind";
 import style from "./Bought.module.scss";
 import { useState } from "react";
 
-import Sidebar from "~/components/Layout/components/Sidebar";
-import products from "~/assets/product";
+import SidebarCart from "~/components/Layout/components/SidebarCart";
 import BoughtItem from "~/components/Layout/components/BoughtItem";
 
 const cx = classNames.bind(style);
@@ -41,7 +40,7 @@ function Bought() {
 
     return (
         <div className={cx('wrapper')}>
-            <Sidebar title={'Sản phẩm bạn đã mua'} />
+            <SidebarCart title={'Sản phẩm bạn đã mua'} />
             <div className={cx('container')}>
                 <div className={cx('temp')}>
                     <div className={cx('inner')}>

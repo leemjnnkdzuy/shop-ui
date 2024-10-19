@@ -3,9 +3,8 @@ import classNames from "classnames/bind";
 import style from "./Cart.module.scss";
 
 
-import Sidebar from "~/components/Layout/components/Sidebar";
+import SidebarCart from "~/components/Layout/components/SidebarCart";
 import CartItem from "~/components/Layout/components/CartItem";
-import products from "~/assets/product";
 
 const cx = classNames.bind(style);
 
@@ -39,7 +38,7 @@ function Cart() {
 
     return (
         <div className={cx('wrapper')}>
-            <Sidebar title={'Giỏ hàng của bạn'} />
+            <SidebarCart title={'Giỏ hàng của bạn'} />
             <div className={cx('container')}>
                 <div className={cx('temp')}>
                     <div className={cx('inner')}>

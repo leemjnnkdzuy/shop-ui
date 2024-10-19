@@ -4,13 +4,28 @@ import { HeaderOnly } from "~/components/Layout";
 
 //main pages
 import Home from "~/pages/Home";
-import Phone from "~/pages/Phone";
 import Profile from "~/pages/Profile";
 import Admin from "~/pages/Admin";
 import AboutUs from "~/pages/AboutUs";
 import Login from "~/pages/Login";
 import Error from "~/pages/Error";
 import Support from "~/pages/Support";
+
+//product pages
+import {
+    Laptop,
+    Phone,
+    Acessory,
+    Fridge,
+    Tablet,
+    Watch,
+    TV,
+    LinhKien,
+    Washer,
+    DustCollector,
+    Moniter,
+    PC,
+} from "~/pages/ProductPages";
 
 //shopping cart pages
 import {
@@ -41,24 +56,39 @@ import {
 } from "~/pages/PolicyPages";
 
 const publicRoutes = [
+    //home page
+    { path: "/", component: Home, Layout: HeaderOnly },
+    
+    //error page
+    { path: "*", component: Error, Layout: HeaderOnly },
+
     //ShoppingCart
     { path: "/Cart", component: Cart, Layout: HeaderOnly },
     { path: "/Ship", component: Ship, Layout: HeaderOnly },
     { path: "/Bought", component: Bought, Layout: HeaderOnly },
 
     //main pages
-    { path: "/", component: Home, Layout: HeaderOnly},
     { path: "/Home", component: Home, Layout: HeaderOnly},
-    { path: "/Phone", component: Phone, Layout: HeaderOnly},
     { path: "/Cart", component: Cart, Layout: HeaderOnly },
     { path: "/Profile", component: Profile, Layout: HeaderOnly},
     { path: "/Admin", component: Admin, Layout: null },
     { path: "/AboutUs", component: AboutUs, Layout: HeaderOnly },
     { path: "/Login", component: Login, Layout: HeaderOnly },
-    { path: "*", component: Error, Layout: HeaderOnly },
     { path: "/Support", component: Support, Layout: HeaderOnly },
 
     //product pages
+    { path: "/ProductPages/Phone", component: Phone, Layout: HeaderOnly },
+    { path: "/ProductPages/Laptop", component: Laptop, Layout: HeaderOnly },
+    { path: "/ProductPages/Acessory", component: Acessory, Layout: HeaderOnly },
+    { path: "/ProductPages/Fridge", component: Fridge, Layout: HeaderOnly },
+    { path: "/ProductPages/Tablet", component: Tablet, Layout: HeaderOnly },
+    { path: "/ProductPages/Watch", component: Watch, Layout: HeaderOnly },
+    { path: "/ProductPages/TV", component: TV, Layout: HeaderOnly },
+    { path: "/ProductPages/LinhKien", component: LinhKien, Layout: HeaderOnly },
+    { path: "/ProductPages/Washer", component: Washer, Layout: HeaderOnly },
+    { path: "/ProductPages/DustCollector", component: DustCollector, Layout: HeaderOnly },
+    { path: "/ProductPages/Moniter", component: Moniter, Layout: HeaderOnly },
+    { path: "/ProductPages/PC", component: PC, Layout: HeaderOnly },
 
     //order pages
     { path: "/OrderPages/Cau_Hoi_Thuong_Gap", component: Cau_Hoi_Thuong_Gap, Layout: HeaderOnly },

@@ -1,6 +1,6 @@
 import Header from "~/components/Layout/components/Header";
 import Footer from "~/components/Layout/components/Footer";
-import Sidebar from "~/components/Layout/components/Sidebar";
+import Sidebar from "~/components/Layout/components/SidebarCart";
 import classNames from 'classnames/bind';
 
 //SCSS import

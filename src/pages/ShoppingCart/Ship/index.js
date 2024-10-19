@@ -2,9 +2,8 @@ import { useState } from "react";
 import classNames from "classnames/bind";
 import style from "./Ship.module.scss";
 
-import Sidebar from "~/components/Layout/components/Sidebar";
+import SidebarCart from "~/components/Layout/components/SidebarCart";
 import ShipItem from "~/components/Layout/components/ShipItem";
-import products from "~/assets/product";
 
 const cx = classNames.bind(style);
 
@@ -41,7 +40,7 @@ function Ship() {
 
     return (
         <div className={cx('wrapper')}>
-            <Sidebar title={'Sản phẩm đang giao đến bạn'} />
+            <SidebarCart title={'Sản phẩm đang giao đến bạn'} />
             <div className={cx('container')}>
                 <div className={cx('temp')}>
                     <div className={cx('inner')}>
