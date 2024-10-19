@@ -5,19 +5,20 @@ import style from "./Cart.module.scss";
 
 import SidebarCart from "~/components/Layout/components/SidebarCart";
 import CartItem from "~/components/Layout/components/CartItem";
+import products from "~/assets/product";
 
 const cx = classNames.bind(style);
 
 function Cart() {
     const [cartItems, setCartItems] = useState([
-        // {
-        //     id: 1,
-        //     img: products.laptop,
-        //     name: 'Laptop',
-        //     description: 'aaaaaaaaaa',
-        //     quantity: 1,
-        //     price: 10000000
-        // }
+        {
+            id: 1,
+            img: products.laptop,
+            name: 'Laptop',
+            description: 'aaaaaaaaaa',
+            quantity: 1,
+            price: 10000000
+        }
     ]);
 
     const handleQuantityChange = (id, newQuantity) => {

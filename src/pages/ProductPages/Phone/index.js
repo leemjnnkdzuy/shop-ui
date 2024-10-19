@@ -1,11 +1,11 @@
 import classNames from "classnames/bind";
 import style from "./Phone.module.scss";
-import phonebanner from "~/assets/phonebanner";
+import phonebanner from "~/assets/brand/phone/phonebanner";
 import BannerProduct from "~/components/Layout/components/BannerProduct";
 import BrandList from "~/components/Layout/components/BrandList";
 
-import phoneicons from "~/assets/phoneicons";
-import SidebarProduct from "~/components/Layout/components/SidebarProduct";
+import phoneicons from "~/assets/brand/phone/phoneicons";
+import PhoneSidebarProduct from "~/components/Layout/components/PhoneSidebarProduct";
 
 const cx = classNames.bind(style);
 
@@ -81,7 +81,7 @@ function Phone() {
             </div>
             <div className={cx("inner")}>
                 <div className={cx("sidebar")}>
-                    <SidebarProduct />
+                    <PhoneSidebarProduct />
                 </div>
                 <div className={cx("content")}>
                     <p>Phone</p>

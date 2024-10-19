@@ -5,12 +5,10 @@ import images from "~/assets/images";
 const cx = classNames.bind(style);
 
 function SaleItem({ img, name, price, discount }) {
-    // Function to format the amount to VND
     const formatToVND = (amount) => {
         return amount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
     };
 
-    // Calculate the discount amount
     const discountAmount = discount - price ;
 
     return (
