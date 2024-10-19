@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shop-ui/static/css/main.0772c8f5.css",
-    "main.js": "/shop-ui/static/js/main.29b3c0df.js",
+    "main.css": "/shop-ui/static/css/main.39fb29a3.css",
+    "main.js": "/shop-ui/static/js/main.6833cd93.js",
     "static/js/453.3dbb07f5.chunk.js": "/shop-ui/static/js/453.3dbb07f5.chunk.js",
     "static/media/bk2.png": "/shop-ui/static/media/bk2.36e428ebdcf0f7643ccc.png",
     "static/media/bk10.png": "/shop-ui/static/media/bk10.c36463e6e099c7bf0b60.png",
@@ -11,7 +11,7 @@
     "static/media/2.png": "/shop-ui/static/media/2.8aec0d7b38e00b26f94c.png",
     "static/media/6.png": "/shop-ui/static/media/6.29a78c878bfb053b20f0.png",
     "static/media/3.png": "/shop-ui/static/media/3.825927e30ed689843ca7.png",
-    "static/media/8.png": "/shop-ui/static/media/8.18aef0259faa183f3fe9.png",
+    "static/media/8.png": "/shop-ui/static/media/8.5f0b0ca3c7ce8f05ad0f.png",
     "static/media/4.png": "/shop-ui/static/media/4.5f7bdfcc4ef03ba18824.png",
     "static/media/bk1.png": "/shop-ui/static/media/bk1.c722b0e82bd9b257f0bb.png",
     "static/media/bk3.png": "/shop-ui/static/media/bk3.31e71aab69521bed6465.png",
@@ -74,12 +74,12 @@
     "static/media/fridge.svg": "/shop-ui/static/media/fridge.fd093ce48582b597ba07c048dbab4d72.svg",
     "static/media/laptop.svg": "/shop-ui/static/media/laptop.9e592a2a95ba7bbf5bc01088d9b856e4.svg",
     "static/media/tablet.svg": "/shop-ui/static/media/tablet.b89f95a6312f04f02328a53012370feb.svg",
-    "main.0772c8f5.css.map": "/shop-ui/static/css/main.0772c8f5.css.map",
-    "main.29b3c0df.js.map": "/shop-ui/static/js/main.29b3c0df.js.map",
+    "main.39fb29a3.css.map": "/shop-ui/static/css/main.39fb29a3.css.map",
+    "main.6833cd93.js.map": "/shop-ui/static/js/main.6833cd93.js.map",
     "453.3dbb07f5.chunk.js.map": "/shop-ui/static/js/453.3dbb07f5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0772c8f5.css",
-    "static/js/main.29b3c0df.js"
+    "static/css/main.39fb29a3.css",
+    "static/js/main.6833cd93.js"
   ]
 }
