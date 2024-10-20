@@ -121,7 +121,7 @@ function Header() {
                     onClickOutside={handleClickOutside}
                     render = {attrs => (
                     <div className={cx('category-result')} tabIndex="-1" {...attrs}>
-                        <CategoryList />
+                        <CategoryList onCategoryClick={() => setCategory(false)}/>
                     </div>
                     )}
                 >
