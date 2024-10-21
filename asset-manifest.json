@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/shop-ui/static/css/main.aea98874.css",
-    "main.js": "/shop-ui/static/js/main.cb8186dc.js",
+    "main.css": "/shop-ui/static/css/main.653fe36c.css",
+    "main.js": "/shop-ui/static/js/main.8b7103b8.js",
     "static/js/453.3dbb07f5.chunk.js": "/shop-ui/static/js/453.3dbb07f5.chunk.js",
     "static/media/bk2.png": "/shop-ui/static/media/bk2.36e428ebdcf0f7643ccc.png",
     "static/media/bk10.png": "/shop-ui/static/media/bk10.c36463e6e099c7bf0b60.png",
     "static/media/2.png": "/shop-ui/static/media/2.8aec0d7b38e00b26f94c.png",
     "static/media/5.png": "/shop-ui/static/media/5.282a09c3130c47c3a5b7.png",
-    "static/media/1.png": "/shop-ui/static/media/1.8fe2dd0bd6848ebdba8e.png",
+    "static/media/1.png": "/shop-ui/static/media/1.45912ac4c8d714e0799a.png",
     "static/media/7.png": "/shop-ui/static/media/7.aed46067834b48a0ed7f.png",
     "static/media/6.png": "/shop-ui/static/media/6.29a78c878bfb053b20f0.png",
     "static/media/3.png": "/shop-ui/static/media/3.762c090230f69f89733a.png",
@@ -53,6 +53,7 @@
     "static/media/huawei.png": "/shop-ui/static/media/huawei.13267a64131bbe05d652.png",
     "static/media/tulanh.png": "/shop-ui/static/media/tulanh.a8c5c9717221adfe2e24.png",
     "static/media/Honor.png": "/shop-ui/static/media/Honor.2f17f5b96d708ab79c44.png",
+    "static/media/gear.png": "/shop-ui/static/media/gear.58781bc4e06e4c736135.png",
     "static/media/psu.png": "/shop-ui/static/media/psu.be788c25007e99655791.png",
     "static/media/Oppo.png": "/shop-ui/static/media/Oppo.6c1081cb6adf6cb68fc2.png",
     "static/media/main.png": "/shop-ui/static/media/main.76dce409331861088ddf.png",
@@ -67,9 +68,14 @@
     "static/media/apple.png": "/shop-ui/static/media/apple.d51a229422912e50a0bd.png",
     "static/media/Benco.png": "/shop-ui/static/media/Benco.31a605c1ff7637d29e38.png",
     "static/media/Vivo.png": "/shop-ui/static/media/Vivo.8fbfed6edd5f6fa23c62.png",
+    "static/media/phukiendienthoai.png": "/shop-ui/static/media/phukiendienthoai.5f4549f7b52326726565.png",
+    "static/media/amthanhvahinhanh.png": "/shop-ui/static/media/amthanhvahinhanh.270d2a2282242369e658.png",
     "static/media/ZTE.png": "/shop-ui/static/media/ZTE.d6870172e5ecb8155597.png",
+    "static/media/luutru.png": "/shop-ui/static/media/luutru.b384cf96de31afe88d48.png",
     "static/media/cpu.png": "/shop-ui/static/media/cpu.911f3c5f2756a80238c8.png",
     "static/media/heatsink.png": "/shop-ui/static/media/heatsink.7d754a7410d5417dc924.png",
+    "static/media/phukienlaptop.png": "/shop-ui/static/media/phukienlaptop.102212a1fe0c981cdc47.png",
+    "static/media/thietbimang.png": "/shop-ui/static/media/thietbimang.f3aa7db9e88a3742123a.png",
     "static/media/garmin.png": "/shop-ui/static/media/garmin.e4b4a2918d48eab7c035.png",
     "static/media/casper.png": "/shop-ui/static/media/casper.b2b01f3c4b2331fd1fd8.png",
     "static/media/case.png": "/shop-ui/static/media/case.7efc0b57a1be3582e63b.png",
@@ -93,12 +99,12 @@
     "static/media/fridge.svg": "/shop-ui/static/media/fridge.fd093ce48582b597ba07c048dbab4d72.svg",
     "static/media/laptop.svg": "/shop-ui/static/media/laptop.9e592a2a95ba7bbf5bc01088d9b856e4.svg",
     "static/media/tablet.svg": "/shop-ui/static/media/tablet.b89f95a6312f04f02328a53012370feb.svg",
-    "main.aea98874.css.map": "/shop-ui/static/css/main.aea98874.css.map",
-    "main.cb8186dc.js.map": "/shop-ui/static/js/main.cb8186dc.js.map",
+    "main.653fe36c.css.map": "/shop-ui/static/css/main.653fe36c.css.map",
+    "main.8b7103b8.js.map": "/shop-ui/static/js/main.8b7103b8.js.map",
     "453.3dbb07f5.chunk.js.map": "/shop-ui/static/js/453.3dbb07f5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aea98874.css",
-    "static/js/main.cb8186dc.js"
+    "static/css/main.653fe36c.css",
+    "static/js/main.8b7103b8.js"
   ]
 }
