@@ -143,6 +143,17 @@ const TabletSidebarProduct = ({ onFilter }) => {
                         <div className={cx("ram-options-content")}>
                             <input
                                 type="checkbox"
+                                value="10GB"
+                                checked={ramOptions.includes("10GB")}
+                                onChange={handleRamChange}
+                            />
+                            <div className={cx("ram-title-options")}>
+                                10GB
+                            </div>
+                        </div>
+                        <div className={cx("ram-options-content")}>
+                            <input
+                                type="checkbox"
                                 value="8GB"
                                 checked={ramOptions.includes("8GB")}
                                 onChange={handleRamChange}
@@ -171,30 +182,30 @@ const TabletSidebarProduct = ({ onFilter }) => {
                         <div className={cx("moniter-options-content")}>
                             <input
                                 type="checkbox"
-                                value="7 inch - 9 inch"
-                                checked={screenSizeOptions.includes("7 inch - 9 inch")}
+                                value="1 inch - 8 inch"
+                                checked={screenSizeOptions.includes("1 inch - 8 inch")}
                                 onChange={handleScreenSizeChange}
                             />
                             <div className={cx("moniter-title-options")}>
-                                7 inch - 9 inch
+                                Dưới 8 inch
                             </div>
                         </div>
                         <div className={cx("moniter-options-content")}>
                             <input
                                 type="checkbox"
-                                value="10 inch - 11 inch"
-                                checked={screenSizeOptions.includes("10 inch - 11 inch")}
+                                value="8.1 inch - 10.5 inch"
+                                checked={screenSizeOptions.includes("8.1 inch - 10.5 inch")}
                                 onChange={handleScreenSizeChange}
                             />
                             <div className={cx("moniter-title-options")}>
-                                10 inch - 11 inch
+                                8 inch - 10.5 inch
                             </div>
                         </div>
                         <div className={cx("moniter-options-content")}>
                             <input
                                 type="checkbox"
-                                value="12 inch - 20 inch"
-                                checked={screenSizeOptions.includes("12 inch - 20 inch")}
+                                value="10.6 inch - 20 inch"
+                                checked={screenSizeOptions.includes("10.6 inch - 20 inch")}
                                 onChange={handleScreenSizeChange}
                             />
                             <div className={cx("moniter-title-options")}>
