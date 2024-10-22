@@ -9,7 +9,7 @@ function SaleItem({ img, name, price, discount }) {
         return amount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
     };
 
-    const discountAmount = discount - price ;
+    const discountAmount = price && discount ? price - discount : 0;
 
     return (
         <div className={cx('wrapper')}>
@@ -20,11 +20,11 @@ function SaleItem({ img, name, price, discount }) {
                 {name ? name : "Sản Phẩm"}
             </h4>
             <div className={cx('price-item')}>
-                <span className={cx('price')}>
-                    {price ? formatToVND(price) : "Giá"}
-                </span>
                 <span className={cx('discount')}>
-                    {discount ? formatToVND(discount) : "Giảm Từ"}
+                    {discount ? formatToVND(discount) : "Giá" }
+                </span>
+                <span className={cx('price')}>
+                    {price ? formatToVND(price) : "Giảm Từ"}
                 </span>
             </div>
             <span className={cx('sale')}>

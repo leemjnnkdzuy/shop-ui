@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
-import style from './PhoneSidebarProduct.module.scss';
+import style from './FridgeSidebarProduct.module.scss';
 
 const cx = classNames.bind(style);
 
@@ -23,29 +23,22 @@ const priceRanges = [
     { value: "1000000000", label: "Trên 30,000,000 VNĐ" },
 ];
 
-const ramOptionsList = [
-    { value: "3GB", label: "3GB" },
-    { value: "4GB", label: "4GB" },
-    { value: "6GB", label: "6GB" },
-    { value: "8GB", label: "8GB" },
-    { value: "16GB", label: "16GB" },
-];
-
-const screenSizeOptionsList = [
-    { value: "3.5 inch - 5.5 inch", label: "Nhỏ (3.5 inch - 5.5 inch)" },
-    { value: "5.6 inch - 6.5 inch", label: "Trung Bình (5.6 inch - 6.5 inch)" },
-    { value: "6.6 inch - 6.8 inch", label: "Lớn (6.6 inch - 6.8 inch)" },
-];
-
-const PhoneSidebarProduct = ({ onFilter }) => {
+const FridgeSidebarProduct = ({ onFilter }) => {
     const [minPrice, setMinPrice] = useState('');
     const [maxPrice, setMaxPrice] = useState('');
-    const [ramOptions, setRamOptions] = useState([]);
-    const [screenSizeOptions, setScreenSizeOptions] = useState([]);
+    const [typeOptions, setTypeOptions] = useState([]);
+    const [capacityOptions, setCapacityOptions] = useState([]);
 
-    const handleChange = (event, setStateFunc) => {
+    const handleTypeChange = (event) => {
         const value = event.target.value;
-        setStateFunc((prev) =>
+        setTypeOptions((prev) => 
+            prev.includes(value) ? prev.filter((item) => item !== value) : [...prev, value]
+        );
+    };
+
+    const handleCapacityChange = (event) => {
+        const value = event.target.value;
+        setCapacityOptions((prev) => 
             prev.includes(value) ? prev.filter((item) => item !== value) : [...prev, value]
         );
     };
@@ -56,8 +49,8 @@ const PhoneSidebarProduct = ({ onFilter }) => {
                 min: minPrice ? parseFloat(minPrice) : undefined,
                 max: maxPrice ? parseFloat(maxPrice) : undefined,
             },
-            ram: ramOptions,
-            screenSize: screenSizeOptions,
+            type: typeOptions,
+            capacity: capacityOptions,
         });
     };
 
@@ -87,7 +80,7 @@ const PhoneSidebarProduct = ({ onFilter }) => {
                         <div className={cx("price-options-content")}>
                             <div className={cx("title-options")}>Từ:</div>
                             <select value={minPrice} onChange={(e) => setMinPrice(e.target.value)}>
-                                {priceRanges.map((range) => (
+                                {priceRanges.map(range => (
                                     <option key={range.value} value={range.value}>
                                         {range.label}
                                     </option>
@@ -95,7 +88,7 @@ const PhoneSidebarProduct = ({ onFilter }) => {
                             </select>
                             <div className={cx("title-options")}>Đến:</div>
                             <select value={maxPrice} onChange={(e) => setMaxPrice(e.target.value)}>
-                                {priceRanges.map((range) => (
+                                {priceRanges.map(range => (
                                     <option key={range.value} value={range.value}>
                                         {range.label}
                                     </option>
@@ -104,42 +97,54 @@ const PhoneSidebarProduct = ({ onFilter }) => {
                         </div>
                     </div>
 
-                    <div className={cx("content-title")}>Dung lượng RAM:</div>
-                    <div className={cx("ram-options")}>
-                        {ramOptionsList.map((option) => (
-                            <div key={option.value} className={cx("ram-options-content")}>
-                                <input
-                                    type="checkbox"
-                                    value={option.value}
-                                    checked={ramOptions.includes(option.value)}
-                                    onChange={(e) => handleChange(e, setRamOptions)}
-                                />
-                                <div className={cx("ram-title-options")}>{option.label}</div>
-                            </div>
-                        ))}
+                    <div className={cx("content-title")}>Kiểu tủ lạnh:</div>
+                    <div className={cx("type-options")}>
+                        <div className={cx("type-options-content")}>
+                            <input
+                                type="checkbox"
+                                value="Mini"
+                                checked={typeOptions.includes("Mini")}
+                                onChange={handleTypeChange}
+                            />
+                            <div className={cx("type-title-options")}>Mini</div>
+                        </div>
+                        <div className={cx("type-options-content")}>
+                            <input
+                                type="checkbox"
+                                value="Side by side"
+                                checked={typeOptions.includes("Side by side")}
+                                onChange={handleTypeChange}
+                            />
+                            <div className={cx("type-title-options")}>Side by side</div>
+                        </div>
                     </div>
 
-                    <div className={cx("content-title")}>Kích cỡ màn hình:</div>
-                    <div className={cx("moniter-options")}>
-                        {screenSizeOptionsList.map((option) => (
-                            <div key={option.value} className={cx("moniter-options-content")}>
-                                <input
-                                    type="checkbox"
-                                    value={option.value}
-                                    checked={screenSizeOptions.includes(option.value)}
-                                    onChange={(e) => handleChange(e, setScreenSizeOptions)}
-                                />
-                                <div className={cx("moniter-title-options")}>{option.label}</div>
-                            </div>
-                        ))}
+                    <div className={cx("content-title")}>Dung tích:</div>
+                    <div className={cx("capacity-options")}>
+                        <div className={cx("capacity-options-content")}>
+                            <input
+                                type="checkbox"
+                                value="Dưới 400L"
+                                checked={capacityOptions.includes("Dưới 400L")}
+                                onChange={handleCapacityChange}
+                            />
+                            <div className={cx("capacity-title-options")}>Dưới 400L</div>
+                        </div>
+                        <div className={cx("capacity-options-content")}>
+                            <input
+                                type="checkbox"
+                                value="Trên 400L"
+                                checked={capacityOptions.includes("Trên 400L")}
+                                onChange={handleCapacityChange}
+                            />
+                            <div className={cx("capacity-title-options")}>Trên 400L</div>
+                        </div>
                     </div>
                 </div>
-                <button className={cx("button-apply")} onClick={handleFilter}>
-                    Tìm Kiếm
-                </button>
+                <button className={cx("button-apply")} onClick={handleFilter}>Tìm Kiếm</button>
             </div>
         </div>
     );
 };
 
-export default PhoneSidebarProduct;
+export default FridgeSidebarProduct;

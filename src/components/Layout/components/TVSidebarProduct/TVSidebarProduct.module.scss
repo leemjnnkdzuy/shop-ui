@@ -85,7 +85,7 @@
     box-shadow: 0 0 5px #0f49dd;
 }
 
-.ram-options {
+.tech-options {
     display: flex;
     width: 100%;
     height: auto;
@@ -94,7 +94,7 @@
     flex-direction: column;
 }
 
-.ram-options-content {
+.tech-options-content {
     display: flex;
     width: 100%;
     height: auto;
@@ -102,12 +102,12 @@
     margin-bottom: 10px;
 }
 
-.ram-options-content input{
+.tech-options-content input{
     background-color: #fff; 
 
 }
 
-.ram-title-options {
+.tech-title-options {
     font-size: 16px;
     font-weight: 400;
     margin-left: 10px;

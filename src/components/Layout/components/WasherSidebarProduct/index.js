@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
-import style from './WatchSidebarProduct.module.scss';
+import style from './WasherSidebarProduct.module.scss';
 
 const cx = classNames.bind(style);
 
@@ -23,22 +23,22 @@ const priceRanges = [
     { value: "1000000000", label: "Trên 30,000,000 VNĐ" },
 ];
 
-const WatchSidebarProduct = ({ onFilter }) => {
+const WasherSidebarProduct = ({ onFilter }) => {
     const [minPrice, setMinPrice] = useState('');
     const [maxPrice, setMaxPrice] = useState('');
-    const [strapOptions, setStrapOptions] = useState([]);
-    const [screenTypeOptions, setScreenTypeOptions] = useState([]);
+    const [typeOptions, setTypeOptions] = useState([]);
+    const [weightOptions, setWeightOptions] = useState([]);
 
-    const handleStrapChange = (event) => {
+    const handleTypeChange = (event) => {
         const value = event.target.value;
-        setStrapOptions((prev) => 
+        setTypeOptions((prev) => 
             prev.includes(value) ? prev.filter((item) => item !== value) : [...prev, value]
         );
     };
 
-    const handleScreenTypeChange = (event) => {
+    const handleWeightChange = (event) => {
         const value = event.target.value;
-        setScreenTypeOptions((prev) => 
+        setWeightOptions((prev) => 
             prev.includes(value) ? prev.filter((item) => item !== value) : [...prev, value]
         );
     };
@@ -49,13 +49,13 @@ const WatchSidebarProduct = ({ onFilter }) => {
                 min: minPrice ? parseFloat(minPrice) : undefined,
                 max: maxPrice ? parseFloat(maxPrice) : undefined,
             },
-            strap: strapOptions,
-            screenType: screenTypeOptions,
+            type: typeOptions,
+            weight: weightOptions,
         });
     };
 
     return (
-        <div className="wrapper">
+        <div className={cx("wrapper")}>
             <div className={cx("inner")}>
                 <div className={cx("header")}>
                     <div className={cx("header-icon")}>
@@ -73,16 +73,12 @@ const WatchSidebarProduct = ({ onFilter }) => {
                         Bộ lọc sản phẩm
                     </div>
                 </div>
-            
+
                 <div className={cx("content")}>
-                    <div className={cx("content-title")}>
-                        Mức giá:
-                    </div>
+                    <div className={cx("content-title")}>Mức giá:</div>
                     <div className={cx("price-options")}>
                         <div className={cx("price-options-content")}>
-                            <div className={cx("title-options")}>
-                                Từ:
-                            </div>
+                            <div className={cx("title-options")}>Từ:</div>
                             <select value={minPrice} onChange={(e) => setMinPrice(e.target.value)}>
                                 {priceRanges.map(range => (
                                     <option key={range.value} value={range.value}>
@@ -90,9 +86,7 @@ const WatchSidebarProduct = ({ onFilter }) => {
                                     </option>
                                 ))}
                             </select>
-                            <div className={cx("title-options")}>
-                                Đến:
-                            </div>
+                            <div className={cx("title-options")}>Đến:</div>
                             <select value={maxPrice} onChange={(e) => setMaxPrice(e.target.value)}>
                                 {priceRanges.map(range => (
                                     <option key={range.value} value={range.value}>
@@ -103,70 +97,56 @@ const WatchSidebarProduct = ({ onFilter }) => {
                         </div>
                     </div>
 
-                    <div className={cx("content-title")}>
-                        Loại dây:
-                    </div>
-                    <div className={cx("ram-options")}>
-                        <div className={cx("ram-options-content")}>
+                    <div className={cx("content-title")}>Loại máy giặt:</div>
+                    <div className={cx("type-options")}>
+                        <div className={cx("type-options-content")}>
                             <input
                                 type="checkbox"
-                                value="Metal"
-                                checked={strapOptions.includes("Metal")}
-                                onChange={handleStrapChange}
+                                value="Cửa trên"
+                                checked={typeOptions.includes("Cửa trên")}
+                                onChange={handleTypeChange}
                             />
-                            <div className={cx("ram-title-options")}>
-                                Kinh Loại
-                            </div>
+                            <div className={cx("type-title-options")}>Cửa trên</div>
                         </div>
-                        <div className={cx("ram-options-content")}>
+                        <div className={cx("type-options-content")}>
                             <input
                                 type="checkbox"
-                                value="Silicon"
-                                checked={strapOptions.includes("Silicon")}
-                                onChange={handleStrapChange}
+                                value="Cửa ngang"
+                                checked={typeOptions.includes("Cửa ngang")}
+                                onChange={handleTypeChange}
                             />
-                            <div className={cx("ram-title-options")}>
-                                Silicon
-                            </div>
+                            <div className={cx("type-title-options")}>Cửa ngang</div>
                         </div>
                     </div>
 
-                    <div className={cx("content-title")}>
-                        Loại mặt màn hình:
-                    </div>
-                    <div className={cx("moniter-options")}>
-                        <div className={cx("moniter-options-content")}>
+                    <div className={cx("content-title")}>Khối lượng giặt:</div>
+                    <div className={cx("weight-options")}>
+                        <div className={cx("weight-options-content")}>
                             <input
                                 type="checkbox"
-                                value="Round"
-                                checked={screenTypeOptions.includes("Round")} 
-                                onChange={handleScreenTypeChange}
+                                value="Dưới 7kg"
+                                checked={weightOptions.includes("Dưới 7kg")}
+                                onChange={handleWeightChange}
                             />
-                            <div className={cx("moniter-title-options")}>
-                                Tròn
-                            </div>
+                            <div className={cx("weight-title-options")}>Dưới 7kg</div>
                         </div>
-                        <div className={cx("moniter-options-content")}>
+                        <div className={cx("weight-options-content")}>
                             <input
                                 type="checkbox"
-                                value="Square"
-                                checked={screenTypeOptions.includes("Square")} 
-                                onChange={handleScreenTypeChange}
+                                value="7kg - 10kg"
+                                checked={weightOptions.includes("7kg - 10kg")}
+                                onChange={handleWeightChange}
                             />
-                            <div className={cx("moniter-title-options")}>
-                                Vuông
-                            </div>
+                            <div className={cx("weight-title-options")}>7kg - 10kg</div>
                         </div>
-                        <div className={cx("moniter-options-content")}>
+                        <div className={cx("weight-options-content")}>
                             <input
                                 type="checkbox"
-                                value="Rectangle"
-                                checked={screenTypeOptions.includes("Rectangle")}  
-                                onChange={handleScreenTypeChange}
+                                value="Trên 10kg"
+                                checked={weightOptions.includes("Trên 10kg")}
+                                onChange={handleWeightChange}
                             />
-                            <div className={cx("moniter-title-options")}>
-                                Chữ nhật    
-                            </div>
+                            <div className={cx("weight-title-options")}>Trên 10kg</div>
                         </div>
                     </div>
                 </div>
@@ -176,4 +156,4 @@ const WatchSidebarProduct = ({ onFilter }) => {
     );
 };
 
-export default WatchSidebarProduct;
+export default WasherSidebarProduct;

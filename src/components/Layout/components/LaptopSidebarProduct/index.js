@@ -23,22 +23,28 @@ const priceRanges = [
     { value: "1000000000", label: "Trên 30,000,000 VNĐ" },
 ];
 
+const ramOptionsList = [
+    { value: "8GB", label: "8GB" },
+    { value: "16GB", label: "16GB" },
+    { value: "32GB", label: "32GB" },
+    { value: "64GB", label: "64GB" },
+];
+
+const screenSizeOptionsList = [
+    { value: "0 inch - 13 inch", label: "Nhỏ (Dưới 13 inch)" },
+    { value: "13.1 inch - 15.6 inch", label: "Trung Bình (13 inch - 15.6 inch)" },
+    { value: "15.6 inch - 20 inch", label: "Lớn (Trên 15.6 inch)" },
+];
+
 const LaptopSidebarProduct = ({ onFilter }) => {
     const [minPrice, setMinPrice] = useState('');
     const [maxPrice, setMaxPrice] = useState('');
     const [ramOptions, setRamOptions] = useState([]);
     const [screenSizeOptions, setScreenSizeOptions] = useState([]);
 
-    const handleRamChange = (event) => {
+    const handleChange = (event, setStateFunc) => {
         const value = event.target.value;
-        setRamOptions((prev) => 
-            prev.includes(value) ? prev.filter((item) => item !== value) : [...prev, value]
-        );
-    };
-
-    const handleScreenSizeChange = (event) => {
-        const value = event.target.value;
-        setScreenSizeOptions((prev) => 
+        setStateFunc((prev) =>
             prev.includes(value) ? prev.filter((item) => item !== value) : [...prev, value]
         );
     };
@@ -55,7 +61,7 @@ const LaptopSidebarProduct = ({ onFilter }) => {
     };
 
     return (
-        <div className="wrapper">
+        <div className={cx("wrapper")}>
             <div className={cx("inner")}>
                 <div className={cx("header")}>
                     <div className={cx("header-icon")}>
@@ -73,28 +79,22 @@ const LaptopSidebarProduct = ({ onFilter }) => {
                         Bộ lọc sản phẩm
                     </div>
                 </div>
-            
+
                 <div className={cx("content")}>
-                    <div className={cx("content-title")}>
-                        Mức giá:
-                    </div>
+                    <div className={cx("content-title")}>Mức giá:</div>
                     <div className={cx("price-options")}>
                         <div className={cx("price-options-content")}>
-                            <div className={cx("title-options")}>
-                                Từ:
-                            </div>
+                            <div className={cx("title-options")}>Từ:</div>
                             <select value={minPrice} onChange={(e) => setMinPrice(e.target.value)}>
-                                {priceRanges.map(range => (
+                                {priceRanges.map((range) => (
                                     <option key={range.value} value={range.value}>
                                         {range.label}
                                     </option>
                                 ))}
                             </select>
-                            <div className={cx("title-options")}>
-                                Đến:
-                            </div>
+                            <div className={cx("title-options")}>Đến:</div>
                             <select value={maxPrice} onChange={(e) => setMaxPrice(e.target.value)}>
-                                {priceRanges.map(range => (
+                                {priceRanges.map((range) => (
                                     <option key={range.value} value={range.value}>
                                         {range.label}
                                     </option>
@@ -103,107 +103,39 @@ const LaptopSidebarProduct = ({ onFilter }) => {
                         </div>
                     </div>
 
-                    <div className={cx("content-title")}>
-                        Dung lượng RAM:
-                    </div>
+                    <div className={cx("content-title")}>Dung lượng RAM:</div>
                     <div className={cx("ram-options")}>
-                        <div className={cx("ram-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="4GB"
-                                checked={ramOptions.includes("4GB")}
-                                onChange={handleRamChange}
-                            />
-                            <div className={cx("ram-title-options")}>
-                                4GB
+                        {ramOptionsList.map((option) => (
+                            <div key={option.value} className={cx("ram-options-content")}>
+                                <input
+                                    type="checkbox"
+                                    value={option.value}
+                                    checked={ramOptions.includes(option.value)}
+                                    onChange={(e) => handleChange(e, setRamOptions)}
+                                />
+                                <div className={cx("ram-title-options")}>{option.label}</div>
                             </div>
-                        </div>
-                        <div className={cx("ram-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="8GB"
-                                checked={ramOptions.includes("8GB")}
-                                onChange={handleRamChange}
-                            />
-                            <div className={cx("ram-title-options")}>
-                                8GB
-                            </div>
-                        </div>
-                        <div className={cx("ram-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="16GB"
-                                checked={ramOptions.includes("16GB")}
-                                onChange={handleRamChange}
-                            />
-                            <div className={cx("ram-title-options")}>
-                                16GB
-                            </div>
-                        </div>
-                        <div className={cx("ram-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="32GB"
-                                checked={ramOptions.includes("32GB")}
-                                onChange={handleRamChange}
-                            />
-                            <div className={cx("ram-title-options")}>
-                                32GB
-                            </div>
-                        </div>
-                        <div className={cx("ram-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="64GB"
-                                checked={ramOptions.includes("64GB")}
-                                onChange={handleRamChange}
-                            />
-                            <div className={cx("ram-title-options")}>
-                                64GB
-                            </div>
-                        </div>
+                        ))}
                     </div>
 
-                    <div className={cx("content-title")}>
-                        Kích cỡ màn hình:
-                    </div>
+                    <div className={cx("content-title")}>Kích cỡ màn hình:</div>
                     <div className={cx("moniter-options")}>
-                        <div className={cx("moniter-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="3.5 inch - 5.5 inch"
-                                checked={screenSizeOptions.includes("3.5 inch - 5.5 inch")}
-                                onChange={handleScreenSizeChange}
-                            />
-                            <div className={cx("moniter-title-options")}>
-                                Nhỏ (3.5 inch - 5.5 inch)
+                        {screenSizeOptionsList.map((option) => (
+                            <div key={option.value} className={cx("moniter-options-content")}>
+                                <input
+                                    type="checkbox"
+                                    value={option.value}
+                                    checked={screenSizeOptions.includes(option.value)}
+                                    onChange={(e) => handleChange(e, setScreenSizeOptions)}
+                                />
+                                <div className={cx("moniter-title-options")}>{option.label}</div>
                             </div>
-                        </div>
-                        <div className={cx("moniter-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="5.6 inch - 6.5 inch"
-                                checked={screenSizeOptions.includes("5.6 inch - 6.5 inch")}
-                                onChange={handleScreenSizeChange}
-                            />
-                            <div className={cx("moniter-title-options")}>
-                                Trung Bình (5.6 inch - 6.5 inch)
-                            </div>
-                        </div>
-                        <div className={cx("moniter-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="6.6 inch - 6.8 inch"
-                                checked={screenSizeOptions.includes("6.6 inch - 6.8 inch")}
-                                onChange={handleScreenSizeChange}
-                            />
-                            <div className={cx("moniter-title-options")}>
-                                Lớn (6.6 inch - 6.8 inch)    
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
-                <button className={cx("button-apply")} onClick={handleFilter}>Tìm Kiếm</button>
+                <button className={cx("button-apply")} onClick={handleFilter}>
+                    Tìm Kiếm
+                </button>
             </div>
         </div>
     );

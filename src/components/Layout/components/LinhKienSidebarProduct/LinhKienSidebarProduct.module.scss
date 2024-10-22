@@ -85,64 +85,6 @@
     box-shadow: 0 0 5px #0f49dd;
 }
 
-.ram-options {
-    display: flex;
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    flex-direction: column;
-}
-
-.ram-options-content {
-    display: flex;
-    width: 100%;
-    height: auto;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.ram-options-content input{
-    background-color: #fff; 
-
-}
-
-.ram-title-options {
-    font-size: 16px;
-    font-weight: 400;
-    margin-left: 10px;
-    align-items: center;
-}
-
-.moniter-options {
-    display: flex;
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    flex-direction: column;
-}
-
-.moniter-options-content {
-    display: flex;
-    width: 100%;
-    height: auto;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.moniter-options-content input{
-    background-color: #fff; 
-
-}
-
-.moniter-title-options {
-    font-size: 16px;
-    font-weight: 400;
-    margin-left: 10px;
-    align-items: center;
-}
-
 .button-apply {
     background-color: #f5f5f5;
     box-shadow: 0 0 10px 0 rgb(80, 80, 80);

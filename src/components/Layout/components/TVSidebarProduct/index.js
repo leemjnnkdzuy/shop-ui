@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
-import style from './PhoneSidebarProduct.module.scss';
+import style from './TVSidebarProduct.module.scss';
 
 const cx = classNames.bind(style);
 
@@ -23,29 +23,39 @@ const priceRanges = [
     { value: "1000000000", label: "Trên 30,000,000 VNĐ" },
 ];
 
-const ramOptionsList = [
-    { value: "3GB", label: "3GB" },
-    { value: "4GB", label: "4GB" },
-    { value: "6GB", label: "6GB" },
-    { value: "8GB", label: "8GB" },
-    { value: "16GB", label: "16GB" },
+const screenTechnologies = [
+    { value: "OLED", label: "OLED" },
+    { value: "QLED", label: "QLED" },
+    { value: "LED", label: "LED" },
+    { value: "Plasma", label: "Plasma" },
 ];
 
-const screenSizeOptionsList = [
-    { value: "3.5 inch - 5.5 inch", label: "Nhỏ (3.5 inch - 5.5 inch)" },
-    { value: "5.6 inch - 6.5 inch", label: "Trung Bình (5.6 inch - 6.5 inch)" },
-    { value: "6.6 inch - 6.8 inch", label: "Lớn (6.6 inch - 6.8 inch)" },
+const screenSizes = [
+    { value: "32 inch", label: "32 inch" },
+    { value: "43 inch", label: "43 inch" },
+    { value: "50 inch", label: "50 inch" },
+    { value: "55 inch", label: "55 inch" },
+    { value: "65 inch", label: "65 inch" },
+    { value: "75 inch", label: "75 inch" },
+    { value: "85 inch", label: "85 inch" },
 ];
 
-const PhoneSidebarProduct = ({ onFilter }) => {
+const TVSidebarProduct = ({ onFilter }) => {
     const [minPrice, setMinPrice] = useState('');
     const [maxPrice, setMaxPrice] = useState('');
-    const [ramOptions, setRamOptions] = useState([]);
+    const [screenTechOptions, setScreenTechOptions] = useState([]);
     const [screenSizeOptions, setScreenSizeOptions] = useState([]);
 
-    const handleChange = (event, setStateFunc) => {
+    const handleScreenTechChange = (event) => {
         const value = event.target.value;
-        setStateFunc((prev) =>
+        setScreenTechOptions((prev) => 
+            prev.includes(value) ? prev.filter((item) => item !== value) : [...prev, value]
+        );
+    };
+
+    const handleScreenSizeChange = (event) => {
+        const value = event.target.value;
+        setScreenSizeOptions((prev) => 
             prev.includes(value) ? prev.filter((item) => item !== value) : [...prev, value]
         );
     };
@@ -56,13 +66,13 @@ const PhoneSidebarProduct = ({ onFilter }) => {
                 min: minPrice ? parseFloat(minPrice) : undefined,
                 max: maxPrice ? parseFloat(maxPrice) : undefined,
             },
-            ram: ramOptions,
+            screenTechnology: screenTechOptions,
             screenSize: screenSizeOptions,
         });
     };
 
     return (
-        <div className={cx("wrapper")}>
+        <div className="wrapper">
             <div className={cx("inner")}>
                 <div className={cx("header")}>
                     <div className={cx("header-icon")}>
@@ -80,22 +90,28 @@ const PhoneSidebarProduct = ({ onFilter }) => {
                         Bộ lọc sản phẩm
                     </div>
                 </div>
-
+            
                 <div className={cx("content")}>
-                    <div className={cx("content-title")}>Mức giá:</div>
+                    <div className={cx("content-title")}>
+                        Mức giá:
+                    </div>
                     <div className={cx("price-options")}>
                         <div className={cx("price-options-content")}>
-                            <div className={cx("title-options")}>Từ:</div>
+                            <div className={cx("title-options")}>
+                                Từ:
+                            </div>
                             <select value={minPrice} onChange={(e) => setMinPrice(e.target.value)}>
-                                {priceRanges.map((range) => (
+                                {priceRanges.map(range => (
                                     <option key={range.value} value={range.value}>
                                         {range.label}
                                     </option>
                                 ))}
                             </select>
-                            <div className={cx("title-options")}>Đến:</div>
+                            <div className={cx("title-options")}>
+                                Đến:
+                            </div>
                             <select value={maxPrice} onChange={(e) => setMaxPrice(e.target.value)}>
-                                {priceRanges.map((range) => (
+                                {priceRanges.map(range => (
                                     <option key={range.value} value={range.value}>
                                         {range.label}
                                     </option>
@@ -104,42 +120,48 @@ const PhoneSidebarProduct = ({ onFilter }) => {
                         </div>
                     </div>
 
-                    <div className={cx("content-title")}>Dung lượng RAM:</div>
-                    <div className={cx("ram-options")}>
-                        {ramOptionsList.map((option) => (
-                            <div key={option.value} className={cx("ram-options-content")}>
+                    <div className={cx("content-title")}>
+                        Công nghệ màn hình:
+                    </div>
+                    <div className={cx("tech-options")}>
+                        {screenTechnologies.map(tech => (
+                            <div key={tech.value} className={cx("tech-options-content")}>
                                 <input
                                     type="checkbox"
-                                    value={option.value}
-                                    checked={ramOptions.includes(option.value)}
-                                    onChange={(e) => handleChange(e, setRamOptions)}
+                                    value={tech.value}
+                                    checked={screenTechOptions.includes(tech.value)}
+                                    onChange={handleScreenTechChange}
                                 />
-                                <div className={cx("ram-title-options")}>{option.label}</div>
+                                <div className={cx("tech-title-options")}>
+                                    {tech.label}
+                                </div>
                             </div>
                         ))}
                     </div>
 
-                    <div className={cx("content-title")}>Kích cỡ màn hình:</div>
+                    <div className={cx("content-title")}>
+                        Kích thước màn hình:
+                    </div>
                     <div className={cx("moniter-options")}>
-                        {screenSizeOptionsList.map((option) => (
-                            <div key={option.value} className={cx("moniter-options-content")}>
+                        {screenSizes.map(size => (
+                            <div key={size.value} className={cx("moniter-options-content")}>
                                 <input
                                     type="checkbox"
-                                    value={option.value}
-                                    checked={screenSizeOptions.includes(option.value)}
-                                    onChange={(e) => handleChange(e, setScreenSizeOptions)}
+                                    value={size.value}
+                                    checked={screenSizeOptions.includes(size.value)}
+                                    onChange={handleScreenSizeChange}
                                 />
-                                <div className={cx("moniter-title-options")}>{option.label}</div>
+                                <div className={cx("moniter-title-options")}>
+                                    {size.label}
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
-                <button className={cx("button-apply")} onClick={handleFilter}>
-                    Tìm Kiếm
-                </button>
+                <button className={cx("button-apply")} onClick={handleFilter}>Tìm Kiếm</button>
             </div>
         </div>
     );
 };
 
-export default PhoneSidebarProduct;
+export default TVSidebarProduct;

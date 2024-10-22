@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
-import style from './/TabletSidebarProduct.module.scss';
+import style from './TabletSidebarProduct.module.scss';
 
 const cx = classNames.bind(style);
 
@@ -21,6 +21,20 @@ const priceRanges = [
     { value: "25000000", label: "25,000,000 VNĐ" },
     { value: "30000000", label: "30,000,000 VNĐ" },
     { value: "1000000000", label: "Trên 30,000,000 VNĐ" },
+];
+
+const ramOptionsList = [
+    "3GB",
+    "4GB",
+    "6GB",
+    "8GB",
+    "10GB",
+    "16GB"
+];
+const screenSizeOptionsList = [
+    "1 inch - 8 inch",
+    "8.1 inch - 10.5 inch",
+    "10.6 inch - 20 inch"
 ];
 
 const TabletSidebarProduct = ({ onFilter }) => {
@@ -55,7 +69,7 @@ const TabletSidebarProduct = ({ onFilter }) => {
     };
 
     return (
-        <div className="wrapper">
+        <div className={cx("wrapper")}>
             <div className={cx("inner")}>
                 <div className={cx("header")}>
                     <div className={cx("header-icon")}>
@@ -73,28 +87,22 @@ const TabletSidebarProduct = ({ onFilter }) => {
                         Bộ lọc sản phẩm
                     </div>
                 </div>
-            
+
                 <div className={cx("content")}>
-                    <div className={cx("content-title")}>
-                        Mức giá:
-                    </div>
+                    <div className={cx("content-title")}>Mức giá:</div>
                     <div className={cx("price-options")}>
                         <div className={cx("price-options-content")}>
-                            <div className={cx("title-options")}>
-                                Từ:
-                            </div>
+                            <div className={cx("title-options")}>Từ:</div>
                             <select value={minPrice} onChange={(e) => setMinPrice(e.target.value)}>
-                                {priceRanges.map(range => (
+                                {priceRanges.map((range) => (
                                     <option key={range.value} value={range.value}>
                                         {range.label}
                                     </option>
                                 ))}
                             </select>
-                            <div className={cx("title-options")}>
-                                Đến:
-                            </div>
+                            <div className={cx("title-options")}>Đến:</div>
                             <select value={maxPrice} onChange={(e) => setMaxPrice(e.target.value)}>
-                                {priceRanges.map(range => (
+                                {priceRanges.map((range) => (
                                     <option key={range.value} value={range.value}>
                                         {range.label}
                                     </option>
@@ -103,118 +111,39 @@ const TabletSidebarProduct = ({ onFilter }) => {
                         </div>
                     </div>
 
-                    <div className={cx("content-title")}>
-                        Dung lượng RAM:
-                    </div>
+                    <div className={cx("content-title")}>Dung lượng RAM:</div>
                     <div className={cx("ram-options")}>
-                        <div className={cx("ram-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="3GB"
-                                checked={ramOptions.includes("3GB")}
-                                onChange={handleRamChange}
-                            />
-                            <div className={cx("ram-title-options")}>
-                                3GB
+                        {ramOptionsList.map((ram) => (
+                            <div key={ram} className={cx("ram-options-content")}>
+                                <input
+                                    type="checkbox"
+                                    value={ram}
+                                    checked={ramOptions.includes(ram)}
+                                    onChange={handleRamChange}
+                                />
+                                <div className={cx("ram-title-options")}>{ram}</div>
                             </div>
-                        </div>
-                        <div className={cx("ram-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="4GB"
-                                checked={ramOptions.includes("4GB")}
-                                onChange={handleRamChange}
-                            />
-                            <div className={cx("ram-title-options")}>
-                                4GB
-                            </div>
-                        </div>
-                        <div className={cx("ram-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="6GB"
-                                checked={ramOptions.includes("6GB")}
-                                onChange={handleRamChange}
-                            />
-                            <div className={cx("ram-title-options")}>
-                                6GB
-                            </div>
-                        </div>
-                        <div className={cx("ram-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="10GB"
-                                checked={ramOptions.includes("10GB")}
-                                onChange={handleRamChange}
-                            />
-                            <div className={cx("ram-title-options")}>
-                                10GB
-                            </div>
-                        </div>
-                        <div className={cx("ram-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="8GB"
-                                checked={ramOptions.includes("8GB")}
-                                onChange={handleRamChange}
-                            />
-                            <div className={cx("ram-title-options")}>
-                                8GB
-                            </div>
-                        </div>
-                        <div className={cx("ram-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="16GB"
-                                checked={ramOptions.includes("16GB")}
-                                onChange={handleRamChange}
-                            />
-                            <div className={cx("ram-title-options")}>
-                                16GB
-                            </div>
-                        </div>
+                        ))}
                     </div>
 
-                    <div className={cx("content-title")}>
-                        Kích cỡ màn hình:
-                    </div>
+                    <div className={cx("content-title")}>Kích cỡ màn hình:</div>
                     <div className={cx("moniter-options")}>
-                        <div className={cx("moniter-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="1 inch - 8 inch"
-                                checked={screenSizeOptions.includes("1 inch - 8 inch")}
-                                onChange={handleScreenSizeChange}
-                            />
-                            <div className={cx("moniter-title-options")}>
-                                Dưới 8 inch
+                        {screenSizeOptionsList.map((size) => (
+                            <div key={size} className={cx("moniter-options-content")}>
+                                <input
+                                    type="checkbox"
+                                    value={size}
+                                    checked={screenSizeOptions.includes(size)}
+                                    onChange={handleScreenSizeChange}
+                                />
+                                <div className={cx("moniter-title-options")}>{size}</div>
                             </div>
-                        </div>
-                        <div className={cx("moniter-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="8.1 inch - 10.5 inch"
-                                checked={screenSizeOptions.includes("8.1 inch - 10.5 inch")}
-                                onChange={handleScreenSizeChange}
-                            />
-                            <div className={cx("moniter-title-options")}>
-                                8 inch - 10.5 inch
-                            </div>
-                        </div>
-                        <div className={cx("moniter-options-content")}>
-                            <input
-                                type="checkbox"
-                                value="10.6 inch - 20 inch"
-                                checked={screenSizeOptions.includes("10.6 inch - 20 inch")}
-                                onChange={handleScreenSizeChange}
-                            />
-                            <div className={cx("moniter-title-options")}>
-                                Hơn 12 inch    
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
-                <button className={cx("button-apply")} onClick={handleFilter}>Tìm Kiếm</button>
+                <button className={cx("button-apply")} onClick={handleFilter}>
+                    Tìm Kiếm
+                </button>
             </div>
         </div>
     );
