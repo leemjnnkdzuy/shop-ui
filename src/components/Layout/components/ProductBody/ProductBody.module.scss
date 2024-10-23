@@ -33,19 +33,28 @@
 }
 
 .show-more {
-    margin-top: 20px;
-    padding: 10px 20px;
+    display: flex;
+    margin-top: 30px;
+    padding: 20px;
+    width: 300px;
+    border-radius: 50px;
     background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    font-size: 1rem;
     transition: background-color 0.3s;
 
     &:hover {
-        background-color: #0056b3;
+        background-color: #002ba0;
     }
+}
+
+
+.show-more-content{
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-right: 10px;
+    font-weight: 400;
 }
 
 .show-more:disabled {

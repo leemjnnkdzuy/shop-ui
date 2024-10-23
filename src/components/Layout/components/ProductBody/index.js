@@ -28,7 +28,16 @@ const ProductBody = ({ productList }) => {
             </div>
             {visibleCount < productList.length && (
                 <button onClick={handleShowMore} className={cx("show-more")}>
-                    Hiện Thêm
+                    <div className={cx("show-more-content")}>Hiện Thêm</div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 24 24"
+                        fill="#ffffff"
+                    >
+                        <path d="M16.293 9.293L12 13.586 7.707 9.293 6.293 10.707 12 16.414l5.707-5.707z" />
+                    </svg>
                 </button>
             )}
         </div>
