@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shop-ui/static/css/main.8874b5a0.css",
-    "main.js": "/shop-ui/static/js/main.b24d675f.js",
+    "main.css": "/shop-ui/static/css/main.a80f1f10.css",
+    "main.js": "/shop-ui/static/js/main.d465ac94.js",
     "static/js/453.3dbb07f5.chunk.js": "/shop-ui/static/js/453.3dbb07f5.chunk.js",
     "static/media/bk2.png": "/shop-ui/static/media/bk2.36e428ebdcf0f7643ccc.png",
     "static/media/bk10.png": "/shop-ui/static/media/bk10.c36463e6e099c7bf0b60.png",
@@ -45,12 +45,13 @@
     "static/media/coolpad.png": "/shop-ui/static/media/coolpad.974ff3b3529e41206eb8.png",
     "static/media/xiaomi.png": "/shop-ui/static/media/xiaomi.644423b50f6a98404363.png",
     "static/media/lenovo.png": "/shop-ui/static/media/lenovo.58101586576b5f992144.png",
-    "static/media/phukien.png": "/shop-ui/static/media/phukien.3e3c21c50b2739ab8dda.png",
+    "static/media/phukien.png": "/shop-ui/static/media/phukien.ae1b738b9850539123cc.png",
     "static/media/masstel.png": "/shop-ui/static/media/masstel.ebd63fef42736a15c074.png",
     "static/media/iphone.png": "/shop-ui/static/media/iphone.a4eaf5339d45c31bf0d7.png",
     "static/media/mayhutbui.png": "/shop-ui/static/media/mayhutbui.d49020ba4d867bc7d1c4.png",
     "static/media/vga.png": "/shop-ui/static/media/vga.8559b54a1d5fe713a055.png",
     "static/media/huawei.png": "/shop-ui/static/media/huawei.13267a64131bbe05d652.png",
+    "static/media/robotlaukinh.png": "/shop-ui/static/media/robotlaukinh.ee6cc31fcb55c6d26d54.png",
     "static/media/tulanh.png": "/shop-ui/static/media/tulanh.a8c5c9717221adfe2e24.png",
     "static/media/Honor.png": "/shop-ui/static/media/Honor.2f17f5b96d708ab79c44.png",
     "static/media/gear.png": "/shop-ui/static/media/gear.58781bc4e06e4c736135.png",
@@ -71,6 +72,7 @@
     "static/media/phukiendienthoai.png": "/shop-ui/static/media/phukiendienthoai.5f4549f7b52326726565.png",
     "static/media/amthanhvahinhanh.png": "/shop-ui/static/media/amthanhvahinhanh.270d2a2282242369e658.png",
     "static/media/ZTE.png": "/shop-ui/static/media/ZTE.d6870172e5ecb8155597.png",
+    "static/media/viewsonic.png": "/shop-ui/static/media/viewsonic.c009932ed4627fdc8408.png",
     "static/media/luutru.png": "/shop-ui/static/media/luutru.b384cf96de31afe88d48.png",
     "static/media/cpu.png": "/shop-ui/static/media/cpu.911f3c5f2756a80238c8.png",
     "static/media/heatsink.png": "/shop-ui/static/media/heatsink.7d754a7410d5417dc924.png",
@@ -79,6 +81,7 @@
     "static/media/garmin.png": "/shop-ui/static/media/garmin.e4b4a2918d48eab7c035.png",
     "static/media/casper.png": "/shop-ui/static/media/casper.b2b01f3c4b2331fd1fd8.png",
     "static/media/case.png": "/shop-ui/static/media/case.7efc0b57a1be3582e63b.png",
+    "static/media/robothutbuilaunha.png": "/shop-ui/static/media/robothutbuilaunha.2b340191710c288dd30f.png",
     "static/media/Realme.png": "/shop-ui/static/media/Realme.8092f6b06f8f7a53dce5.png",
     "static/media/drive.png": "/shop-ui/static/media/drive.0ad123dd4a8c3eb4ba6c.png",
     "static/media/nodejs.svg": "/shop-ui/static/media/nodejs.20ad7a07d42b2a1db89926e6252b95ca.svg",
@@ -99,12 +102,12 @@
     "static/media/fridge.svg": "/shop-ui/static/media/fridge.fd093ce48582b597ba07c048dbab4d72.svg",
     "static/media/laptop.svg": "/shop-ui/static/media/laptop.9e592a2a95ba7bbf5bc01088d9b856e4.svg",
     "static/media/tablet.svg": "/shop-ui/static/media/tablet.b89f95a6312f04f02328a53012370feb.svg",
-    "main.8874b5a0.css.map": "/shop-ui/static/css/main.8874b5a0.css.map",
-    "main.b24d675f.js.map": "/shop-ui/static/js/main.b24d675f.js.map",
+    "main.a80f1f10.css.map": "/shop-ui/static/css/main.a80f1f10.css.map",
+    "main.d465ac94.js.map": "/shop-ui/static/js/main.d465ac94.js.map",
     "453.3dbb07f5.chunk.js.map": "/shop-ui/static/js/453.3dbb07f5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8874b5a0.css",
-    "static/js/main.b24d675f.js"
+    "static/css/main.a80f1f10.css",
+    "static/js/main.d465ac94.js"
   ]
 }
