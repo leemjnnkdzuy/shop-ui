@@ -5,10 +5,21 @@
     overflow: hidden;
     flex-direction: column;
     user-select: none;
+    border-radius: 30px;
+    transition: box-shadow 0.3s;
+    
+}
+
+.wrapper:hover {
+    border-radius: 30px;
+    box-shadow: 0 0 15px #b4b4b4;
+    transition: box-shadow 0.3s;
 }
 
 .img{
     display: flex;
+    margin-top: 15px;
+    margin-bottom: 5px;
     justify-content: center;
     align-items: center;
     width: 100%;
