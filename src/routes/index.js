@@ -10,6 +10,7 @@ import AboutUs from "~/pages/AboutUs";
 import Login from "~/pages/Login";
 import Error from "~/pages/Error";
 import Support from "~/pages/Support";
+import Product from "~/pages/Product";
 
 //product pages
 import {
@@ -89,6 +90,10 @@ const publicRoutes = [
     { path: "/ProductPages/DustCollector", component: DustCollector, Layout: HeaderOnly },
     { path: "/ProductPages/Moniter", component: Moniter, Layout: HeaderOnly },
     { path: "/ProductPages/PC", component: PC, Layout: HeaderOnly },
+
+    //product pages by id
+    { path: "/ProductPages/:productname", component: Product, Layout: HeaderOnly },
+
 
     //order pages
     { path: "/OrderPages/Cau_Hoi_Thuong_Gap", component: Cau_Hoi_Thuong_Gap, Layout: HeaderOnly },

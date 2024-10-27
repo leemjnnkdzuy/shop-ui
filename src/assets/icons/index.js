@@ -20,6 +20,8 @@ const icons = {
     expressjs: require('~/assets/icons/expressjs.svg').default,
     github: require('~/assets/icons/github.svg').default,
     axios: require('~/assets/icons/axios.svg').default,
+    star: require('~/assets/icons/star.svg').default,
+    starhalf: require('~/assets/icons/starhalf.svg').default,
 }
 
 

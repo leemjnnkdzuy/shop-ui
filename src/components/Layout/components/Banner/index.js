@@ -43,6 +43,9 @@ function Banner() {
         fetchSaleItems();
     }, []);
 
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error}</p>;
+
     const banners1 = [banner1.banner1, banner1.banner6, banner1.banner7];
     const banners2 = [banner1.banner8, banner1.banner9, banner1.banner10];
     const banners3 = [banner1.banner5, banner1.banner2, banner1.banner3, banner1.banner4];
@@ -81,36 +84,48 @@ function Banner() {
             </div>
             <div className={cx('title')}>Sản Phẩm Bán Chạy</div>
             <div className={cx('product-list')}>
-                {[
-                    { name: 'Laptop', img: products.laptop },
-                    { name: 'Tivi', img: products.TV },
-                    { name: 'Điện Thoại', img: products.phone },
-                    { name: 'Phụ Kiện', img: products.phukien },
-                    { name: 'Máy Tính Bảng', img: products.tablet },
-                    { name: 'Smart Watch', img: products.smartwacth }
-                ].map(product => (
-                    <div key={product.name} onClick={() => handleNavigate(`/ProductPages/${product.name}`)} className={cx('product')}>
-                        <BoxImageText name={product.name} img={product.img} alt="#" />
-                    </div>
-                ))}
+                <div onClick={() => handleNavigate(`/ProductPages/Laptop`)} className={cx('product')}>
+                    <BoxImageText name={'Laptop'} img={products.laptop} alt="#" />
+                </div>
+                <div onClick={() => handleNavigate(`/ProductPages/TV`)} className={cx('product')}>
+                    <BoxImageText name={'Tivi'} img={products.TV} alt="#" />
+                </div>
+                    <div onClick={() => handleNavigate(`/ProductPages/Phone`)} className={cx('product')}>
+                    <BoxImageText name={'Điện Thoại'} img={products.phone} alt="#" />
+                </div>
+                    <div onClick={() => handleNavigate(`/ProductPages/Acessory`)} className={cx('product')}>
+                    <BoxImageText name={'Phụ Kiện'} img={products.phukien} alt="#" />
+                </div>
+                    <div onClick={() => handleNavigate(`/ProductPages/Tablet`)} className={cx('product')}>
+                    <BoxImageText name={'Máy Tính Bảng'} img={products.tablet} alt="#" />
+                </div>
+                    <div onClick={() => handleNavigate(`/ProductPages/Watch`)} className={cx('product')}>
+                    <BoxImageText name={'Smart Watch'} img={products.smartwacth} alt="#" />
+                </div>
             </div>
             <div className={cx('banner-list-2')}>
                 <BannerProductTripble ListBanner={banners4} />
             </div>
             <div className={cx('title')}>Sản Phẩm Khác</div>
             <div className={cx('product-list')}>
-                {[
-                    { name: 'Máy Tính', img: products.pcdesktop },
-                    { name: 'Linh Kiện', img: products.linhkienmaytinh },
-                    { name: 'Màng Hình', img: products.moniter },
-                    { name: 'Máy Hút Bụi', img: products.mayhutbui },
-                    { name: 'Máy Giặt', img: products.washer },
-                    { name: 'Tủ Lạnh', img: products.tulanh }
-                ].map(product => (
-                    <div key={product.name} onClick={() => handleNavigate(`/ProductPages/${product.name}`)} className={cx('product')}>
-                        <BoxImageText name={product.name} img={product.img} alt="#" />
-                    </div>
-                ))}
+                <div onClick={() => handleNavigate(`/ProductPages/PC`)} className={cx('product')}>
+                    <BoxImageText name={'Máy Tính'} img={products.pcdesktop} alt="#" />
+                </div>
+                <div onClick={() => handleNavigate(`/ProductPages/LinhKien`)} className={cx('product')}>
+                    <BoxImageText name={'Linh Kiện'} img={products.linhkienmaytinh} alt="#" />
+                </div>
+                    <div onClick={() => handleNavigate(`/ProductPages/Moniter`)} className={cx('product')}>
+                    <BoxImageText name={'Màng Hình'} img={products.moniter} alt="#" />
+                </div>
+                    <div onClick={() => handleNavigate(`/ProductPages/DustCollector`)} className={cx('product')}>
+                    <BoxImageText name={'Máy Hút Bụi'} img={products.mayhutbui} alt="#" />
+                </div>
+                    <div onClick={() => handleNavigate(`/ProductPages/Washer`)} className={cx('product')}>
+                    <BoxImageText name={'Máy Giặt'} img={products.washer} alt="#" />
+                </div>
+                    <div onClick={() => handleNavigate(`/ProductPages/Fridge`)} className={cx('product')}>
+                    <BoxImageText name={'Tủ Lạnh'} img={products.tulanh} alt="#" />
+                </div>
             </div>
             <div className={cx('banner')}>
                 <BannerProduct ListBanner={banners3} />
