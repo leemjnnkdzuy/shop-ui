@@ -1,3 +1,4 @@
+
 const icons = {
     //img
     mobile: require('~/assets/icons/mobile.svg').default,
@@ -22,6 +23,13 @@ const icons = {
     axios: require('~/assets/icons/axios.svg').default,
     star: require('~/assets/icons/star.svg').default,
     starhalf: require('~/assets/icons/starhalf.svg').default,
+    checkshield: require('~/assets/icons/checkshield.svg').default,
+    truck: require('~/assets/icons/truck.svg').default,
+    diamond: require('~/assets/icons/diamond.svg').default,
+    transferalt: require('~/assets/icons/transferalt.svg').default,
+    analyse: require('~/assets/icons/analyse.svg').default,
+    creditcard: require('~/assets/icons/creditcard.svg').default,
+    bolt: require('~/assets/icons/bolt.svg').default,
 }
 
 

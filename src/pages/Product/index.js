@@ -4,11 +4,42 @@ import styles from "./Product.module.scss";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ProductImage from "~/components/Layout/components/ProductImage";
+import FooterProduct from "~/components/Layout/components/FooterProduct";
 import icons from "~/assets/icons";
 
 const cx = classNames.bind(styles);
 
 function Product() {
+
+
+    const footerItems = [
+        {
+            icon: icons.checkshield,
+            title: 'Sản phẩm chất lượng',
+            content: 'Đảm bảo tương thích và độ bền cao',
+            alt: 'checkshield'
+        },
+        {
+            icon: icons.transferalt,
+            title: 'Đổi trả dễ dàng',
+            content: 'Theo chính sách đổi trả tại FPT Shop',
+            alt: 'Truck'
+        },
+        {
+            icon: icons.diamond,
+            title: 'Thương hiệu đảm bảo',
+            content: 'Nhập khẩu, bảo hành chính hãng',
+            alt: 'Diamond'
+        },
+        {
+            icon: icons.truck,
+            title: 'Giao hàng tận nơi',
+            content: 'Tại 63 tỉnh thành',
+            alt: 'Transferalt'
+        }
+    ];
+
+
     const ListPics = [
         "https://cdn2.fptshop.com.vn/unsafe/750x0/filters:quality(100)/iphone_16_pro_max_desert_titan_3552a28ae0.png",
         "https://cdn2.fptshop.com.vn/unsafe/750x0/filters:quality(100)/iphone_16_pro_max_desert_titan_3552a28ae0.png",
@@ -50,6 +81,7 @@ function Product() {
         setSelectedColor(index);
     };
 
+    const price = 36000000;
     const comment = 199;
     const model = "ABC_123";
     const NameProduct = "iPhone 13 Pro Max";
@@ -119,7 +151,79 @@ function Product() {
                             ))}
                         </div>
                     </div>
+                    <div className={cx('line-5')}>
+                        <div className={cx('title-gift')}>
+                            Chính sách dành cho sản phẩm
+                        </div>
+                        <div className={cx('gift-content')}>
+                            <div className={cx('content-gift')}>
+                                <div className={cx('gift-img-content')}>
+                                    <img src={icons.creditcard} alt="creditcard" />
+                                </div>
+                                <div className={cx('gift-text-content')}>
+                                    Trả góp 0% lãi suất trong 12 tháng
+                                </div>
+                            </div>
+                            <div className={cx('content-gift')}>
+                                <div className={cx('gift-img-content')}>
+                                    <img src={icons.analyse} alt="analyse" />
+                                </div>
+                                <div className={cx('gift-text-content')}>
+                                    Hàng chính hãng - Bảo hành (tháng): 12
+                                </div>
+                            </div>
+                            <div className={cx('content-gift')}>
+                                <div className={cx('gift-img-content')}>
+                                    <img src={icons.bolt} alt="bolt" />
+                                </div>
+                                <div className={cx('gift-text-content')}>
+                                    Giao hàng nhanh chóng miễn phí toàn quốc
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={cx('line-4')}>
+                        <div className={cx('price-product')}>
+                            <div className={cx('price-current')}>
+                                <div className={cx('price-title')}>
+                                    Mua ngay với giá
+                                </div>
+                                <div className={cx('price-value')}>
+                                    {price.toLocaleString()}đ
+                                </div>
+                            </div>
+                            <div className={cx('betwen-line')}>
+                                <div className={cx('line-betwen')} />
+                                <div className={cx('betwen-line-content')}>
+                                    Hoặc
+                                </div>
+                                <div className={cx('line-betwen')} />
+                            </div>
+                            <div className={cx('price-current')}>
+                                <div className={cx('price-title')}>
+                                    Trả góp 12 tháng từ
+                                </div>
+                                <div className={cx('price-value')}>
+                                    {Math.floor(price / 12).toLocaleString()}đ
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={cx('line-6')}>
+                        <div className={cx('button-buy')}>
+                            <button onClick={() => handleNavigate('/cart')}>Mua ngay</button>
+                        </div>
+                        <div className={cx('button-cart')}>
+                            <button onClick={() => handleNavigate('/cart')}>Thêm vào giỏ hàng</button>
+                        </div>
+                        <div className={cx('button-installment')}>
+                            <button onClick={() => handleNavigate('/cart')}>Mua trả góp</button>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div className={cx('footer-product')}>
+                <FooterProduct footerItems={footerItems} />
             </div>
         </div>
     );
