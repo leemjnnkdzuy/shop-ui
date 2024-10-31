@@ -2,7 +2,6 @@ import classNames from "classnames/bind";
 import styles from "./Product.module.scss";
 
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import ProductImage from "~/components/Layout/components/ProductImage";
 import FooterProduct from "~/components/Layout/components/FooterProduct";
 import icons from "~/assets/icons";
@@ -22,7 +21,7 @@ function Product() {
         {
             icon: icons.transferalt,
             title: 'Đổi trả dễ dàng',
-            content: 'Theo chính sách đổi trả tại FPT Shop',
+            content: 'Theo chính sách đổi trả tại PixelShop',
             alt: 'Truck'
         },
         {
@@ -82,13 +81,11 @@ function Product() {
     };
 
     const price = 36000000;
-    const comment = 199;
+    const comment = 0;
     const model = "ABC_123";
     const NameProduct = "iPhone 13 Pro Max";
     const RateProduct = 4.5;
-
-    const navigate = useNavigate();  
-    const handleNavigate = (path) => { navigate(path); };
+    const Chip = "A15 Bionic";
 
     return (
         <div className={cx('wrapper')}>
@@ -96,6 +93,48 @@ function Product() {
                 <div className={cx('content')}>
                     <div className={cx("img-content")}>
                         <ProductImage ListPic={ListPics} />
+                    </div>
+                    <div className={cx('description')}>
+                        <div className={cx('name-description')}>
+                            <div className={cx('title-product-description')}>
+                                Tên đầy đủ của sản phẩm
+                            </div>
+                            <div className={cx('name-product')}>
+                                {NameProduct}
+                            </div>
+                        </div>
+                        <div className={cx('description-product')}>
+                            <div className={cx('title-description')}>
+                                Mô tả chi tiết
+                            </div>
+                            <div className={cx('information-description')}>
+                                <div className={cx('double-description-box')}>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Chip
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                { Chip || "Hiện không có thông tin mục này" }
+                                            </div>
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.chip} alt="Chip" />
+                                        </div>
+                                    </div>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Chip
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                A15 Bionic
+                                            </div>
+                                        </div>        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className={cx('sidebar')}>
@@ -116,7 +155,7 @@ function Product() {
                             ))}
                         </div>
                         <div className={cx('comment-number')}>
-                            {comment} đánh giá
+                            {comment || "Chưa có "} đánh giá
                         </div>
                     </div>
                     <div className={cx('line-2')}>
@@ -210,14 +249,31 @@ function Product() {
                         </div>
                     </div>
                     <div className={cx('line-6')}>
+                        <div className={cx('double-button')}>
+                            <div className={cx('button-cart')}>
+                                <div className={cx('button-buy-title')}>
+                                    Mua ngay
+                                </div>
+                                <div className={cx('button-buy-icon')}>
+                                    <img src={icons.logincircle} alt="cartadd" />
+                                </div>
+                            </div>
+                            <div className={cx('button-installment')}>
+                                <div className={cx('button-buy-title')}>
+                                    Mua trả góp
+                                </div>
+                                <div className={cx('button-buy-icon')}>
+                                    <img src={icons.wallet} alt="wallet" />
+                                </div>
+                            </div>
+                        </div>
                         <div className={cx('button-buy')}>
-                            <button onClick={() => handleNavigate('/cart')}>Mua ngay</button>
-                        </div>
-                        <div className={cx('button-cart')}>
-                            <button onClick={() => handleNavigate('/cart')}>Thêm vào giỏ hàng</button>
-                        </div>
-                        <div className={cx('button-installment')}>
-                            <button onClick={() => handleNavigate('/cart')}>Mua trả góp</button>
+                            <div className={cx('button-buy-title')}>
+                                Thêm vào giỏ hàng
+                            </div>
+                            <div className={cx('button-buy-icon')}>
+                                <img src={icons.cartadd} alt="logincircle" />
+                            </div>
                         </div>
                     </div>
                 </div>

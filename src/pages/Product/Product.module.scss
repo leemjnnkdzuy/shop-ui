@@ -19,9 +19,9 @@
 
 .content {
     height: auto;
-    width: 60%;
+    width: 62%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .img-content {
@@ -32,9 +32,92 @@
     border-radius: 30px;
 }
 
+.description{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.title-product-description{
+    font-size: 15px;
+    font-weight: 300;
+    color: #000000;
+}
+
+.title-description{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.description-product{
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 1px solid #888888;
+    padding: 20px;
+}
+
+.information-description{
+    display: flex;
+    flex-direction: column;
+}
+
+.double-description-box{
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+}
+
+.description-box{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    transition: 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover{
+        box-shadow: 0px 0px 7px 0px #cacaca;
+        transition: 0.3s ease;
+    }
+}
+
+.content-description-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.title-box{
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: 300;
+    color: #000000;
+}
+.content-box{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.icon-description-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
 .sidebar {
     height: auto;
     width: 35%;
+    padding-top: 20px;
 }
 
 .banner-footer {
@@ -50,7 +133,6 @@
     font-size: 30px;
     font-weight: 700;
     color: #000000;
-    margin-top: 20px;
 }
 
 .line-1 {
@@ -293,60 +375,151 @@
     flex-direction: column;
     width: 100%;
     height: auto;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .button-buy,
-.button-cart,
-.button-installment{
+.button-installment,
+.button-cart{
+    background-color: #f0f0f0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 40px;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out, transform 0.1s ease-in-out;
+}
+
+
+.button-buy{
+    width: 100%;
+}
+
+.button-installment,
+.button-cart{
+    gap: 10px;
+    width: 240px;
+}
+.button-buy-title{
+    display: flex;
+    width: calc(100% - 70px);
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.button-buy-icon{
+    position: absolute;
+    right:10px;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.double-button{
     display: flex;
     width: 100%;
     height: 80px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 40px;
-    cursor: pointer;
     margin-bottom: 10px;
+    justify-content: space-between;
 }
 
-button{
-    background-color: transparent;
-    font-size: 20px;
-    font-weight: 700;
-    cursor: pointer;
-    color: white;
+.button-buy:hover .button-buy-icon {
+    transform: scale(1.1);
 }
 
-.button-buy{
-    background-color: #101638;
-    transition: 0.3s ease;
-
-    &:hover{
-        background-color: #202c6e;
-        box-shadow: 0px 0px 20px 0px #667bb3;
-        transition: 0.3s ease;
-    }
+.button-installment:hover .button-buy-icon {
+    transform: scale(1.1);
 }
 
-.button-cart{
-    background-color: #313d7d;
-    transition: 0.3s ease;
-
-    &:hover{
-        background-color: rgb(54, 72, 172);
-        box-shadow: 0px 0px 20px 0px #667bb3;
-        transition: 0.3s ease;
-    }
+.button-cart:hover .button-buy-icon {
+    transform: scale(1.1);
 }
 
-.button-installment{
-    background-color: #40d5e5;
-    transition: 0.3s ease;
+.button-cart::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #3952e0;
+    z-index: 0;
+    transform: translateX(100%); 
+    transition: transform 0.4s ease-in-out;
+}
 
-    &:hover{
-        background-color: #60ddeb;
-        box-shadow: 0px 0px 20px 0px #b3f1f8;
-        transition: 0.3s ease;
-    }
+.button-cart:hover::before {
+    transform: translateX(0);
+}
+
+.button-cart:hover {
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.button-cart:active {
+    transform: scale(0.98);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 0px 20px 0px #667bb3;
+}
+
+
+.button-installment::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #60ddeb;
+    z-index: 0;
+    transform: translateX(100%); 
+    transition: transform 0.4s ease-in-out;
+}
+
+.button-installment:hover::before {
+    transform: translateX(0);
+}
+
+.button-installment:hover {
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.button-installment:active {
+    transform: scale(0.98);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 0px 20px 0px #b3f1f8;
+}
+
+.button-buy::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #202c6e;
+    z-index: 0;
+    transform: translateX(100%); 
+    transition: transform 0.4s ease-in-out;
+}
+
+.button-buy:hover::before {
+    transform: translateX(0);
+}
+
+.button-buy:hover {
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.button-buy:active {
+    transform: scale(0.98);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 0px 20px 0px #667bb3;
 }

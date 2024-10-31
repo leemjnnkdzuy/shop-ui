@@ -30,6 +30,10 @@ const icons = {
     analyse: require('~/assets/icons/analyse.svg').default,
     creditcard: require('~/assets/icons/creditcard.svg').default,
     bolt: require('~/assets/icons/bolt.svg').default,
+    logincircle: require('~/assets/icons/logincircle.svg').default,
+    cartadd: require('~/assets/icons/cartadd.svg').default,
+    wallet: require('~/assets/icons/wallet.svg').default,
+    chip: require('~/assets/icons/chip.svg').default,
 }
 
 
