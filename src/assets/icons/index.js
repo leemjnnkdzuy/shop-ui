@@ -34,6 +34,21 @@ const icons = {
     cartadd: require('~/assets/icons/cartadd.svg').default,
     wallet: require('~/assets/icons/wallet.svg').default,
     chip: require('~/assets/icons/chip.svg').default,
+    sushi: require('~/assets/icons/sushi.svg').default,
+    memorycard: require('~/assets/icons/memorycard.svg').default,
+    shapesquare: require('~/assets/icons/shapesquare.svg').default,
+    dumbbell: require('~/assets/icons/dumbbell.svg').default,
+    shield: require('~/assets/icons/shield.svg').default,
+    cuboid: require('~/assets/icons/cuboid.svg').default,
+    area: require('~/assets/icons/area.svg').default,
+    slack: require('~/assets/icons/slack.svg').default,
+    slackold: require('~/assets/icons/slackold.svg').default,
+    showalt: require('~/assets/icons/showalt.svg').default,
+    chess: require('~/assets/icons/chess.svg').default,
+    atom: require('~/assets/icons/atom.svg').default,
+    brightnesshalf: require('~/assets/icons/brightnesshalf.svg').default,
+    refresh: require('~/assets/icons/refresh.svg').default,
+    layer: require('~/assets/icons/layer.svg').default,
 }
 
 

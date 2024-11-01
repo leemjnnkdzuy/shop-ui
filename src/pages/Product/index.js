@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import styles from "./Product.module.scss";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import ProductImage from "~/components/Layout/components/ProductImage";
 import FooterProduct from "~/components/Layout/components/FooterProduct";
 import icons from "~/assets/icons";
@@ -9,7 +9,6 @@ import icons from "~/assets/icons";
 const cx = classNames.bind(styles);
 
 function Product() {
-
 
     const footerItems = [
         {
@@ -38,7 +37,6 @@ function Product() {
         }
     ];
 
-
     const ListPics = [
         "https://cdn2.fptshop.com.vn/unsafe/750x0/filters:quality(100)/iphone_16_pro_max_desert_titan_3552a28ae0.png",
         "https://cdn2.fptshop.com.vn/unsafe/750x0/filters:quality(100)/iphone_16_pro_max_desert_titan_3552a28ae0.png",
@@ -54,7 +52,7 @@ function Product() {
 
     useEffect(() => {
         const fetchStorageOptions = async () => {
-            const response = ["1TB", "256GB", "128GB", "64GB", "512GB"];
+            const response = ["1TB", "512GB", "256GB", "128GB", "64GB"];
             const sortedStorage = response.sort((a, b) => {
                 const parseValue = (str) => str.includes('TB') ? parseInt(str) * 1024 : parseInt(str);
                 return parseValue(a) - parseValue(b);
@@ -85,7 +83,22 @@ function Product() {
     const model = "ABC_123";
     const NameProduct = "iPhone 13 Pro Max";
     const RateProduct = 4.5;
+
     const Chip = "A15 Bionic";
+    const Ram = "6GB";
+    const MemoryCard = "Không";
+    const Size = "160.8 x 78.1 x 7.65 mm";
+    const Weight = 238;
+    const Protection = "IP68";
+    const Material = "Thép không gỉ";
+    const ScreenSize = 6.7;
+    const ScreenTechnology = "OLED";
+    const ScreenType = "Super Retina XDR";
+    const ScreenResolution = "1284 x 2778";
+    const ScreenDensity = 458;
+    const ScreenProtection = "Ceramic Shield";
+    const ScreenBrightness = 1800; 
+    const ScreenRefreshRate = 120;
 
     return (
         <div className={cx('wrapper')}>
@@ -105,7 +118,7 @@ function Product() {
                         </div>
                         <div className={cx('description-product')}>
                             <div className={cx('title-description')}>
-                                Mô tả chi tiết
+                                Mô tả chi tiết cấu hình sản phẩm
                             </div>
                             <div className={cx('information-description')}>
                                 <div className={cx('double-description-box')}>
@@ -125,16 +138,226 @@ function Product() {
                                     <div className={cx('description-box')}>
                                         <div className={cx('content-description-box')}>
                                             <div className={cx('title-box')}>
-                                                Chip
+                                                Ram
                                             </div>
                                             <div className={cx('content-box')}>
-                                                A15 Bionic
+                                                { Ram || "Hiện không có thông tin mục này" }
                                             </div>
-                                        </div>        
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.layer} alt="Ram" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={cx('double-description-box')}>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Rom
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                {storage[selectedStorage] || "Hiện không có thông tin mục này"}
+                                            </div>
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.sushi} alt="Rom" />
+                                        </div>
+                                    </div>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Hỗ trợ thẻ nhớ ngoài
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                { MemoryCard || "Hiện không có thông tin mục này"}
+                                            </div>
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.memorycard} alt="Memorycard" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={cx('title-description')}>
+                                Mô tả chi tiết thiết kế & trọng lượng
+                            </div>
+                            <div className={cx('information-description')}>
+                                <div className={cx('double-description-box')}>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Kích thước
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                { Size || "Hiện không có thông tin mục này" }
+                                            </div>
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.shapesquare} alt="Chip" />
+                                        </div>
+                                    </div>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Trọng lượng
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                { Weight + "g" || "Hiện không có thông tin mục này" }
+                                            </div>
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.dumbbell} alt="Ram" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={cx('double-description-box')}>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Chuẩn kháng nước / Bụi bẩn
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                { Protection || "Hiện không có thông tin mục này"}
+                                            </div>
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.shield} alt="Shield" />
+                                        </div>
+                                    </div>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Chất liệu
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                { Material|| "Hiện không có thông tin mục này"}
+                                            </div>
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.cuboid} alt="Cuboid" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={cx('title-description')}>
+                                Mô tả chi tiết màn hình
+                            </div>
+                            <div className={cx('information-description')}>
+                                <div className={cx('double-description-box')}>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Kích thước màng hình
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                { ScreenSize + " inch" || "Hiện không có thông tin mục này" }
+                                            </div>
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.area} alt="Chip" />
+                                        </div>
+                                    </div>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Công nghệ màng hình
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                { ScreenTechnology || "Hiện không có thông tin mục này" }
+                                            </div>
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.slack} alt="Ram" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={cx('double-description-box')}>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Chuẩn màng hình
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                { ScreenType || "Hiện không có thông tin mục này"}
+                                            </div>
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.slackold} alt="Shield" />
+                                        </div>
+                                    </div>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Độ phân giải
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                { ScreenResolution + " Pixel" || "Hiện không có thông tin mục này"}
+                                            </div>
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.chess} alt="Cuboid" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={cx('double-description-box')}>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Mật độ điểm ảnh
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                { ScreenDensity + " PPI" || "Hiện không có thông tin mục này" }
+                                            </div>
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.showalt} alt="Chip" />
+                                        </div>
+                                    </div>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Chất liệu mặt kính
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                { ScreenProtection || "Hiện không có thông tin mục này" }
+                                            </div>
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.atom} alt="Ram" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={cx('double-description-box')}>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Độ sáng tối đa
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                { ScreenBrightness + " nits" || "Hiện không có thông tin mục này" }
+                                            </div>
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.brightnesshalf} alt="Chip" />
+                                        </div>
+                                    </div>
+                                    <div className={cx('description-box')}>
+                                        <div className={cx('content-description-box')}>
+                                            <div className={cx('title-box')}>
+                                                Tần số quét 
+                                            </div>
+                                            <div className={cx('content-box')}>
+                                                { ScreenRefreshRate + "Hz" || "Hiện không có thông tin mục này" }
+                                            </div>
+                                        </div>  
+                                        <div className={cx('icon-description-box')}>
+                                            <img src={icons.refresh} alt="Ram" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
                 <div className={cx('sidebar')}>
