@@ -6,6 +6,7 @@ import { HeaderOnly } from "~/components/Layout";
 import Home from "~/pages/Home";
 import Profile from "~/pages/Profile";
 import Admin from "~/pages/Admin";
+import Dashboard from "~/pages/Dashboard";
 import AboutUs from "~/pages/AboutUs";
 import Login from "~/pages/Login";
 import Error from "~/pages/Error";
@@ -73,6 +74,7 @@ const publicRoutes = [
     { path: "/Cart", component: Cart, Layout: HeaderOnly },
     { path: "/Profile", component: Profile, Layout: HeaderOnly},
     { path: "/Admin", component: Admin, Layout: null },
+    { path: "/Admin/Dashboard", component: Dashboard, Layout: null },
     { path: "/AboutUs", component: AboutUs, Layout: HeaderOnly },
     { path: "/Login", component: Login, Layout: HeaderOnly },
     { path: "/Support", component: Support, Layout: HeaderOnly },

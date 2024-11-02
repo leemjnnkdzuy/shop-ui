@@ -3,7 +3,7 @@
     align-items: center;
     display: flex;
     height: 91vh;
-    width: 100%;
+    width: var(--default-layout-header-width);
     user-select: none;
 }
 

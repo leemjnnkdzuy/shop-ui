@@ -1,5 +1,5 @@
 .wrapper {
-    width: 100%;
+    width: var(--default-layout-header-width);
     height: 91vh;
     display: flex;
     justify-content: center;

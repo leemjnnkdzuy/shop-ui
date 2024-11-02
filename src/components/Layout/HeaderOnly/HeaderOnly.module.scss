@@ -6,8 +6,10 @@
 }
 
 .container{
-    width: var(--default-layout-header-width);
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .content{
@@ -15,4 +17,5 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }

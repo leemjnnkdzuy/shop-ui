@@ -1,4 +1,5 @@
 .wrapper {
+    width: 100%;
     width: var(--default-layout-header-width);
     height:auto;
     display: flex;
@@ -6,6 +7,7 @@
     flex-direction: column;
     position: relative;
 }
+
 
 .title{
     margin-top: 35px;

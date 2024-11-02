@@ -3,6 +3,7 @@
     justify-content: center;
     user-select: none;
     height: auto;
+    width: var(--default-layout-header-width);
 }
 
 .container{
@@ -10,7 +11,6 @@
     height: auto;
     display: flex;
     min-height: 91vh;
-    width: var(--default-layout-header-width);
 }
 .temp{
     width: 100%;

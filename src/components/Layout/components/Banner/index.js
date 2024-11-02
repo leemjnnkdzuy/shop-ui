@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import style from './Banner.module.scss';
+import { URL } from '~/utils/request';
 
 // Components
 import BoxImage from '~/components/Layout/components/BoxImage';
@@ -16,35 +16,11 @@ import products from '~/assets/product';
 import banner1 from '~/assets/banner1';
 import banner2 from '~/assets/banner2';
 
-import { URL, default as request } from '~/utils/request';
-
 const cx = classNames.bind(style);
 
-function Banner() {
+function Banner( {saleItems}) {
     const navigate = useNavigate();  
     const handleNavigate = (path) => { navigate(path); };
-
-    const [saleItems, setSaleItems] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchSaleItems = async () => {
-            try {
-                const response = await request.get('api/saleItem');
-                setSaleItems(response.data);
-            } catch (err) {
-                setError(err.message);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchSaleItems();
-    }, []);
-
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error}</p>;
 
     const banners1 = [banner1.banner1, banner1.banner6, banner1.banner7];
     const banners2 = [banner1.banner8, banner1.banner9, banner1.banner10];
@@ -90,16 +66,16 @@ function Banner() {
                 <div onClick={() => handleNavigate(`/ProductPages/TV`)} className={cx('product')}>
                     <BoxImageText name={'Tivi'} img={products.TV} alt="#" />
                 </div>
-                    <div onClick={() => handleNavigate(`/ProductPages/Phone`)} className={cx('product')}>
+                <div onClick={() => handleNavigate(`/ProductPages/Phone`)} className={cx('product')}>
                     <BoxImageText name={'Điện Thoại'} img={products.phone} alt="#" />
                 </div>
-                    <div onClick={() => handleNavigate(`/ProductPages/Acessory`)} className={cx('product')}>
+                <div onClick={() => handleNavigate(`/ProductPages/Acessory`)} className={cx('product')}>
                     <BoxImageText name={'Phụ Kiện'} img={products.phukien} alt="#" />
                 </div>
-                    <div onClick={() => handleNavigate(`/ProductPages/Tablet`)} className={cx('product')}>
+                <div onClick={() => handleNavigate(`/ProductPages/Tablet`)} className={cx('product')}>
                     <BoxImageText name={'Máy Tính Bảng'} img={products.tablet} alt="#" />
                 </div>
-                    <div onClick={() => handleNavigate(`/ProductPages/Watch`)} className={cx('product')}>
+                <div onClick={() => handleNavigate(`/ProductPages/Watch`)} className={cx('product')}>
                     <BoxImageText name={'Smart Watch'} img={products.smartwacth} alt="#" />
                 </div>
             </div>
@@ -114,16 +90,16 @@ function Banner() {
                 <div onClick={() => handleNavigate(`/ProductPages/LinhKien`)} className={cx('product')}>
                     <BoxImageText name={'Linh Kiện'} img={products.linhkienmaytinh} alt="#" />
                 </div>
-                    <div onClick={() => handleNavigate(`/ProductPages/Moniter`)} className={cx('product')}>
+                <div onClick={() => handleNavigate(`/ProductPages/Moniter`)} className={cx('product')}>
                     <BoxImageText name={'Màng Hình'} img={products.moniter} alt="#" />
                 </div>
-                    <div onClick={() => handleNavigate(`/ProductPages/DustCollector`)} className={cx('product')}>
+                <div onClick={() => handleNavigate(`/ProductPages/DustCollector`)} className={cx('product')}>
                     <BoxImageText name={'Máy Hút Bụi'} img={products.mayhutbui} alt="#" />
                 </div>
-                    <div onClick={() => handleNavigate(`/ProductPages/Washer`)} className={cx('product')}>
+                <div onClick={() => handleNavigate(`/ProductPages/Washer`)} className={cx('product')}>
                     <BoxImageText name={'Máy Giặt'} img={products.washer} alt="#" />
                 </div>
-                    <div onClick={() => handleNavigate(`/ProductPages/Fridge`)} className={cx('product')}>
+                <div onClick={() => handleNavigate(`/ProductPages/Fridge`)} className={cx('product')}>
                     <BoxImageText name={'Tủ Lạnh'} img={products.tulanh} alt="#" />
                 </div>
             </div>

@@ -2,7 +2,7 @@
     display: flex;
     min-height: 850px;
     height: auto;
-    width: 100%;
+    width: var(--default-layout-header-width);
     flex-direction: column;
     user-select: none;
 }

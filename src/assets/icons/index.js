@@ -48,10 +48,23 @@ const icons = {
     atom: require('~/assets/icons/atom.svg').default,
     brightnesshalf: require('~/assets/icons/brightnesshalf.svg').default,
     refresh: require('~/assets/icons/refresh.svg').default,
+    webcam: require('~/assets/icons/webcam.svg').default,
+    extension: require('~/assets/icons/extension.svg').default,
+    categoryalt: require('~/assets/icons/categoryalt.svg').default,
+    frontcategory: require('~/assets/icons/frontcategory.svg').default,
+    frontextension: require('~/assets/icons/frontextension.svg').default,
+    frontwebcam: require('~/assets/icons/frontwebcam.svg').default,
+    ghost: require('~/assets/icons/ghost.svg').default,
+    cog: require('~/assets/icons/cog.svg').default,
+    signal: require('~/assets/icons/signal.svg').default,
+    objectshorizontalleft: require('~/assets/icons/objectshorizontalleft.svg').default,
+    wifi: require('~/assets/icons/wifi.svg').default,
+    bluetooth: require('~/assets/icons/bluetooth.svg').default,
+    batterylow: require('~/assets/icons/batterylow.svg').default,
+    location: require('~/assets/icons/location.svg').default,
+    user: require('~/assets/icons/user.svg').default,
+    lockalt: require('~/assets/icons/lockalt.svg').default,
     layer: require('~/assets/icons/layer.svg').default,
 }
-
-
-
 
 export default icons;   

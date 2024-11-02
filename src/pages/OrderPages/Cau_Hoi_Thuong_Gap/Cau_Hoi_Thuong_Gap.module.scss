@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: var(--default-layout-header-width);
     height: auto;
 }
 
 .inner{
-    width: var(--default-layout-header-width);
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
