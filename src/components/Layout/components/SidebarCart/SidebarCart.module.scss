@@ -30,7 +30,7 @@
     border-radius: 40px;
     position: relative;
     overflow: hidden;
-    transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 .tag::before {
@@ -55,6 +55,7 @@
 
 .tag:active {
     transform: scale(0.98);
+    transition: 0.3s ease-in-out;
     box-shadow: 0 0 5px rgba(150, 150, 150, 0.7);
 }
 

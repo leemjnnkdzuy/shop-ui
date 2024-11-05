@@ -2,6 +2,7 @@ import classNames from "classnames/bind";
 import style from "./ProductBody.module.scss";
 import { useState } from "react";
 import SaleItem from "~/components/Layout/components/SaleItem";
+import images from "~/assets/images";
 
 const cx = classNames.bind(style);
 
@@ -12,16 +13,31 @@ const ProductBody = ({ productList }) => {
         setVisibleCount((prevCount) => prevCount + 8);
     };
 
+    if (!productList || productList.length === 0) {
+        return (
+            <div className={cx("wrapper")}>
+                <div className={cx("no-products")}>
+                    <div className={cx('err-title')}>
+                        Hiện chúng mình chưa có sản phẩm nào trong danh mục này
+                    </div>
+                    <div className={cx('err-img')}>
+                        <img src={images.loading} alt="empty-box" />
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className={cx("wrapper")}>
             <div className={cx("inner")}>
                 {productList.slice(0, visibleCount).map((product) => (
                     <div key={product.id} className={cx("product")}>
                         <SaleItem 
-                            img={product.img}
-                            name={product.name}
-                            price={product.price}
-                            discount={product.discount}
+                            img={product.ThumbnailImage}
+                            name={product.Name}
+                            price={product.Price}
+                            discount={product.Discount}
                         />
                     </div>
                 ))}

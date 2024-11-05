@@ -5,6 +5,7 @@
     padding-left: 20px;
     width: 100%;
     height: auto;
+    user-select: none;
 }
 
 .inner {
@@ -13,6 +14,34 @@
     gap: 18px;
     width: 100%;
     height: auto;
+}
+
+.no-products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.err-title{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #4d4d4d;
+}
+
+.err-img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
 }
 
 .product {
