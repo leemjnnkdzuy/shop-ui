@@ -23,7 +23,6 @@ function Header() {
     const [searchResult, setSearchResult] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [category, setCategory] = useState(false);
-    const [loading, setLoading] = useState(false);
 
     const handleClick = () => {
         setCategory(true);
@@ -53,15 +52,12 @@ function Header() {
             }
     
             try {
-                setLoading(true);
                 const response = await request.get(`api/search?query=${inputValue}`);
                 // Remove .json() since response is already JSON
                 setSearchResult(response);
             } catch (error) {
                 console.error('Search error:', error);
                 setSearchResult([]);
-            } finally {
-                setLoading(false);
             }
         };
     
@@ -166,7 +162,7 @@ function Header() {
                                 >
                                     <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
                                 </svg>
-                                <span>Danh Mục</span>
+                                <div className={cx('header-title-button')}>Danh Mục</div>
                             </button>
                         </div>
                     </Tippy>
@@ -182,7 +178,7 @@ function Header() {
                         <circle cx="10.5" cy="19.5" r="1.5"></circle>
                         <circle cx="17.5" cy="19.5" r="1.5"></circle>
                     </svg>
-                    <span>Giỏ Hàng</span>
+                    <div className={cx('header-title-button')}>Giỏ Hàng</div>
                 </button>
                 <button onClick={() => handleNavigate('/Login')} className={cx('icon-user')}>
                     <svg
@@ -194,7 +190,7 @@ function Header() {
                     >
                         <path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path>
                     </svg>
-                    <span>Đăng Nhập</span>
+                    <div className={cx('header-title-button')}>Đăng Nhập</div>
                 </button>
                 </div>
             </div>

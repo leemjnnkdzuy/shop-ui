@@ -2,15 +2,15 @@
     display: flex;
     height: 100vh;
     width: 100%;
+    user-select: none;
 }
 
 .sidebar {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 400px;
-    background-color: rgb(29, 34, 65);
-    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.8);
+    width: 20%;
+    background-color: rgb(230, 230, 230);
     z-index: 1;
 }
 
@@ -27,7 +27,7 @@
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
 }
 
-.item {
+.item-sidebar {
     padding: 10px;
     cursor: pointer;
     border-radius: 8px;
@@ -36,12 +36,12 @@
     transition: all 0.3s ease;
 
     &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255);
     }
 
     &.active {
-        background-color: rgba(255, 255, 255, 0.2);
-        color: #fff;
+        background-color: rgba(255, 255, 255);
+        color: #000000;
         font-weight: bold;
     }
 }
@@ -53,13 +53,12 @@
     justify-content: center;
     gap: 10px;
     padding: 20px;
-    color: white;
+    color: #686868;
 }
-
 
 .inner{
+    width: 80%;
     flex: 1;
-    height: 100%;
-    background-color: beige;
+    height: auto;
+    background-color: rgb(255, 255, 255);
 }
-

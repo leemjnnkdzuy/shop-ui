@@ -3,6 +3,7 @@ import style from "./ProductBody.module.scss";
 import { useState } from "react";
 import SaleItem from "~/components/Layout/components/SaleItem";
 import images from "~/assets/images";
+import { URL } from "~/utils/request";
 
 const cx = classNames.bind(style);
 
@@ -34,7 +35,7 @@ const ProductBody = ({ productList }) => {
                 {productList.slice(0, visibleCount).map((product) => (
                     <div key={product.id} className={cx("product")}>
                         <SaleItem 
-                            img={product.ThumbnailImage}
+                            img={`${URL}public/${product.ThumbnailImage}`}
                             name={product.Name}
                             price={product.Price}
                             discount={product.Discount}
