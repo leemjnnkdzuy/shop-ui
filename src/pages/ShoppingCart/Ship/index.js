@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames/bind";
 import style from "./Ship.module.scss";
+import request from "~/utils/request";
+import Popup from "~/components/Layout/components/Popup";
+import products from "~/assets/product";
 
 import SidebarCart from "~/components/Layout/components/SidebarCart";
 import ShipItem from "~/components/Layout/components/ShipItem";
@@ -8,17 +12,52 @@ import ShipItem from "~/components/Layout/components/ShipItem";
 const cx = classNames.bind(style);
 
 function Ship() {
+    const navigate = useNavigate();
+    const [errorMessage, setErrorMessage] = useState("");
+    const [showPopup, setShowPopup] = useState(false);
+    
     const [shipItem] = useState([
-        // {
-        //     id: 1,
-        //     img: products.laptop,
-        //     name: 'Laptop',
-        //     description: 'aaaaaaaaaa',
-        //     quantity: 1,
-        //     price: 10000000,
-        //     date: '2021-10-10',
-        // }
+        {
+            id: 1,
+            img: products.laptop,
+            name: 'Laptop',
+            description: 'aaaaaaaaaa',
+            quantity: 1,
+            price: 10000000,
+            date: '2021-10-10',
+        }
     ]);
+
+    useEffect(() => {
+        const verifyToken = async () => {
+            const token = localStorage.getItem("userToken") || sessionStorage.getItem("userToken");
+            
+            if (!token) {
+                setErrorMessage("Vui lòng đăng nhập để tiếp tục.");
+                setShowPopup(true);
+                return;
+            }
+
+            try {
+                await request.get("api/user/verify-token", {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+            } catch (error) {
+                setErrorMessage("Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.");
+                setShowPopup(true);
+            }
+        };
+
+        verifyToken();
+    }, [navigate]);
+
+    const handleClosePopup = () => {
+        setShowPopup(false);
+        setErrorMessage("");
+        navigate("/login");
+    };
 
     const renderCartItems = () => {
         if (shipItem.length === 0) {
@@ -56,6 +95,23 @@ function Ship() {
                     </div>
                 </div>
             </div>
+            
+            {showPopup && (
+                <Popup>
+                    <div className={cx("header-popup")}>
+                        <h2>Thông báo</h2>
+                        <button
+                            onClick={handleClosePopup}
+                            className={cx("close-btn-popup")}
+                        >
+                            &times;
+                        </button>
+                    </div>
+                    <div className={cx("content-popup")}>
+                        <p>{errorMessage}</p>
+                    </div>
+                </Popup>
+            )}
         </div>
     );
 }

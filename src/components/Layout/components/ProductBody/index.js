@@ -33,12 +33,13 @@ const ProductBody = ({ productList }) => {
         <div className={cx("wrapper")}>
             <div className={cx("inner")}>
                 {productList.slice(0, visibleCount).map((product) => (
-                    <div key={product.id} className={cx("product")}>
+                    <div key={product._id} className={cx("product")}>
                         <SaleItem 
                             img={`${URL}public/${product.ThumbnailImage}`}
                             name={product.Name}
                             price={product.Price}
                             discount={product.Discount}
+                            _id={product._id}
                         />
                     </div>
                 ))}

@@ -32,36 +32,26 @@ function Tablet() {
         },
         {
             id: 2,
-            name: "Coolpad",
-            image: tableticons.coolpad
-        },
-        {
-            id: 3,
             name: "Honor",
             image: tableticons.honor
         },
         {
-            id: 4,
+            id: 3,
             name: "Huawei",
             image: tableticons.huawei
         },
         {
-            id: 5,
+            id: 4,
             name: "Lenovo",
             image: tableticons.lenovo
         },
         {
-            id: 6,
-            name: "Masstel",
-            image: tableticons.masstel
-        },
-        {
-            id: 7,
+            id: 5,
             name: "Samsung",
             image: tableticons.samsung
         },
         {
-            id: 8,
+            id: 6,
             name: "Xiaomi",
             image: tableticons.xiaomi
         },

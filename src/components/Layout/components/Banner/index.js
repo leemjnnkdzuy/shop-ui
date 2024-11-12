@@ -18,7 +18,7 @@ import banner2 from '~/assets/banner2';
 
 const cx = classNames.bind(style);
 
-function Banner( {saleItems}) {
+function Banner({ saleItems }) {
     const navigate = useNavigate();  
     const handleNavigate = (path) => { navigate(path); };
 
@@ -45,10 +45,11 @@ function Banner( {saleItems}) {
                             saleItems.slice(0, 5).map(item => (
                                 <div key={item._id} className={cx('product-sale')}>
                                     <SaleItem
-                                        img={URL + item.img}
-                                        name={item.name}
-                                        price={item.price}
-                                        discount={item.discount}
+                                        img={URL + "public/" + item.ThumbnailImage}
+                                        name={item.Name}
+                                        price={item.Price}
+                                        discount={item.Discount}
+                                        _id={item._id}
                                     />
                                 </div>
                             ))
@@ -113,11 +114,12 @@ function Banner( {saleItems}) {
                         {saleItems.slice(5, 10).map(item => (
                             <div key={item._id} className={cx('product-sale')}>
                                 <SaleItem
-                                    img={URL + item.img}
-                                    name={item.name}
-                                    price={item.price}
-                                    discount={item.discount}
-                                />
+                                        img={URL + "public/" + item.ThumbnailImage}
+                                        name={item.Name}
+                                        price={item.Price}
+                                        discount={item.Discount}
+                                        _id={item._id}
+                                    />
                             </div>
                         ))}
                     </div>
@@ -125,11 +127,12 @@ function Banner( {saleItems}) {
                         {saleItems.slice(10, 15).map(item => (
                             <div key={item._id} className={cx('product-sale')}>
                                 <SaleItem
-                                    img={URL + item.img}
-                                    name={item.name}
-                                    price={item.price}
-                                    discount={item.discount}
-                                />
+                                        img={URL + "public/" + item.ThumbnailImage}
+                                        name={item.Name}
+                                        price={item.Price}
+                                        discount={item.Discount}
+                                        _id={item._id}
+                                    />
                             </div>
                         ))}
                     </div>
@@ -137,11 +140,12 @@ function Banner( {saleItems}) {
                         {saleItems.slice(15, 20).map(item => (
                             <div key={item._id} className={cx('product-sale')}>
                                 <SaleItem
-                                    img={URL + item.img}
-                                    name={item.name}
-                                    price={item.price}
-                                    discount={item.discount}
-                                />
+                                        img={URL + "public/" + item.ThumbnailImage}
+                                        name={item.Name}
+                                        price={item.Price}
+                                        discount={item.Discount}
+                                        _id={item._id}
+                                    />
                             </div>
                         ))}
                     </div>

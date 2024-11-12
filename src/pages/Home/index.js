@@ -15,7 +15,7 @@ function Home() {
         const fetchSaleItems = async () => {
             while (true) {
                 try {
-                    const response = await request.get('api/saleItem');
+                    const response = await request.get('api/homeItem');
                     setSaleItems(response.data);
                     break;
                 } catch (err) {

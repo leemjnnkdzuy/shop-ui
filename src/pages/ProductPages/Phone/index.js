@@ -36,42 +36,37 @@ function Phone() {
             image: phoneicons.Samsung
         },
         {
-            id: 3,
-            name: "Benco",
-            image: phoneicons.Benco
-        },
-        {
-            id: 4,
+            id: 5,
             name: "Xiaomi",
             image: phoneicons.Xiaomi
         },
         {
-            id: 5,
+            id: 6,
             name: "Oppo",
             image: phoneicons.Oppo
         },
         {
-            id: 6,
+            id: 7,
             name: "Vivo",
             image: phoneicons.Vivo
         },
         {
-            id: 7,
+            id: 8,
             name: "Realme",
             image: phoneicons.Realme
         },
         {
-            id: 8,
+            id: 9,
             name: "Tecno",
             image: phoneicons.Tecno
         },
         {
-            id: 9,
+            id: 10,
             name: "ZTE",
             image: phoneicons.ZTE
         },
         {
-            id: 10,
+            id: 11,
             name: "Honor",
             image: phoneicons.Honor
         },

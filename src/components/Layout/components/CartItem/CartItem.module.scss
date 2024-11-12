@@ -70,14 +70,19 @@
 .quantity-controls {
     display: flex;
     align-items: center;
+    height: 30px;
+    width: auto;
 
     button {
+        display: flex;
         background-color: #888888;
         color: white;
         border: none;
-        border-radius: 8px;
-        width: 20px;
         height: 30px;
+        width: 20px;
+        border-radius: 8px;
+        justify-content: center;
+        align-items: center;
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.2s; /* Hiệu ứng chuyển động */
 
@@ -98,7 +103,7 @@
     input[type="number"] {
         -moz-appearance: textfield;
         appearance: none;
-        width: 30px;
+        width: 40px;
         height: 30px;
         font-size: 16px;
         text-align: center;

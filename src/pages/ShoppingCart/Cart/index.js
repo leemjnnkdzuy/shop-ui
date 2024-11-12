@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import classNames from "classnames/bind";
 import style from "./Cart.module.scss";
-
+import request from "~/utils/request";
+import Popup from "~/components/Layout/components/Popup";
 
 import SidebarCart from "~/components/Layout/components/SidebarCart";
 import CartItem from "~/components/Layout/components/CartItem";
@@ -10,6 +12,10 @@ import products from "~/assets/product";
 const cx = classNames.bind(style);
 
 function Cart() {
+    const navigate = useNavigate();
+    const [errorMessage, setErrorMessage] = useState("");
+    const [showPopup, setShowPopup] = useState(false);
+    
     const [cartItems, setCartItems] = useState([
         {
             id: 1,
@@ -35,6 +41,37 @@ function Cart() {
 
     const handlePaymentMethodChange = (e) => {
         setPaymentMethod(e.target.value);
+    };
+
+    useEffect(() => {
+        const verifyToken = async () => {
+            const token = localStorage.getItem("userToken") || sessionStorage.getItem("userToken");
+            
+            if (!token) {
+                setErrorMessage("Vui lòng đăng nhập để tiếp tục.");
+                setShowPopup(true);
+                return;
+            }
+
+            try {
+                await request.get("api/user/verify-token", {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+            } catch (error) {
+                setErrorMessage("Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.");
+                setShowPopup(true);
+            }
+        };
+
+        verifyToken();
+    }, [navigate]);
+
+    const handleClosePopup = () => {
+        setShowPopup(false);
+        setErrorMessage("");
+        navigate("/login");
     };
 
     return (
@@ -88,6 +125,23 @@ function Cart() {
                     )}
                 </div>
             </div>
+            
+            {showPopup && (
+                <Popup>
+                    <div className={cx("header-popup")}>
+                        <h2>Thông báo</h2>
+                        <button
+                            onClick={handleClosePopup}
+                            className={cx("close-btn-popup")}
+                        >
+                            &times;
+                        </button>
+                    </div>
+                    <div className={cx("content-popup")}>
+                        <p>{errorMessage}</p>
+                    </div>
+                </Popup>
+            )}
         </div>
     );
 }

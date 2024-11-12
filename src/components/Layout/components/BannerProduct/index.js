@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import classNames from "classnames/bind";
 import style from "./BannerProduct.module.scss";
 import icons from "~/assets/icons";
@@ -8,25 +8,25 @@ const cx = classNames.bind(style);
 function BannerProduct({ ListBanner }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+    const handleNext = useCallback(() => {
+        setCurrentImageIndex((prevIndex) =>
+            prevIndex === ListBanner.length - 1 ? 0 : prevIndex + 1
+        );
+    }, [ListBanner.length]);
+
+    const handlePrev = useCallback(() => {
+        setCurrentImageIndex((prevIndex) =>
+            prevIndex === 0 ? ListBanner.length - 1 : prevIndex - 1
+        );
+    }, [ListBanner.length]);
+
     useEffect(() => {
         const interval = setInterval(() => {
             handleNext();
         }, 5000);
 
         return () => clearInterval(interval);
-    }, [currentImageIndex]);
-
-    const handleNext = () => {
-        setCurrentImageIndex((prevIndex) =>
-            prevIndex === ListBanner.length - 1 ? 0 : prevIndex + 1
-        );
-    };
-
-    const handlePrev = () => {
-        setCurrentImageIndex((prevIndex) =>
-            prevIndex === 0 ? ListBanner.length - 1 : prevIndex - 1
-        );
-    };
+    }, [handleNext]);
 
     return (
         <div className={cx("wrapper")}>

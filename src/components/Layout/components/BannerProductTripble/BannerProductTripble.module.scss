@@ -43,12 +43,11 @@
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    padding: 0 20px;
 }
 
 .control-button {
     background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgb(80, 80, 80);
     border: none;
     background-color: #fff;
     width: 40px;
@@ -62,7 +61,6 @@
     font-size: 20px;
     border-radius: 50%;
     opacity: 0;
-    pointer-events: none;
     transition: opacity 0.5s ease, transform 0.5s ease; 
 
     .banner-body:hover & {
@@ -73,9 +71,10 @@
 
     &:hover {
         transform: scale(1.1); 
+        background-color: #fff;
         transition: transform 0.5s ease; 
     }
-    
+
     &:active {
         transform: scale(0.9); 
         transition: transform 0.5s ease; 

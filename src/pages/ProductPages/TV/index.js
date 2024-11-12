@@ -27,26 +27,21 @@ function TV() {
     const brands = [
         {
             id: 1,
-            name: "Casper",
-            image: TVicons.casper
-        },
-        {
-            id: 2,
             name: "LG",
             image: TVicons.lg
         },
         {
-            id: 3,
+            id: 2,
             name: "Samsung",
             image: TVicons.samsung
         },
         {
-            id: 4,
+            id: 3,
             name: "TCL",
             image: TVicons.tcl
         },
         {
-            id: 5,
+            id: 4,
             name: "Xiaomi",
             image: TVicons.xiaomi
         },

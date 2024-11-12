@@ -19,7 +19,7 @@ function Admin() {
 
     useEffect(() => {
         const checkToken = async () => {
-            const token = localStorage.getItem("token") || sessionStorage.getItem("token");
+            const token = localStorage.getItem("adminToken") || sessionStorage.getItem("adminToken");
             if (token) {
                 try {
                     const response = await request.get("api/admin/verify-token", {
@@ -53,9 +53,9 @@ function Admin() {
             });
             const { token } = response.data;
             if (remember) {
-                localStorage.setItem("token", token);
+                localStorage.setItem("adminToken", token);
             } else {
-                sessionStorage.setItem("token", token);
+                sessionStorage.setItem("adminToken", token);
             }
             navigate("/Admin/Dashboard");
         } catch (error) {
@@ -75,7 +75,7 @@ function Admin() {
                 {error && <div className={cx("error-message")}>{error}</div>}
                 <div className={cx("input-box")}>
                     <input
-                        type="text"
+                        type=""
                         required
                         name="adminid"
                         value={adminid}

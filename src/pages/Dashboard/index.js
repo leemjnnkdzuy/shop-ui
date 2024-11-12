@@ -17,7 +17,7 @@ function Dashboard() {
 
     useEffect(() => {
         const checkToken = async () => {
-            const token = localStorage.getItem("token") || sessionStorage.getItem("token");
+            const token = localStorage.getItem("adminToken") || sessionStorage.getItem("adminToken");
             if (!token) {
                 navigate("/Admin");
                 return;
@@ -37,7 +37,6 @@ function Dashboard() {
                     }, 3000);
                 }
             } catch (error) {
-                console.error("Token verification failed:", error);
                 navigate("/Admin");
             }
         };
