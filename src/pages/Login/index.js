@@ -131,7 +131,6 @@ function Login() {
 				setSuccessMessage(response.data.message);
 				setEmailSent(true);
 
-				// Hide success message after 3 seconds and show PIN form
 				await new Promise(resolve => setTimeout(resolve, 3000));
 				setEmailSent(false);
 				setShowPinForm(true);
