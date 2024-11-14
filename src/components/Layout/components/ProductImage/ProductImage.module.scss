@@ -21,16 +21,23 @@
 .banner-container {
     display: flex;
     flex-direction: row;
-    height: 120%;
+    height: 100%;
     width: 100%;
     transition: transform 0.5s ease-in-out; 
 }
 
+.banner-container img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
 .image-banner {
+    padding: 50px;
+    display: flex;
     width: 100%;
     height: auto;
-    padding-left: 206px;
-    padding-right: 206px;
     cursor: pointer;
 }
 
@@ -45,10 +52,8 @@
 }
 
 .control-button {
-    background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px rgb(80, 80, 80);
     border: none;
-    background-color: #fff;
     width: 40px;
     height: 40px;
     display: flex;
@@ -60,6 +65,7 @@
     font-size: 20px;
     border-radius: 50%;
     opacity: 0;
+    background-color: #fff;
     transition: opacity 0.5s ease, transform 0.5s ease; 
 
     .banner-body:hover & {

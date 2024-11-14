@@ -21,6 +21,9 @@ function Product() {
 	const [selectedColor, setSelectedColor] = useState(0);
 	const [storage, setStorage] = useState([]);
 	const [color, setColor] = useState([]);
+	const [showNotification, setShowNotification] = useState(false);
+    const [notificationMessage, setNotificationMessage] = useState('');
+    const [notificationType, setNotificationType] = useState('success');
 
 	const imagePrefix = `${URL}public/`; 
 
@@ -72,6 +75,50 @@ function Product() {
 
 	const toggleDescription = () => {
 		setShowFullDescription(!showFullDescription);
+	};
+
+	const handleAddToCart = async () => {
+		const token = localStorage.getItem("userToken") || sessionStorage.getItem("userToken");
+		
+		if (!token) {
+			setNotificationMessage("Vui lòng đăng nhập để thêm vào giỏ hàng");
+            setNotificationType('error');
+            setShowNotification(true);
+            setTimeout(() => setShowNotification(false), 2000);
+            return;
+		}
+
+		try {
+			const productData = {
+				productId: productId,
+				name: Items.Name,
+				price: Items.Price,
+				quantity: 1,
+				img: Items.ListPicture[0],
+				description: Items.Description
+			};
+
+			await request.post('api/user/cart/add', productData, {
+				headers: {
+					Authorization: `Bearer ${token}`
+				}
+			});
+
+			setNotificationMessage('Đã thêm sản phẩm vào giỏ hàng');
+            setNotificationType('success');
+            setShowNotification(true);
+            setTimeout(() => setShowNotification(false), 2000);
+
+		} catch (error) {
+			if (error.response && error.response.status === 400) {
+				setNotificationMessage(error.response.data.error);
+			} else {
+				setNotificationMessage("Có lỗi xảy ra khi thêm vào giỏ hàng");
+			}
+			setNotificationType('error');
+            setShowNotification(true);
+            setTimeout(() => setShowNotification(false), 2000);
+		}
 	};
 
 	const footerItems = [
@@ -260,7 +307,7 @@ function Product() {
 								</div>
 							</div>
 						</div>
-						<div className={cx("button-buy")}>
+						<div className={cx("button-buy")} onClick={handleAddToCart}>
 							<div className={cx("button-buy-title")}>Thêm vào giỏ hàng</div>
 							<div className={cx("button-buy-icon")}>
 								<img src={icons.cartadd} alt="logincircle" />
@@ -272,6 +319,11 @@ function Product() {
 			<div className={cx("footer-product")}>
 				<FooterProduct footerItems={footerItems} />
 			</div>
+			{showNotification && (
+                <div className={cx("notification", notificationType)}>
+                    {notificationMessage}
+                </div>
+            )}
 		</div>
 	);
 }

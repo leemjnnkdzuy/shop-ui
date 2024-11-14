@@ -2,12 +2,11 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import classNames from "classnames/bind";
 import style from "./Cart.module.scss";
-import request from "~/utils/request";
+import request, { URL } from "~/utils/request";
 import Popup from "~/components/Layout/components/Popup";
 
 import SidebarCart from "~/components/Layout/components/SidebarCart";
 import CartItem from "~/components/Layout/components/CartItem";
-import products from "~/assets/product";
 
 const cx = classNames.bind(style);
 
@@ -15,28 +14,84 @@ function Cart() {
     const navigate = useNavigate();
     const [errorMessage, setErrorMessage] = useState("");
     const [showPopup, setShowPopup] = useState(false);
-    
-    const [cartItems, setCartItems] = useState([
-        {
-            id: 1,
-            img: products.laptop,
-            name: 'Laptop',
-            description: 'aaaaaaaaaa',
-            quantity: 1,
-            price: 10000000
-        }
-    ]);
+    const [cartItems, setCartItems] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
-    const handleQuantityChange = (id, newQuantity) => {
+    // Fetch cart items
+    useEffect(() => {
+        const fetchCartItems = async () => {
+            const token = localStorage.getItem("userToken") || sessionStorage.getItem("userToken");
+            
+            if (!token) {
+                setErrorMessage("Vui lòng đăng nhập để xem giỏ hàng");
+                setShowPopup(true);
+                return;
+            }
+
+            try {
+                const response = await request.get("api/user/cart", {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+
+                const transformedItems = response.data.map(item => ({
+                    ...item,
+                    img: `${URL}public/${item.img}`,
+                    id: item.productId
+                }));
+
+                setCartItems(transformedItems);
+            } catch (error) {
+                if (error.response?.status === 401) {
+                    setErrorMessage("Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.");
+                    setShowPopup(true);
+                } else {
+                    setErrorMessage("Không thể tải giỏ hàng. Vui lòng thử lại sau.");
+                    setShowPopup(true);
+                }
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchCartItems();
+    }, []);
+
+    const handleQuantityChange = async (id, newQuantity) => {
         setCartItems(prevItems =>
             prevItems.map(item =>
-                item.id === id ? { ...item, quantity: newQuantity } : item
+                item.productId === id ? { ...item, quantity: newQuantity } : item
             )
         );
+
+        // TODO: Thêm API cập nhật số lượng trong giỏ hàng
+    };
+
+    const handleDeleteItem = async (productId) => {
+        const token = localStorage.getItem("userToken") || sessionStorage.getItem("userToken");
+        
+        if (!token) {
+            setErrorMessage("Vui lòng đăng nhập để thực hiện thao tác này");
+            setShowPopup(true);
+            return;
+        }
+
+        try {
+            await request.delete(`api/user/cart/${productId}`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
+
+            setCartItems(prevItems => prevItems.filter(item => item.productId !== productId));
+        } catch (error) {
+            setErrorMessage("Không thể xóa sản phẩm. Vui lòng thử lại sau.");
+            setShowPopup(true);
+        }
     };
 
     const [paymentMethod, setPaymentMethod] = useState('cash');
-
     const totalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
     const handlePaymentMethodChange = (e) => {
@@ -68,12 +123,6 @@ function Cart() {
         verifyToken();
     }, [navigate]);
 
-    const handleClosePopup = () => {
-        setShowPopup(false);
-        setErrorMessage("");
-        navigate("/login");
-    };
-
     return (
         <div className={cx('wrapper')}>
             <SidebarCart title={'Giỏ hàng của bạn'} />
@@ -87,20 +136,27 @@ function Cart() {
                             <div className={cx('title')}>Thành tiền</div>
                         </div>
                         <div className={cx('content')}>
-                            {cartItems.length > 0 ? (
+                            {isLoading ? (
+                                <div className={cx('loading')}>Đang tải giỏ hàng...</div>
+                            ) : cartItems.length > 0 ? (
                                 cartItems.map(item => (
                                     <CartItem
-                                        key={item.id}
+                                        key={item.productId}
                                         img={item.img}
                                         name={item.name}
                                         description={item.description}
                                         quantity={item.quantity}
                                         price={item.price}
-                                        onQuantityChange={(newQuantity) => handleQuantityChange(item.id, newQuantity)}
+                                        onQuantityChange={(newQuantity) => 
+                                            handleQuantityChange(item.productId, newQuantity)
+                                        }
+                                        onDelete={() => handleDeleteItem(item.productId)}
                                     />
                                 ))
                             ) : (
-                                <div className={cx('empty-cart')}>Không tìm thấy sản phẩm bạn trong giỏ hàng</div>
+                                <div className={cx('empty-cart')}>
+                                    Không tìm thấy sản phẩm nào trong giỏ hàng
+                                </div>
                             )}
                         </div>
                     </div>
@@ -131,7 +187,13 @@ function Cart() {
                     <div className={cx("header-popup")}>
                         <h2>Thông báo</h2>
                         <button
-                            onClick={handleClosePopup}
+                            onClick={() => {
+                                setShowPopup(false);
+                                if (!localStorage.getItem("userToken") && 
+                                    !sessionStorage.getItem("userToken")) {
+                                    navigate("/login");
+                                }
+                            }}
                             className={cx("close-btn-popup")}
                         >
                             &times;

@@ -4,7 +4,7 @@ import style from "./CartItem.module.scss";
 
 const cx = classNames.bind(style);
 
-function CartItem({ img, name, description, quantity, price, onQuantityChange }) {
+function CartItem({ img, name, description, quantity, price, onQuantityChange, onDelete }) {
     const [currentQuantity, setCurrentQuantity] = useState(quantity);
 
     const handleQuantityChange = (value) => {
@@ -60,6 +60,9 @@ function CartItem({ img, name, description, quantity, price, onQuantityChange })
                     </div>
                     <div className={cx('total')}>
                         {(price * currentQuantity || 0).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}
+                    </div>
+                    <div className={cx('delete-btn')} onClick={onDelete}>
+                        ×
                     </div>
                 </div>
             </div>
