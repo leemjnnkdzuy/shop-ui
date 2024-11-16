@@ -33,6 +33,7 @@ function Login() {
 	const [showResetPassword, setShowResetPassword] = useState(false);
 	const [newPassword, setNewPassword] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
+	const [showLoginPinForm, setShowLoginPinForm] = useState(false);
 	const navigate = useNavigate();
 	const { setAuthUser } = useContext(AuthContext);
 
@@ -170,10 +171,15 @@ function Login() {
 				}, 1500);
 			}
 		} catch (error) {
-			console.log("Login error:", error);
-			setErrorMessage(
-				error.response?.data?.error || "Thông tin đăng nhập không chính xác"
-			);
+			const errorMsg = error.response?.data?.error || "Thông tin đăng nhập không chính xác";
+
+			if (error.response?.data?.requireVerification) {
+				setErrorMessage("");
+				setRegistrationEmail(loginData.email);
+				setShowLoginPinForm(true);
+			} else {
+				setErrorMessage(errorMsg);
+			}
 		} finally {
 			setIsLoading(false);
 		}
@@ -291,6 +297,37 @@ function Login() {
 		} catch (error) {
 			setErrorMessage(error.response?.data?.message || "Mã xác thực không hợp lệ");
 			await checkRegistrationStatus(registrationEmail);
+		}
+	};
+
+	const handleLoginVerificationSubmit = async (e) => {
+		e.preventDefault();
+		setIsLoading(true);
+		setErrorMessage("");
+		setSuccessMessage("");
+
+		try {
+			await request.post("/api/user/verify-email", {
+				email: registrationEmail,
+				pin: verificationCode,
+			});
+
+			setSuccessMessage("Xác thực email thành công! Vui lòng đăng nhập.");
+
+			setTimeout(() => {
+				setShowLoginPinForm(false);
+				setIsActive(false);
+				setVerificationCode("");
+				setRegistrationEmail("");
+				setLoginData({
+					email: "",
+					password: "",
+				});
+			}, 1500);
+		} catch (error) {
+			setErrorMessage(error.response?.data?.message || "Mã xác thực không hợp lệ");
+		} finally {
+			setIsLoading(false);
 		}
 	};
 
@@ -450,9 +487,33 @@ function Login() {
 		</form>
 	);
 
-	const loginForm = showForgotPassword ? forgotPasswordForm : (
-		<form onSubmit={handleLoginSubmit}>
-			<h1>Đăng Nhập</h1>
+	const loginVerificationForm = (
+		<form onSubmit={handleLoginVerificationSubmit}>
+			<h1>Xác thực Email</h1>
+			<div className={cx("social-icons")}>
+				{/* ...existing code... */}
+			</div>
+			<span>Nhập mã xác thực đã được gửi đến email của bạn</span>
+			<input
+				type="text"
+				maxLength="6"
+				pattern="\d{6}"
+				value={verificationCode}
+				onChange={(e) => setVerificationCode(e.target.value)}
+				placeholder="Nhập mã 6 số"
+				required
+			/>
+			<button type="submit">
+				<div className={cx("text-button")}>Xác nhận</div>
+			</button>
+		</form>
+	);
+
+	const loginForm = showForgotPassword ? forgotPasswordForm
+    : showLoginPinForm ? loginVerificationForm
+    : (
+        <form onSubmit={handleLoginSubmit}>
+            <h1>Đăng Nhập</h1>
 			<div className={cx("social-icons")}>
 				<div className={cx("icon")}>
 					<img src={icons.google} alt="google" />
@@ -485,8 +546,8 @@ function Login() {
 			<button type="submit">
 				<div className={cx("text-button")}>Đăng Nhập</div>
 			</button>
-		</form>
-	);
+        </form>
+    );
 
 	return (
 		<div className={cx("wrapper")}>

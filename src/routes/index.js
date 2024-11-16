@@ -1,7 +1,6 @@
 //layout import
 import { HeaderOnly } from "~/components/Layout";
 
-
 //main pages
 import Home from "~/pages/Home";
 import Profile from "~/pages/Profile";
@@ -13,49 +12,46 @@ import Error from "~/pages/Error";
 import Support from "~/pages/Support";
 import Product from "~/pages/Product";
 import AccountUser from "~/pages/AccountUser";
+import Payment from "~/pages/Payment";
 
 //product pages
 import {
-    Laptop,
-    Phone,
-    Acessory,
-    Fridge,
-    Tablet,
-    Watch,
-    TV,
-    LinhKien,
-    Washer,
-    DustCollector,
-    Moniter,
-    PC,
+	Laptop,
+	Phone,
+	Acessory,
+	Fridge,
+	Tablet,
+	Watch,
+	TV,
+	LinhKien,
+	Washer,
+	DustCollector,
+	Moniter,
+	PC,
 } from "~/pages/ProductPages";
 
 //shopping cart pages
-import {
-    Cart,
-    Ship,
-    Bought
-} from "~/pages/ShoppingCart";
+import { Cart, Ship, Bought } from "~/pages/ShoppingCart";
 
 //order pages
 import {
-    Quy_Che_Hoat_Dong,
-    Gioi_Thieu_Ve_Cong_Ty,
-    Cau_Hoi_Thuong_Gap,
-    Gioi_Thieu_May_Doi_Tra,
-    Huong_Dan_Mua_Hang_Va_Thanh_Toan_Online
-} from "~/pages/OrderPages"
+	Quy_Che_Hoat_Dong,
+	Gioi_Thieu_Ve_Cong_Ty,
+	Cau_Hoi_Thuong_Gap,
+	Gioi_Thieu_May_Doi_Tra,
+	Huong_Dan_Mua_Hang_Va_Thanh_Toan_Online,
+} from "~/pages/OrderPages";
 
 //policy pages
 import {
-    Chinh_Sach_Bao_Hanh,
-    Chinh_Sach_Doi_Tra,
-    Chinh_Sach_Bao_Mat,
-    Chinh_Sach_Tra_Gop,
-    Chinh_Sach_Khui_Hop_San_Pham,
-    Chinh_Sach_Thu_Thap_Va_Xu_Ly_Du_Lieu_Ca_Nhan,
-    Chinh_Sach_Giao_Hang_Va_Lap_Dat,
-    Quy_Dinh_Ve_Ho_Tro_Ky_Thuat_Va_Sao_Luu_Du_Lieu,
+	Chinh_Sach_Bao_Hanh,
+	Chinh_Sach_Doi_Tra,
+	Chinh_Sach_Bao_Mat,
+	Chinh_Sach_Tra_Gop,
+	Chinh_Sach_Khui_Hop_San_Pham,
+	Chinh_Sach_Thu_Thap_Va_Xu_Ly_Du_Lieu_Ca_Nhan,
+	Chinh_Sach_Giao_Hang_Va_Lap_Dat,
+	Quy_Dinh_Ve_Ho_Tro_Ky_Thuat_Va_Sao_Luu_Du_Lieu,
 } from "~/pages/PolicyPages";
 
 const publicRoutes = [
@@ -80,6 +76,7 @@ const publicRoutes = [
 	{ path: "/Login", component: Login, Layout: HeaderOnly },
 	{ path: "/Support", component: Support, Layout: HeaderOnly },
 	{ path: "/AccountUser", component: AccountUser, Layout: HeaderOnly },
+	{ path:  "/Payment", component: Payment, Layout: HeaderOnly },
 
 	//product pages
 	{ path: "/ProductPages/Phone", component: Phone, Layout: HeaderOnly },

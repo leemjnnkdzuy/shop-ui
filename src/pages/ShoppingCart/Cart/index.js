@@ -17,7 +17,6 @@ function Cart() {
     const [cartItems, setCartItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    // Fetch cart items
     useEffect(() => {
         const fetchCartItems = async () => {
             const token = localStorage.getItem("userToken") || sessionStorage.getItem("userToken");
@@ -64,8 +63,6 @@ function Cart() {
                 item.productId === id ? { ...item, quantity: newQuantity } : item
             )
         );
-
-        // TODO: Thêm API cập nhật số lượng trong giỏ hàng
     };
 
     const handleDeleteItem = async (productId) => {
@@ -91,12 +88,8 @@ function Cart() {
         }
     };
 
-    const [paymentMethod, setPaymentMethod] = useState('cash');
     const totalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
-    const handlePaymentMethodChange = (e) => {
-        setPaymentMethod(e.target.value);
-    };
 
     useEffect(() => {
         const verifyToken = async () => {
@@ -142,6 +135,7 @@ function Cart() {
                                 cartItems.map(item => (
                                     <CartItem
                                         key={item.productId}
+                                        productId={item.productId} // Pass productId to CartItem
                                         img={item.img}
                                         name={item.name}
                                         description={item.description}
@@ -167,12 +161,6 @@ function Cart() {
                                 <div className={cx('price-total')}>
                                     {totalAmount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}
                                 </div>
-                            </div>
-                            <div className={cx('method-payment')}>
-                                <select value={paymentMethod} onChange={handlePaymentMethodChange}>
-                                    <option value="cash">Thanh toán khi nhận hàng</option>
-                                    <option value="transfer">Chuyển khoản</option>
-                                </select>
                             </div>
                             <div className={cx('checkout')}>
                                 Thanh toán

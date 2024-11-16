@@ -67,6 +67,8 @@ const icons = {
     layer: require('~/assets/icons/layer.svg').default,
     chevronleft: require('~/assets/icons/chevronleft.svg').default,
     chevronright: require('~/assets/icons/chevronright.svg').default,
+    x: require('~/assets/icons/x.svg').default,
+    check: require('~/assets/icons/check.svg').default,
 }
 
 export default icons;   
