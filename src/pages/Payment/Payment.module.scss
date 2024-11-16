@@ -6,7 +6,7 @@
 	width: var(--default-layout-header-width);
 	align-items: flex-start;
 	user-select: none;
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .inner {
@@ -65,7 +65,7 @@
 	align-items: center;
 	color: #333333;
 	font-size: 20px;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
+	transition: border 0.3s ease, box-shadow 0.3s ease;
 
 	input {
 		width: 100%;
@@ -73,18 +73,19 @@
 		border: none;
 		outline: none;
 		font-size: 15px;
-        font-weight: 300;
-        color: #333333;
+		font-weight: 300;
+		color: #333333;
 	}
 
-    &:hover {
-        border: 1px solid #333333;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    }
+	&:hover {
+		border: 1px solid #002ba0;
+		box-shadow: 0 0 3px 0 #002ba0;
+		transition: border 0.3s ease, box-shadow 0.3s ease;
+	}
 
-    &:focus-within {
-        border: 1px solid #333333;
-    }
+	&:focus-within {
+		border: 1px solid #002ba0;
+	}
 }
 
 .sidebar {
