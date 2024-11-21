@@ -34,7 +34,7 @@
     border-radius: 30px;
 }
 
-.empty-cart {
+.empty-cart{
     width: 100%;
     height: auto;
     display: flex;
@@ -45,6 +45,15 @@
     font-size: 1.5rem;
     font-weight: 300;
     color: #4d4d4d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    font-size: 16px;
+    color: #666;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
 .header {

@@ -3,8 +3,14 @@ import style from "./ShipItem.module.scss";
 
 const cx = classNames.bind(style);
 
-function ShipItem({ img, name, description, quantity, price, date }) {
-
+function ShipItem({ img, name, description = "", quantity, price, date }) {
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const year = date.getFullYear();
+        return `${day}/${month}/${year}`;
+    };
 
     return (
         <div className={cx('wrapper')}>
@@ -26,7 +32,7 @@ function ShipItem({ img, name, description, quantity, price, date }) {
                         {(price || 0).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}
                     </div>
                     <div className={cx('date')}>
-                        {date}
+                        {formatDate(date)}
                     </div>
                 </div>
             </div>

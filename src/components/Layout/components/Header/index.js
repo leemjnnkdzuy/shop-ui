@@ -29,6 +29,11 @@ function Header() {
 		navigate("/");
 	};
 
+	const handleLogoutClick = (e) => {
+		e.stopPropagation(); // Prevent parent div click
+		handleLogout();
+	};
+
 	const handleNavigate = (path) => {
 		navigate(path);
 	};
@@ -204,7 +209,7 @@ function Header() {
 						</div>
 						<div className={cx("user-actions")}>
 							<span className={cx("username")}>{authUser.user}</span>
-							<button className={cx("logout-btn")} onClick={handleLogout}>
+							<button className={cx("logout-btn")} onClick={handleLogoutClick}>
 								<div className={cx("logout-btn-title")}>Đăng xuất</div>
 							</button>
 						</div>

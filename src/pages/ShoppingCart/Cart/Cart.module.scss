@@ -130,6 +130,11 @@
 .checkout:hover{
     background-color: #0f49dd;
     transition: 0.5s;
+    opacity: 0.9;
+}
+
+.checkout:active {
+    transform: scale(0.98);
 }
 
 select{

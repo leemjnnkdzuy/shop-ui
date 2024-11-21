@@ -116,6 +116,26 @@ function Cart() {
         verifyToken();
     }, [navigate]);
 
+    const handleCheckout = () => {
+        const token = localStorage.getItem("userToken") || sessionStorage.getItem("userToken");
+        
+        if (!token) {
+            setErrorMessage("Vui lòng đăng nhập để tiếp tục thanh toán");
+            setShowPopup(true);
+            return;
+        }
+
+        if (cartItems.length === 0) {
+            setErrorMessage("Giỏ hàng của bạn đang trống");
+            setShowPopup(true);
+            return;
+        }
+
+        navigate('/Payment', { 
+            state: { cartItems }
+        });
+    };
+
     return (
         <div className={cx('wrapper')}>
             <SidebarCart title={'Giỏ hàng của bạn'} />
@@ -162,7 +182,11 @@ function Cart() {
                                     {totalAmount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}
                                 </div>
                             </div>
-                            <div className={cx('checkout')}>
+                            <div 
+                                className={cx('checkout')} 
+                                onClick={handleCheckout}
+                                style={{ cursor: 'pointer' }}
+                            >
                                 Thanh toán
                             </div>
                         </div>

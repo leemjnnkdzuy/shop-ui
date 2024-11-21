@@ -1,45 +1,162 @@
-.wrapper{
+.wrapper {
     display: flex;
-    height: auto;
+    height: 100%;
     width: 100%;
     flex-direction: column;
     user-select: none;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.header-section {
+    appearance: none;
+    background: #fff;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    color: #495057;
+    font-size: 14px;
+    margin: 0 8px;
+    padding: 12px 40px 12px 16px;
+    transition: all 0.2s ease;
+    
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236c757d" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 12px) center;
+    
+    &:hover {
+        border-color: #5271ff;
+        box-shadow: 0 0 0 4px rgba(82, 113, 255, 0.1);
+    }
+
+    &:focus {
+        border-color: #5271ff;
+        box-shadow: 0 0 0 4px rgba(82, 113, 255, 0.1);
+        outline: none;
+    }
+
+    option {
+        padding: 8px;
+        font-size: 14px;
+    }
 }
 
 .header{
-    width: 100%;
-    height: 100px;
     display: flex;
     justify-content: space-between;
+    justify-items: center;
     align-items: center;
-    padding: 20px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
-.header-section{
-    padding-bottom: 10px;
-    flex: 1;
-    margin: 0 10px;
-    text-align: center;
-    text-align-last: center;
-    width: 300px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    transition: all 0.3s ease;
-    appearance: none;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
-    background-position: calc(100% - 15px) center; 
-    padding-right: 40px;
+.header-title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 30px;
 }
 
-.body{
-    width: 100%;
+.popup-button {
     display: flex;
-    flex-direction: column;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    height: 56px;
+    padding: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: auto;
+    align-items: center;
+
+    &:hover {
+        width: 250px;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+
+        .select-container {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    &.extended:hover {
+        width: 458px;
+    }
+
+    .icon {
+        background: linear-gradient(135deg, #5271ff, #4361ee);
+        border-radius: 12px;
+        color: white;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(69, 91, 192, 0.2);
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .select-container {
+        display: flex;
+        gap: 12px;
+        left: 80px;
+        opacity: 0;
+        position: absolute;
+        transform: translateX(-10px);
+        transition: all 0.3s ease;
+        
+        .header-section {
+            width: 180px;
+
+            &:last-child {
+                animation: slideIn 0.3s ease;
+            }
+        }
+    }
+}
+
+.popup-wrapper {
+    align-items: center;
+    display: flex;
+    padding: 24px;
+    position: relative;
+}
+
+.body {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     flex: 1;
-    padding: 20px;
-    max-height: 88vh;
+    margin: 0 24px 24px;
+    max-height: calc(100vh - 100px);
     overflow-y: auto;
+    padding: 24px;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f3f5;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #dee2e6;
+        border-radius: 4px;
+        
+        &:hover {
+            background: #ced4da;
+        }
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

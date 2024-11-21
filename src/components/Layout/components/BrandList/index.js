@@ -3,7 +3,14 @@ import style from "./BrandList.module.scss";
 
 const cx = classNames.bind(style);
 
-function BrandList({ name, brands }) {
+function BrandList({ name, brands, onBrandClick, activeId }) {
+
+    const handleClick = (brand) => {
+        if (onBrandClick) {
+            onBrandClick(brand);
+        }
+    };
+
     return (
         <div className={cx("wrapper")}>
             <div className={cx("brand-title")}>
@@ -11,7 +18,11 @@ function BrandList({ name, brands }) {
             </div>
             <div className={cx("brand-list")}>
                 {brands.map((brand) => (
-                    <div key={brand.id} className={cx("brand-item")}>
+                    <div 
+                        key={brand.id} 
+                        onClick={() => handleClick(brand)} 
+                        className={cx("brand-item", { active: brand.id === activeId })}
+                    >
                         <img src={brand.image} alt={brand.name} className={cx("brand-image")} />
                         <p className={cx("brand-name")}>{brand.name}</p>
                     </div>

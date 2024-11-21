@@ -6,57 +6,65 @@ const cx = classNames.bind(styles);
 
 function PhoneDescription({
     items,
-    selectedStorage,
+    selectedStorage = 0,
     showFullDescription
 }) {
-    const specifications = items
-        ? {
-              config: {
-                  chip: { value: items.Chip },
-                  ram: { value: items.Ram },
-                  rom: { value: items.Storage[selectedStorage] },
-                  memoryCard: { value: items.MemoryCard },
-              },
-              design: {
-                  size: { value: items.Size },
-                  weight: { value: items.Weight, unit: "g" },
-                  protection: { value: items.Protection },
-                  material: { value: items.Material },
-              },
-              screen: {
-                  size: { value: items.ScreenSize, unit: "inch" },
-                  technology: { value: items.ScreenTechnology },
-                  type: { value: items.ScreenType },
-                  resolution: { value: items.ScreenResolution, unit: "Pixel" },
-                  density: { value: items.ScreenDensity, unit: "PPI" },
-                  protection: { value: items.ScreenProtection },
-                  brightness: { value: items.ScreenBrightness, unit: "nits" },
-                  refreshRate: { value: items.ScreenRefreshRate, unit: "Hz" },
-              },
-              camera: {
-                  back: {
-                      information: { value: items.BackCameraInformation },
-                      rotationAbility: { value: items.BackCameraRotationAbility },
-                      feature: { value: items.BackCameraFeature },
-                  },
-                  front: {
-                      information: { value: items.FrontCameraInformation },
-                      rotationAbility: { value: items.FrontCameraRotationAbility },
-                      feature: { value: items.FrontCameraFeature },
-                  },
-              },
-              other: {
-                  os: { value: items.OS },
-                  securitySupport: { value: items.SecuritySupport },
-                  simSupport: { value: items.SIMSupport },
-                  networkSupport: { value: items.NetworkSupport },
-                  bluetoothSupport: { value: items.BluetoothSupport },
-                  wifiSupport: { value: items.WifiSupport },
-                  powerStorage: { value: items.PowerStrogae },
-                  madeIn: { value: items.MadeIn },
-              },
-          }
-        : null;
+    // Add null check at the start of component
+    if (!items) {
+        return <div>Loading...</div>;
+    }
+
+    // Get storage value safely
+    const storageValue = Array.isArray(items.Storage) && items.Storage.length > 0 
+        ? items.Storage[selectedStorage]
+        : '';
+
+    const specifications = {
+        config: {
+            chip: { value: items.Chip || '' },
+            ram: { value: items.Ram || '' },
+            rom: { value: storageValue },
+            memoryCard: { value: items.MemoryCard || '' },
+        },
+        design: {
+            size: { value: items.Size },
+            weight: { value: items.Weight, unit: "g" },
+            protection: { value: items.Protection },
+            material: { value: items.Material },
+        },
+        screen: {
+            size: { value: items.ScreenSize, unit: "inch" },
+            technology: { value: items.ScreenTechnology },
+            type: { value: items.ScreenType },
+            resolution: { value: items.ScreenResolution, unit: "Pixel" },
+            density: { value: items.ScreenDensity, unit: "PPI" },
+            protection: { value: items.ScreenProtection },
+            brightness: { value: items.ScreenBrightness, unit: "nits" },
+            refreshRate: { value: items.ScreenRefreshRate, unit: "Hz" },
+        },
+        camera: {
+            back: {
+                information: { value: items.BackCameraInformation },
+                rotationAbility: { value: items.BackCameraRotationAbility },
+                feature: { value: items.BackCameraFeature },
+            },
+            front: {
+                information: { value: items.FrontCameraInformation },
+                rotationAbility: { value: items.FrontCameraRotationAbility },
+                feature: { value: items.FrontCameraFeature },
+            },
+        },
+        other: {
+            os: { value: items.OS },
+            securitySupport: { value: items.SecuritySupport },
+            simSupport: { value: items.SIMSupport },
+            networkSupport: { value: items.NetworkSupport },
+            bluetoothSupport: { value: items.BluetoothSupport },
+            wifiSupport: { value: items.WifiSupport },
+            powerStorage: { value: items.PowerStrogae },
+            madeIn: { value: items.MadeIn },
+        },
+    };
 
     const getValue = (spec) => {
         if (!spec || (!spec.value && !spec.unit))

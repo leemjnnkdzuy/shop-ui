@@ -4,7 +4,6 @@ import classNames from "classnames/bind";
 import style from "./Ship.module.scss";
 import request from "~/utils/request";
 import Popup from "~/components/Layout/components/Popup";
-import products from "~/assets/product";
 
 import SidebarCart from "~/components/Layout/components/SidebarCart";
 import ShipItem from "~/components/Layout/components/ShipItem";
@@ -16,22 +15,13 @@ function Ship() {
     const [errorMessage, setErrorMessage] = useState("");
     const [showPopup, setShowPopup] = useState(false);
     
-    const [shipItem] = useState([
-        {
-            id: 1,
-            img: products.laptop,
-            name: 'Laptop',
-            description: 'aaaaaaaaaa',
-            quantity: 1,
-            price: 10000000,
-            date: '2021-10-10',
-        }
-    ]);
+    const [shipItems, setShipItems] = useState([]);
 
     useEffect(() => {
-        const verifyToken = async () => {
-            const token = localStorage.getItem("userToken") || sessionStorage.getItem("userToken");
-            
+        const fetchPendingOrders = async () => {
+            const token =
+                localStorage.getItem("userToken") || sessionStorage.getItem("userToken");
+
             if (!token) {
                 setErrorMessage("Vui lòng đăng nhập để tiếp tục.");
                 setShowPopup(true);
@@ -39,18 +29,26 @@ function Ship() {
             }
 
             try {
-                await request.get("api/user/verify-token", {
+                const response = await request.get("api/shipping/pending-orders", {
                     headers: {
-                        Authorization: `Bearer ${token}`
-                    }
+                        Authorization: `Bearer ${token}`,
+                    },
                 });
+
+                if (response.data.success) {
+                    setShipItems(response.data.orders);
+                } else {
+                    setErrorMessage(response.data.message);
+                    setShowPopup(true);
+                }
             } catch (error) {
-                setErrorMessage("Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.");
+                console.error("Error fetching pending orders:", error);
+                setErrorMessage("Không thể lấy danh sách đơn hàng.");
                 setShowPopup(true);
             }
         };
 
-        verifyToken();
+        fetchPendingOrders();
     }, [navigate]);
 
     const handleClosePopup = () => {
@@ -60,21 +58,27 @@ function Ship() {
     };
 
     const renderCartItems = () => {
-        if (shipItem.length === 0) {
-            return <div className={cx('empty-cart')}>Không tìm thấy sản phẩm bạn đã mua trước đó</div>;
+        if (shipItems.length === 0) {
+            return (
+                <div className={cx('empty-cart')}>
+                    Không tìm thấy đơn hàng đang chờ
+                </div>
+            );
         }
 
-        return shipItem.map(item => (
-            <ShipItem
-                key={item.id}
-                img={item.img}
-                name={item.name}
-                description={item.description}
-                quantity={item.quantity}
-                price={item.price}
-                date={item.date}
-            />
-        ));
+        return shipItems.map((order) =>
+            order.orderItems.map((item) => (
+                <ShipItem
+                    key={item.productId}
+                    img={item.img}
+                    name={item.name}
+                    description=""
+                    quantity={item.quantity}
+                    price={item.price * item.quantity}
+                    date={order.createdAt}
+                />
+            ))
+        );
     };
 
     return (

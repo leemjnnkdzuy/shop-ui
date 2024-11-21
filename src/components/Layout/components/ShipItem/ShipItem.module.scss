@@ -26,7 +26,7 @@
 }
 .product {
     display: flex;
-    width: 55%;
+    width: 45%;
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -39,11 +39,10 @@
 .image{
     width: 130px;
     height: 130px;
-    overflow: hidden;
     display: flex;
 }
 .info{
-    padding-left: 10px;
+    padding-left: 15px;
     width: 72%;
     height: 100%;
     display: flex;

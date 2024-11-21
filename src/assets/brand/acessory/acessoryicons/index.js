@@ -1,10 +1,16 @@
 const acessoryicons = {
-    amthanhvahinhanh: require('./amthanhvahinhanh.png'),
-    gear: require('./gear.png'),
-    luutru: require('./luutru.png'),
-    phukiendienthoai: require('./phukiendienthoai.png'),
-    phukienlaptop: require('./phukienlaptop.png'),
-    thietbimang: require('./thietbimang.png'),
-}
+	luutru: require("./luutru.png"),
+	thietbimang: require("./thietbimang.png"),
+	charger: require("./charger.png"),
+	chargingcable: require("./chargingcable.png"),
+	earphone: require("./earphone.png"),
+	headphone: require("./headphone.png"),
+	keyboard: require("./keyboard.png"),
+	mouse: require("./mouse.png"),
+	mousepad: require("./mousepad.png"),
+	phonecase: require("./phonecase.png"),
+	powerbank: require("./powerbank.png"),
+	temperedglass: require("./temperedglass.png")
+};
 
 export default acessoryicons;

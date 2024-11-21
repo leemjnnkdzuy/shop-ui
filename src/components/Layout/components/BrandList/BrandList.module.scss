@@ -33,7 +33,25 @@
     background-color: #f0f0f0;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
+    user-select: none;
+    transition: all 0.3s;
+
+    &:active {
+        scale: 0.98;
+        transition: scale 0.1s;
+    }
+
+    &.active {
+        background-color: #e0e0e0;
+        scale: 1.02;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &:hover:not(.active) {
+        background-color: #e0e0e0;
+        scale: 1.02;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .brand-item:hover {

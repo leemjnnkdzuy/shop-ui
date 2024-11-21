@@ -4,10 +4,9 @@ import classNames from "classnames/bind";
 import style from "./Bought.module.scss";
 import request from "~/utils/request";
 import Popup from "~/components/Layout/components/Popup";
-import products from "~/assets/product";
 
 import SidebarCart from "~/components/Layout/components/SidebarCart";
-import BoughtItem from "~/components/Layout/components/BoughtItem";
+import ShipItem from "~/components/Layout/components/ShipItem";
 
 const cx = classNames.bind(style);
 
@@ -15,23 +14,13 @@ function Bought() {
     const navigate = useNavigate();
     const [errorMessage, setErrorMessage] = useState("");
     const [showPopup, setShowPopup] = useState(false);
-    
-    const [boughtItem] = useState([
-        {
-            id: 1,
-            img: products.laptop,
-            name: 'Laptop',
-            description: 'aaaaaaaaaa',
-            quantity: 1,
-            price: 10000000,
-            date: '2021-10-10',
-        }
-    ]);
+    const [boughtItems, setBoughtItems] = useState([]);
 
     useEffect(() => {
-        const verifyToken = async () => {
-            const token = localStorage.getItem("userToken") || sessionStorage.getItem("userToken");
-            
+        const fetchDeliveredOrders = async () => {
+            const token =
+                localStorage.getItem("userToken") || sessionStorage.getItem("userToken");
+
             if (!token) {
                 setErrorMessage("Vui lòng đăng nhập để tiếp tục.");
                 setShowPopup(true);
@@ -39,19 +28,31 @@ function Bought() {
             }
 
             try {
-                await request.get("api/user/verify-token", {
+                const response = await request.get("api/bought/delivered-orders", {
                     headers: {
-                        Authorization: `Bearer ${token}`
-                    }
+                        Authorization: `Bearer ${token}`,
+                    },
                 });
+
+                if (response.data.success) {
+                    if (response.data.orders && response.data.orders.length > 0) {
+                        setBoughtItems(response.data.orders);
+                    } else {
+                        setBoughtItems([]);
+                    }
+                } else {
+                    setErrorMessage(response.data.message || "Không thể lấy danh sách đơn hàng.");
+                    setShowPopup(true);
+                }
             } catch (error) {
-                setErrorMessage("Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.");
+                console.error("Error fetching delivered orders:", error);
+                setErrorMessage("Không thể kết nối đến máy chủ.");
                 setShowPopup(true);
             }
         };
 
-        verifyToken();
-    }, [navigate]);
+        fetchDeliveredOrders();
+    }, []);
 
     const handleClosePopup = () => {
         setShowPopup(false);
@@ -59,27 +60,33 @@ function Bought() {
         navigate("/login");
     };
 
-    const renderCartItems = () => {
-        if (boughtItem.length === 0) {
-            return <div className={cx('empty-cart')}>Không tìm thấy sản phẩm bạn đã từng giao đến bạn</div>;
+    const renderBoughtItems = () => {
+        if (!boughtItems || boughtItems.length === 0) {
+            return (
+                <div className={cx('empty-cart')}>
+                    Không tìm thấy đơn hàng đã giao
+                </div>
+            );
         }
 
-        return boughtItem.map(item => (
-            <BoughtItem
-                key={item.id}
-                img={item.img}
-                name={item.name}
-                description={item.description}
-                quantity={item.quantity}
-                price={item.price}
-                date={item.date}
-            />
-        ));
+        return boughtItems.flatMap((order) =>
+            order.orderItems.map((item) => (
+                <ShipItem
+                    key={`${order._id}-${item.productId}`}
+                    img={item.img}
+                    name={item.name}
+                    description=""
+                    quantity={item.quantity}
+                    price={item.price * item.quantity}
+                    date={new Date(order.createdAt).toLocaleDateString('vi-VN')}
+                />
+            ))
+        );
     };
 
     return (
         <div className={cx('wrapper')}>
-            <SidebarCart title={'Sản phẩm bạn đã mua'} />
+            <SidebarCart title={'Sản phẩm đã được giao'} />
             <div className={cx('container')}>
                 <div className={cx('temp')}>
                     <div className={cx('inner')}>
@@ -87,14 +94,15 @@ function Bought() {
                             <div className={cx('name')}>Sản phẩm</div>
                             <div className={cx('title')}>Số lượng</div>
                             <div className={cx('title')}>Tổng đơn giá</div>
-                            <div className={cx('title')}>Ngày hoàn thành</div>
+                            <div className={cx('title')}>Ngày giao</div>
                         </div>
                         <div className={cx('content')}>
-                            {renderCartItems()}
+                            {renderBoughtItems()}
                         </div>
                     </div>
                 </div>
             </div>
+            
             {showPopup && (
                 <Popup>
                     <div className={cx("header-popup")}>

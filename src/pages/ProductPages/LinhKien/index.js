@@ -8,7 +8,6 @@ import linhkienbanner from "~/assets/brand/linhkien/linhkienbanner";
 import linhkienicons from "~/assets/brand/linhkien/linhkienicons";
 import linhkienphanloai from "~/assets/brand/linhkien/linhkienphanloai";
 import ProductBody from "~/components/Layout/components/ProductBody";
-import images from "~/assets/images";
 import { useState, useEffect } from "react";
 
 import { default as request } from '~/utils/request';
@@ -66,21 +65,46 @@ function LinhKien() {
     ];
   
     const [linhkienItems, setLinhkienItems] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [selectedCategory, setSelectedCategory] = useState(null);
+
+    const getCategoryEndpoint = (categoryId) => {
+        if (categoryId === null) {
+            return 'linhkien/getThumnailItems';
+        }
+        const endpointMap = {
+            1: 'cpuItem/getThumnailItems',
+            2: 'mainboardItem/getThumnailItems',
+            3: 'ramItem/getThumnailItems',
+            4: 'vgaItem/getThumnailItems',
+            5: 'driveItem/getThumnailItems',
+            6: 'heatsinkItem/getThumnailItems',
+            7: 'psuItem/getThumnailItems',
+            8: 'caseItem/getThumnailItems'
+        };
+        return endpointMap[categoryId];
+    };
+
+    const handleCategoryClick = (category) => {
+        if (selectedCategory === category.id) {
+            setSelectedCategory(null);
+        } else {
+            setSelectedCategory(category.id);
+        }
+    };
 
     useEffect(() => {
-        const fetchLinhkienItems = async () => {
+        const fetchItems = async () => {
             try {
-                const response = await request.get('api/linhkien/getThumnailItems');
+                const endpoint = getCategoryEndpoint(selectedCategory);
+                const response = await request.get(`api/${endpoint}`);
                 setLinhkienItems(response.data);
-                setLoading(false);
             } catch (error) {
-                await new Promise(resolve => setTimeout(resolve, 3000));
+                console.log('Failed to fetch items:', error);
             }
         };
 
-        fetchLinhkienItems();
-    }, []);
+        fetchItems();
+    }, [selectedCategory]);
 
     const brands = [
         {
@@ -156,7 +180,12 @@ function LinhKien() {
                 <BannerProduct ListBanner={banners} />
             </div>
             <div className={cx("brand-choice")}>
-                <BrandList name={"Loại Linh Kiện"} brands={phanloai}/>
+                <BrandList 
+                    name={"Loại Linh Kiện"} 
+                    brands={phanloai}
+                    onBrandClick={handleCategoryClick}
+                    activeId={selectedCategory}
+                />
             </div>
             <div className={cx("brand-choice")}>
                 <BrandList brands={brands}/>
@@ -166,11 +195,7 @@ function LinhKien() {
                     <LinhKienSidebarProduct />
                 </div>
                 <div className={cx("content")}>
-                    {loading ? (
-                        <img src={images.loading} alt="loading" />
-                    ) : (
-                        <ProductBody productList={linhkienItems} />
-                    )}
+                    <ProductBody productList={linhkienItems} />
                 </div>
             </div>
         </div>
