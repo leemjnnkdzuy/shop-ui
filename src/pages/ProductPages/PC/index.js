@@ -25,7 +25,7 @@ function PC() {
     useEffect(() => {
         const fetchLinhkienItems = async () => {
             try {
-                const response = await request.get('api/pc/getThumnailItems');
+                const response = await request.get('api/pcItem/getThumnailItems');
                 setLinhkienItems(response.data);
                 setLoading(false);
             } catch (error) {

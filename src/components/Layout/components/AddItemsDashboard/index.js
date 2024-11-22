@@ -16,6 +16,24 @@ import AddFridgeBody from "~/components/Layout/components/AddFridgeBody";
 import AddHeadphoneBody from "~/components/Layout/components/AddHeadphoneBody";
 import AddHeatsinkBody from "~/components/Layout/components/AddHeatsinkBody";
 import AddKeyboardBody from "~/components/Layout/components/AddKeyboardBody";
+import AddMainboardBody from "~/components/Layout/components/AddMainboardBody";
+import AddMonitorBody from "~/components/Layout/components/AddMonitorBody";
+import AddMouseBody from "~/components/Layout/components/AddMouseBody";
+import AddMousePadBody from "~/components/Layout/components/AddMousePadBody";
+import AddNetworkProductBody from "~/components/Layout/components/AddNetworkProductBody";
+import AddPhoneCaseBody from "~/components/Layout/components/AddPhoneCaseBody";
+import AddPcBody from "~/components/Layout/components/AddPcBody";
+import AddPhoneBody from "~/components/Layout/components/AddPhoneBody";
+import AddPortableDriveBody from "~/components/Layout/components/AddPortableDriveBody";
+import AddPowerBankBody from "~/components/Layout/components/AddPowerBankBody";
+import AddPsuBody from "~/components/Layout/components/AddPsuBody";
+import AddTabletBody from "~/components/Layout/components/AddTabletBody";
+import AddTemperedGlassBody from "~/components/Layout/components/AddTemperedGlassBody";
+import AddTVBody from "~/components/Layout/components/AddTVBody";
+import AddVgaBody from "~/components/Layout/components/AddVgaBody";
+import AddWasherBody from "~/components/Layout/components/AddWasherBody";
+import AddRamBody from "~/components/Layout/components/AddRamBody";
+import AddWatchBody from "~/components/Layout/components/AddWatchBody";
 
 const cx = classNames.bind(styles);
 
@@ -77,6 +95,7 @@ const AddItemsDashboard = () => {
 			phone: "Điện thoại",
 			monitor: "Màn hình",
 			tv: "TV",
+			pc: "Máy tính",
 			washer: "Máy giặt",
 			watch: "Đồng hồ thông minh",
 			accessories: "Phụ kiện",
@@ -101,6 +120,30 @@ const AddItemsDashboard = () => {
 		if (selectedOption === "accessories" && selectedAccessory === "keyboard") {
 			return <AddKeyboardBody />;
 		}
+		if (selectedOption === "accessories" && selectedAccessory === "mouse") {
+			return <AddMouseBody />;
+		}
+		if (selectedOption === "accessories" && selectedAccessory === "mousepad") {
+			return <AddMousePadBody />;
+		}
+		if (
+			selectedOption === "accessories" &&
+			selectedAccessory === "networkproduct"
+		) {
+			return <AddNetworkProductBody />;
+		}
+		if (selectedOption === "accessories" && selectedAccessory === "phonecase") {
+			return <AddPhoneCaseBody />;
+		}
+		if (selectedOption === "accessories" && selectedAccessory === "portabledrive") {
+			return <AddPortableDriveBody />;
+		}
+		if (selectedOption === "accessories" && selectedAccessory === "powerbank") {
+			return <AddPowerBankBody />;
+		}
+		if (selectedOption === "accessories" && selectedAccessory === "temperedglass") {
+			return <AddTemperedGlassBody />;
+		}
 
 		// Add more components here
 		if (selectedOption === "pc-components" && selectedPcComponent === "case") {
@@ -115,7 +158,19 @@ const AddItemsDashboard = () => {
 		if (selectedOption === "pc-components" && selectedPcComponent === "heatsink") {
 			return <AddHeatsinkBody />;
 		}
-		
+		if (selectedOption === "pc-components" && selectedPcComponent === "mainboard") {
+			return <AddMainboardBody />;
+		}
+		if (selectedOption === "pc-components" && selectedPcComponent === "psu") {
+			return <AddPsuBody />;
+		}
+		if (selectedOption === "pc-components" && selectedPcComponent === "vga") {
+			return <AddVgaBody />;
+		}
+		if (selectedOption === "pc-components" && selectedPcComponent === "ram") {
+			return <AddRamBody />;
+		}
+
 		// Add more components here
 		if (selectedOption === "dustCollector") {
 			return <AddDustCollectorBody />;
@@ -126,6 +181,28 @@ const AddItemsDashboard = () => {
 		if (selectedOption === "fridge") {
 			return <AddFridgeBody />;
 		}
+		if (selectedOption === "monitor") {
+			return <AddMonitorBody />;
+		}
+		if (selectedOption === "pc") {
+			return <AddPcBody />;
+		}
+		if (selectedOption === "phone") {
+			return <AddPhoneBody />;
+		}
+		if (selectedOption === "tablet") {
+			return <AddTabletBody />;
+		}
+		if (selectedOption === "tv") {
+			return <AddTVBody />;
+		}
+		if (selectedOption === "washer") {
+			return <AddWasherBody />;
+		}
+		if (selectedOption === "watch") {
+			return <AddWatchBody />;
+		}
+
 		return <div></div>;
 	};
 
@@ -151,6 +228,7 @@ const AddItemsDashboard = () => {
 								<option value="phone">Điện thoại</option>
 								<option value="monitor">Màng hình</option>
 								<option value="tv">TV</option>
+								<option value="pc">Máy Tính</option>
 								<option value="washer">Máy Giặc</option>
 								<option value="watch">Đồng hồ thông minh</option>
 								<option value="pc-components">Linh kiện PC</option>
