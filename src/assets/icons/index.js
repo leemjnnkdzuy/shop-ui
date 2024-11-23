@@ -33,6 +33,8 @@ const icons = {
     logincircle: require('~/assets/icons/logincircle.svg').default,
     cartadd: require('~/assets/icons/cartadd.svg').default,
     wallet: require('~/assets/icons/wallet.svg').default,
+    
+    ///// dành cho description
     chip: require('~/assets/icons/chip.svg').default,
     sushi: require('~/assets/icons/sushi.svg').default,
     memorycard: require('~/assets/icons/memorycard.svg').default,
@@ -63,8 +65,9 @@ const icons = {
     batterylow: require('~/assets/icons/batterylow.svg').default,
     location: require('~/assets/icons/location.svg').default,
     user: require('~/assets/icons/user.svg').default,
-    lockalt: require('~/assets/icons/lockalt.svg').default,
     layer: require('~/assets/icons/layer.svg').default,
+    /// 
+    lockalt: require('~/assets/icons/lockalt.svg').default,
     chevronleft: require('~/assets/icons/chevronleft.svg').default,
     chevronright: require('~/assets/icons/chevronright.svg').default,
     x: require('~/assets/icons/x.svg').default,

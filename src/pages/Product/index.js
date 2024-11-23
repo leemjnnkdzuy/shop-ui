@@ -7,7 +7,18 @@ import React, { useState, useEffect } from "react";
 import ProductImage from "~/components/Layout/components/ProductImage";
 import FooterProduct from "~/components/Layout/components/FooterProduct";
 import icons from "~/assets/icons";
-import PhoneDescription from "~/components/Layout/components/PhoneDescription";
+
+//import DescriptionItem
+import DescriptionPhone from "~/components/Layout/components/DescriptionPhone";
+import DescriptionCase from "~/components/Layout/components/DescriptionCase";
+import DescriptionCharger from "~/components/Layout/components/DescriptionCharger";
+import DescriptionChargingCable from "~/components/Layout/components/DescriptionChargingCable";
+import DescriptionCpu from "~/components/Layout/components/DescriptionCpu";
+import DescriptionDrive from "~/components/Layout/components/DescriptionDrive";
+import DescriptionDustCollector from "~/components/Layout/components/DescriptionDustCollector";
+import DescriptionEarphone from "~/components/Layout/components/DescriptionEarphone";
+import DescriptionFridge from "~/components/Layout/components/DescriptionFridge";
+import DescriptionHeadphone from "~/components/Layout/components/DescriptionHeadphone";
 
 const cx = classNames.bind(styles);
 
@@ -22,10 +33,11 @@ function Product() {
 	const [storage, setStorage] = useState([]);
 	const [color, setColor] = useState([]);
 	const [showNotification, setShowNotification] = useState(false);
-    const [notificationMessage, setNotificationMessage] = useState('');
-    const [notificationType, setNotificationType] = useState('success');
+	const [notificationMessage, setNotificationMessage] = useState("");
+	const [notificationType, setNotificationType] = useState("success");
+	const [modelType, setModelType] = useState(null);
 
-	const imagePrefix = `${URL}public/`; 
+	const imagePrefix = `${URL}public/`;
 
 	useEffect(() => {
 		const fetchItems = async () => {
@@ -35,7 +47,8 @@ function Product() {
 					if (Object.keys(response.data).length === 0) {
 						navigate("/Error");
 					} else {
-						setItems(response.data);
+						setModelType(response.data[0]?.modelName || null);
+						setItems(response.data[1]?.data || null);
 					}
 				} else {
 					navigate("/Error");
@@ -50,13 +63,17 @@ function Product() {
 
 	useEffect(() => {
 		if (Items?.Storage) {
-			let storageArray = Array.isArray(Items.Storage) ? Items.Storage : [Items.Storage];
+			let storageArray = Array.isArray(Items.Storage)
+				? Items.Storage
+				: [Items.Storage];
 			const parseValue = (str) => {
-				if (str.includes('TB')) return parseFloat(str) * 1024;
-				if (str.includes('GB')) return parseFloat(str);
+				if (str.includes("TB")) return parseFloat(str) * 1024;
+				if (str.includes("GB")) return parseFloat(str);
 				return 0;
 			};
-			const sortedStorage = [...storageArray].sort((a, b) => parseValue(a) - parseValue(b));
+			const sortedStorage = [...storageArray].sort(
+				(a, b) => parseValue(a) - parseValue(b)
+			);
 			setStorage(sortedStorage);
 		}
 		if (Items?.Color) {
@@ -78,14 +95,15 @@ function Product() {
 	};
 
 	const handleAddToCart = async () => {
-		const token = localStorage.getItem("userToken") || sessionStorage.getItem("userToken");
-		
+		const token =
+			localStorage.getItem("userToken") || sessionStorage.getItem("userToken");
+
 		if (!token) {
 			setNotificationMessage("Vui lòng đăng nhập để thêm vào giỏ hàng");
-            setNotificationType('error');
-            setShowNotification(true);
-            setTimeout(() => setShowNotification(false), 2000);
-            return;
+			setNotificationType("error");
+			setShowNotification(true);
+			setTimeout(() => setShowNotification(false), 2000);
+			return;
 		}
 
 		try {
@@ -95,29 +113,120 @@ function Product() {
 				price: Items.Price,
 				quantity: 1,
 				img: Items.ListPicture[0],
-				description: Items.Description
+				description: Items.Description,
 			};
 
-			await request.post('api/user/cart/add', productData, {
+			await request.post("api/user/cart/add", productData, {
 				headers: {
-					Authorization: `Bearer ${token}`
-				}
+					Authorization: `Bearer ${token}`,
+				},
 			});
 
-			setNotificationMessage('Đã thêm sản phẩm vào giỏ hàng');
-            setNotificationType('success');
-            setShowNotification(true);
-            setTimeout(() => setShowNotification(false), 2000);
-
+			setNotificationMessage("Đã thêm sản phẩm vào giỏ hàng");
+			setNotificationType("success");
+			setShowNotification(true);
+			setTimeout(() => setShowNotification(false), 2000);
 		} catch (error) {
 			if (error.response && error.response.status === 400) {
 				setNotificationMessage(error.response.data.error);
 			} else {
 				setNotificationMessage("Có lỗi xảy ra khi thêm vào giỏ hàng");
 			}
-			setNotificationType('error');
-            setShowNotification(true);
-            setTimeout(() => setShowNotification(false), 2000);
+			setNotificationType("error");
+			setShowNotification(true);
+			setTimeout(() => setShowNotification(false), 2000);
+		}
+	};
+
+	const renderDescription = () => {
+		if (!Items) return null;
+
+		switch (modelType) {
+			case "phoneItem":
+				return (
+					<DescriptionPhone
+						items={Items}
+						selectedStorage={selectedStorage}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "caseItem":
+				return (
+					<DescriptionCase
+						items={Items}
+						selectedColor={selectedColor}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "chargerItem":
+				return (
+					<DescriptionCharger
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "chargingCableItem":
+				return (
+					<DescriptionChargingCable
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "cpuItem":
+				return (
+					<DescriptionCpu
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "driveItem":
+				return (
+					<DescriptionDrive
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "dustCollectorItem":
+				return (
+					<DescriptionDustCollector
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "earphoneItem":
+				return (
+					<DescriptionEarphone
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "fridgeItem":
+				return (
+					<DescriptionFridge
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "headphoneItem":
+				return (
+					<DescriptionHeadphone
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			
+			default:
+				return null;
 		}
 	};
 
@@ -153,8 +262,8 @@ function Product() {
 			<div className={cx("container")}>
 				<div className={cx("content")}>
 					<div className={cx("img-content")}>
-						<ProductImage 
-							ListPic={(Items?.ListPicture || []).map(pic => imagePrefix + pic)} 
+						<ProductImage
+							ListPic={(Items?.ListPicture || []).map((pic) => imagePrefix + pic)}
 						/>
 					</div>
 					<div className={cx("name-description")}>
@@ -166,14 +275,7 @@ function Product() {
 							className={cx("description", { expanded: showFullDescription })}
 							onClick={toggleDescription}
 						>
-							{Items && (
-								<PhoneDescription
-									items={Items}
-									selectedStorage={selectedStorage}
-									showFullDescription={showFullDescription}
-									onToggleDescription={toggleDescription}
-								/>
-							)}
+							{Items && renderDescription()}
 						</div>
 						<div
 							className={cx("button-information")}
@@ -210,7 +312,7 @@ function Product() {
 							{Items?.Comment || "Chưa có "} đánh giá
 						</div>
 					</div>
-						{Items?.Storage && storage.length > 1 && (
+					{Items?.Storage && storage.length > 1 && (
 						<div className={cx("line-2")}>
 							<div className={cx("storage-product")}>Dung lượng</div>
 							<div className={cx("storage-option")}>
@@ -226,7 +328,7 @@ function Product() {
 							</div>
 						</div>
 					)}
-						{Items?.Color && color.length > 1 && (
+					{Items?.Color && color.length > 1 && (
 						<div className={cx("line-3")}>
 							<div className={cx("color-product")}>Màu sắc</div>
 							<div className={cx("color-option")}>
@@ -320,10 +422,10 @@ function Product() {
 				<FooterProduct footerItems={footerItems} />
 			</div>
 			{showNotification && (
-                <div className={cx("notification", notificationType)}>
-                    {notificationMessage}
-                </div>
-            )}
+				<div className={cx("notification", notificationType)}>
+					{notificationMessage}
+				</div>
+			)}
 		</div>
 	);
 }

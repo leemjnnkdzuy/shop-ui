@@ -1,20 +1,18 @@
 import classNames from "classnames/bind";
-import styles from "./PhoneDescription.module.scss";
+import styles from "./DescriptionPhone.module.scss";
 import icons from "~/assets/icons";
 
 const cx = classNames.bind(styles);
 
-function PhoneDescription({
+function DescriptionPhone({
     items,
     selectedStorage = 0,
     showFullDescription
 }) {
-    // Add null check at the start of component
     if (!items) {
         return <div>Loading...</div>;
     }
 
-    // Get storage value safely
     const storageValue = Array.isArray(items.Storage) && items.Storage.length > 0 
         ? items.Storage[selectedStorage]
         : '';
@@ -450,4 +448,4 @@ function PhoneDescription({
     );
 }
 
-export default PhoneDescription;
+export default DescriptionPhone;
