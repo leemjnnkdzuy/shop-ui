@@ -9,7 +9,7 @@ import FooterProduct from "~/components/Layout/components/FooterProduct";
 import icons from "~/assets/icons";
 
 //import DescriptionItem
-import DescriptionPhone from "~/components/Layout/components/DescriptionPhone";
+import DescriptionPhone from "~/components/Layout/components/DescriptionWasher";
 import DescriptionCase from "~/components/Layout/components/DescriptionCase";
 import DescriptionCharger from "~/components/Layout/components/DescriptionCharger";
 import DescriptionChargingCable from "~/components/Layout/components/DescriptionChargingCable";
@@ -19,6 +19,26 @@ import DescriptionDustCollector from "~/components/Layout/components/Description
 import DescriptionEarphone from "~/components/Layout/components/DescriptionEarphone";
 import DescriptionFridge from "~/components/Layout/components/DescriptionFridge";
 import DescriptionHeadphone from "~/components/Layout/components/DescriptionHeadphone";
+import DescriptionHeatsink from "~/components/Layout/components/DescriptionHeatsink";
+import DescriptionKeyboard from "~/components/Layout/components/DescriptionKeyboard";
+import DescriptionLaptop from "~/components/Layout/components/DescriptionLaptop";
+import DescriptionMainboard from "~/components/Layout/components/DescriptionMainboard";
+import DescriptionMonitor from "~/components/Layout/components/DescriptionMonitor";
+import DescriptionMouse from "~/components/Layout/components/DescriptionMouse";
+import DescriptionMousePad from "~/components/Layout/components/DescriptionMousePad";
+import DescriptionNetworkProduct from "~/components/Layout/components/DescriptionNetworkProduct";
+import DescriptionPc from "~/components/Layout/components/DescriptionPc";
+import DescriptionPhoneCase from "~/components/Layout/components/DescriptionPhoneCase";
+import DescriptionPortableDrive from "~/components/Layout/components/DescriptionPortableDrive";
+import DescriptionPowerBank from "~/components/Layout/components/DescriptionPowerBank";
+import DescriptionPsu from "~/components/Layout/components/DescriptionPsu";
+import DescriptionRam from "~/components/Layout/components/DescriptionRam";
+import DescriptionTablet from "~/components/Layout/components/DescriptionTablet";
+import DescriptionTemperedGlass from "~/components/Layout/components/DescriptionTemperedGlass";
+import DescriptionTV from "~/components/Layout/components/DescriptionTV";
+import DescriptionVga from "~/components/Layout/components/DescriptionVga";
+import DescriptionWasher from "~/components/Layout/components/DescriptionWasher";
+import DescriptionWatch from "~/components/Layout/components/DescriptionWatch";
 
 const cx = classNames.bind(styles);
 
@@ -224,6 +244,172 @@ function Product() {
 						onToggleDescription={toggleDescription}
 					/>
 				);
+			case "heatsinkItem":
+				return (
+					<DescriptionHeatsink
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "keyboardItem":
+				return (
+					<DescriptionKeyboard
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "laptopItem":
+				return (
+					<DescriptionLaptop
+						items={Items}
+						selectedStorage={selectedStorage}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "mainboardItem":
+				return (
+					<DescriptionMainboard
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "monitorItem":
+				return (
+					<DescriptionMonitor
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "mouseItem":
+				return (
+					<DescriptionMouse
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "mousePadItem":
+				return (
+					<DescriptionMousePad
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+
+			case "networkProductItem":
+				return (
+					<DescriptionNetworkProduct
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "pcItem":
+				return (
+					<DescriptionPc
+						items={Items}
+						selectedStorage={selectedStorage}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "phoneCaseItem":
+				return (
+					<DescriptionPhoneCase
+						items={Items}
+						selectedColor={selectedColor}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "portableDriveItem":
+				return (
+					<DescriptionPortableDrive
+						items={Items}
+						selectedStorage={selectedStorage}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "powerBankItem":
+				return (
+					<DescriptionPowerBank
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "psuItem":
+				return (
+					<DescriptionPsu
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "ramItem":
+				return (
+					<DescriptionRam
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>	
+				);
+			case "tabletItem":
+				return (
+					<DescriptionTablet
+						items={Items}
+						selectedStorage={selectedStorage}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "temperedGlassItem":
+				return (
+					<DescriptionTemperedGlass
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "tvItem":
+				return (
+					<DescriptionTV
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "vgaItem":
+				return (
+					<DescriptionVga
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "washerItem":
+				return (
+					<DescriptionWasher
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
+			case "watchItem":
+				return (
+					<DescriptionWatch
+						items={Items}
+						showFullDescription={showFullDescription}
+						onToggleDescription={toggleDescription}
+					/>
+				);
 			
 			default:
 				return null;
@@ -378,7 +564,7 @@ function Product() {
 							<div className={cx("price-current")}>
 								<div className={cx("price-title")}>Mua ngay với giá</div>
 								<div className={cx("price-value")}>
-									{Items?.Price ? Items.Price.toLocaleString() : "N/A"}đ
+									{Items?.Discount ? Items.Discount.toLocaleString() : "N/A"}đ
 								</div>
 							</div>
 							<div className={cx("betwen-line")}>
@@ -389,7 +575,7 @@ function Product() {
 							<div className={cx("price-current")}>
 								<div className={cx("price-title")}>Trả góp 12 tháng từ</div>
 								<div className={cx("price-value")}>
-									{Items?.Price ? Math.floor(Items.Price / 12).toLocaleString() : "N/A"}đ
+									{Items?.Discount ? Math.floor(Items.Discount / 12).toLocaleString() : "N/A"}đ
 								</div>
 							</div>
 						</div>

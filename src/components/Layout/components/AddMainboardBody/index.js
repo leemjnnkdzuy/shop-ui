@@ -185,212 +185,208 @@ const AddMainboardBody = () => {
 	};
 
 	return (
-		<div className={cx("wrapper")}>
-			<form onSubmit={handleSubmit}>
-				<input type="text" name="Name" placeholder="Name" onChange={handleChange} />
-				{errors.Name && <span className="error">{errors.Name}</span>}
-				<input type="text" name="Brand" placeholder="Brand" onChange={handleChange} />
-				{errors.Brand && <span className="error">{errors.Brand}</span>}
-				<input
-					type="number"
-					name="Discount"
-					placeholder="Discount"
-					step="any"
-					onChange={handleChange}
-				/>
-				<input
-					type="number"
-					name="Price"
-					placeholder="Price"
-					step="any"
-					onChange={handleChange}
-				/>
-				{errors.Price && <span className="error">{errors.Price}</span>}
-				<input type="text" name="Model" placeholder="Model" onChange={handleChange} />
-				<input
-					type="text"
-					name="Color"
-					placeholder="Colors (comma-separated)"
-					onChange={handleChange}
-				/>
-				<input
-					type="number"
-					name="Comment"
-					placeholder="Comment"
-					step="any"
-					onChange={handleChange}
-				/>
-				<input
-					type="number"
-					name="RateProduct"
-					placeholder="Rate Product"
-					step="any"
-					onChange={handleChange}
-				/>
-				<input type="file" name="ThumbnailImage" onChange={handleFileChange} />
-				<input type="file" name="ListPicture" multiple onChange={handleFileChange} />
+	<div className={cx("wrapper")}>
+		<form onSubmit={handleSubmit}>
+			<input type="text" name="Name" placeholder="Name" onChange={handleChange} />
+			<input type="text" name="Brand" placeholder="Brand" onChange={handleChange} />
+			<input
+				type="number"
+				name="Discount"
+				placeholder="Discount"
+				step="any"
+				onChange={handleChange}
+			/>
+			<input
+				type="number"
+				name="Price"
+				placeholder="Price"
+				step="any"
+				onChange={handleChange}
+			/>
+			<input type="text" name="Model" placeholder="Model" onChange={handleChange} />
+			<input
+				type="text"
+				name="Color"
+				placeholder="Colors (comma-separated)"
+				onChange={handleChange}
+			/>
+			<input
+				type="number"
+				name="Comment"
+				placeholder="Comment"
+				step="any"
+				onChange={handleChange}
+			/>
+			<input
+				type="number"
+				name="RateProduct"
+				placeholder="Rate Product"
+				step="any"
+				onChange={handleChange}
+			/>
+			<input type="file" name="ThumbnailImage" onChange={handleFileChange} />
+			<input type="file" name="ListPicture" multiple onChange={handleFileChange} />
 
-				{/* Mainboard specific fields */}
-				<input
-					type="text"
-					name="FormFactor"
-					placeholder="Form Factor"
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					name="SocketType"
-					placeholder="Socket Type"
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					name="Chipset"
-					placeholder="Chipset"
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					name="MemoryType"
-					placeholder="Memory Type"
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					name="MaxMemory"
-					placeholder="Max Memory"
-					onChange={handleChange}
-				/>
-				<input
-					type="number"
-					name="MemorySlots"
-					placeholder="Memory Slots"
-					onChange={handleChange}
-				/>
-				<input
-					type="number"
-					name="PCIeSlots"
-					placeholder="PCIe Slots"
-					onChange={handleChange}
-				/>
-				<input
-					type="number"
-					name="SATAPorts"
-					placeholder="SATA Ports"
-					onChange={handleChange}
-				/>
-				<input
-					type="number"
-					name="USBPorts"
-					placeholder="USB Ports"
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					name="EthernetPort"
-					placeholder="Ethernet Port"
-					onChange={handleChange}
-				/>
-				<input type="text" name="WiFi" placeholder="WiFi" onChange={handleChange} />
-				<input
-					type="text"
-					name="Bluetooth"
-					placeholder="Bluetooth"
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					name="AudioChip"
-					placeholder="Audio Chip"
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					name="PowerConnector"
-					placeholder="Power Connector"
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					name="CoolingSolution"
-					placeholder="Cooling Solution"
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					name="MainStandards"
-					placeholder="Main Standards"
-					onChange={handleChange}
-				/>
+			<input
+				type="text"
+				name="FormFactor"
+				placeholder="Form Factor"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="SocketType"
+				placeholder="Socket Type"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="Chipset"
+				placeholder="Chipset"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="MemoryType"
+				placeholder="Memory Type"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="MaxMemory"
+				placeholder="Max Memory"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="MemorySlots"
+				placeholder="Memory Slots"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="PCIeSlots"
+				placeholder="PCIe Slots"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="SATAPorts"
+				placeholder="SATA Ports"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="USBPorts"
+				placeholder="USB Ports"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="EthernetPort"
+				placeholder="Ethernet Port"
+				onChange={handleChange}
+			/>
+			<input type="text" name="WiFi" placeholder="WiFi" onChange={handleChange} />
+			<input
+				type="text"
+				name="Bluetooth"
+				placeholder="Bluetooth"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="AudioChip"
+				placeholder="Audio Chip"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="PowerConnector"
+				placeholder="Power Connector"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="CoolingSolution"
+				placeholder="Cooling Solution"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="MainStandards"
+				placeholder="Main Standards"
+				onChange={handleChange}
+			/>
 
-				<input
-					type="text"
-					name="Warranty"
-					placeholder="Warranty"
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					name="Material"
-					placeholder="Material"
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					name="Dimensions"
-					placeholder="Dimensions"
-					onChange={handleChange}
-				/>
-				<input
-					type="number"
-					name="Weight"
-					placeholder="Weight"
-					step="any"
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					name="Features"
-					placeholder="Features"
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					name="ReleaseDate"
-					placeholder="Release Date"
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					name="MadeIn"
-					placeholder="Made In"
-					onChange={handleChange}
-				/>
-				<button type="submit">Add Mainboard</button>
-			</form>
+			<input
+				type="text"
+				name="Warranty"
+				placeholder="Warranty"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="Material"
+				placeholder="Material"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="Dimensions"
+				placeholder="Dimensions"
+				onChange={handleChange}
+			/>
+			<input
+				type="number"
+				name="Weight"
+				placeholder="Weight"
+				step="any"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="Features"
+				placeholder="Features"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="ReleaseDate"
+				placeholder="Release Date"
+				onChange={handleChange}
+			/>
+			<input
+				type="text"
+				name="MadeIn"
+				placeholder="Made In"
+				onChange={handleChange}
+			/>
+			<button type="submit">Add Mainboard</button>
+		</form>
 
-			{showPopup && (successMessage || errorMessage) && (
-				<Popup>
-					<div className={cx("header")}>
-						<h2>Thông báo</h2>
-						<button
-							onClick={() => {
-								setShowPopup(false);
-								setSuccessMessage("");
-								setErrorMessage("");
-							}}
-							className={cx("close-btn")}
-						>
-							&times;
-						</button>
-					</div>
-					<div className={cx("content")}>
-						<p>{successMessage || errorMessage}</p>
-					</div>
-				</Popup>
-			)}
-		</div>
-	);
+		{showPopup && (successMessage || errorMessage) && (
+			<Popup>
+				<div className={cx("header")}>
+					<h2>Thông báo</h2>
+					<button
+						onClick={() => {
+							setShowPopup(false);
+							setSuccessMessage("");
+							setErrorMessage("");
+						}}
+						className={cx("close-btn")}
+					>
+						&times;
+					</button>
+				</div>
+				<div className={cx("content")}>
+					<p>{successMessage || errorMessage}</p>
+				</div>
+			</Popup>
+		)}
+	</div>
+);
 };
 
 export default AddMainboardBody;
