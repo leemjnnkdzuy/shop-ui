@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import classNames from "classnames/bind";
 import styles from "./Payment.module.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import logopayment from "~/assets/logopayment";
 import request, { URL } from "~/utils/request";
 import Popup from "~/components/Layout/components/Popup";
@@ -11,6 +11,7 @@ const cx = classNames.bind(styles);
 
 const Payment = () => {
 	const navigate = useNavigate();
+	const location = useLocation();
 	const handleNavigate = (path) => {
 		navigate(path);
 	};
@@ -96,6 +97,15 @@ const Payment = () => {
 			}
 
 			try {
+				// Check if there's a direct purchase from product page
+				const locationState = location?.state;
+				if (locationState?.directPurchase && locationState?.cartItems) {
+					setCartItems(locationState.cartItems);
+					setIsLoading(false);
+					return;
+				}
+
+				// Otherwise fetch cart items as normal
 				const response = await request.get("api/user/cart", {
 					headers: {
 						Authorization: `Bearer ${token}`,
@@ -117,7 +127,7 @@ const Payment = () => {
 		};
 
 		fetchCartItems();
-	}, [navigate]);
+	}, [navigate, location]);
 
 	const handleVoucherValidation = async () => {
 		if (!voucherInput.trim()) {

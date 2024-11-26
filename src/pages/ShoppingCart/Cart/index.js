@@ -155,7 +155,7 @@ function Cart() {
                                 cartItems.map(item => (
                                     <CartItem
                                         key={item.productId}
-                                        productId={item.productId} // Pass productId to CartItem
+                                        productId={item.productId}
                                         img={item.img}
                                         name={item.name}
                                         description={item.description}
