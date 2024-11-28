@@ -11,6 +11,9 @@ module.exports = override(
       ...config.resolve.alias,
       "~": path.resolve(__dirname, "src"),
     };
+    if (config.output && config.output.path) {
+      config.output.path = path.resolve(__dirname, 'dist');
+    }
     return config;
   }
 );
