@@ -43,7 +43,6 @@ const AddMainboardBody = () => {
 		MadeIn: "",
 	});
 
-	const [errors, setErrors] = useState({});
 	const [successMessage, setSuccessMessage] = useState("");
 	const [errorMessage, setErrorMessage] = useState("");
 	const [showPopup, setShowPopup] = useState(false);
@@ -69,7 +68,6 @@ const AddMainboardBody = () => {
 		if (!formData.Name) newErrors.Name = "Name is required";
 		if (!formData.Brand) newErrors.Brand = "Brand is required";
 		if (formData.Price <= 0) newErrors.Price = "Price must be greater than 0";
-		setErrors(newErrors);
 		return Object.keys(newErrors).length === 0;
 	};
 
@@ -109,7 +107,6 @@ const AddMainboardBody = () => {
 			ReleaseDate: "",
 			MadeIn: "",
 		});
-		setErrors({});
 	};
 
 	const handleSubmit = async (e) => {

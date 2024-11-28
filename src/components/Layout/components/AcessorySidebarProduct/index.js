@@ -26,22 +26,7 @@ const priceRanges = [
 const AcessorySidebarProduct = ({ onFilter }) => {
     const [minPrice, setMinPrice] = useState('');
     const [maxPrice, setMaxPrice] = useState('');
-    const [ramOptions, setRamOptions] = useState([]);
-    const [screenSizeOptions, setScreenSizeOptions] = useState([]);
 
-    const handleRamChange = (event) => {
-        const value = event.target.value;
-        setRamOptions((prev) => 
-            prev.includes(value) ? prev.filter((item) => item !== value) : [...prev, value]
-        );
-    };
-
-    const handleScreenSizeChange = (event) => {
-        const value = event.target.value;
-        setScreenSizeOptions((prev) => 
-            prev.includes(value) ? prev.filter((item) => item !== value) : [...prev, value]
-        );
-    };
 
     const handleFilter = () => {
         onFilter({
@@ -49,8 +34,6 @@ const AcessorySidebarProduct = ({ onFilter }) => {
                 min: minPrice ? parseFloat(minPrice) : undefined,
                 max: maxPrice ? parseFloat(maxPrice) : undefined,
             },
-            ram: ramOptions,
-            screenSize: screenSizeOptions,
         });
     };
 

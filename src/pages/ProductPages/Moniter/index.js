@@ -4,7 +4,6 @@ import BannerProduct from "~/components/Layout/components/BannerProduct";
 import BrandList from "~/components/Layout/components/BrandList";
 
 import ProductBody from "~/components/Layout/components/ProductBody";
-import products from "~/assets/product";
 import moniterbanner from "~/assets/brand/moniter/moniterbanner";
 import monitericons from "~/assets/brand/moniter/monitericons";
 import MoniterSidebarProduct from "~/components/Layout/components/MoniterSidebarProduct";
