@@ -9,7 +9,7 @@ import FooterProduct from "~/components/Layout/components/FooterProduct";
 import icons from "~/assets/icons";
 
 //import DescriptionItem
-import DescriptionPhone from "~/components/Layout/components/DescriptionWasher";
+import DescriptionPhone from "~/components/Layout/components/DescriptionPhone";
 import DescriptionCase from "~/components/Layout/components/DescriptionCase";
 import DescriptionCharger from "~/components/Layout/components/DescriptionCharger";
 import DescriptionChargingCable from "~/components/Layout/components/DescriptionChargingCable";

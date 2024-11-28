@@ -51,6 +51,7 @@ function DescriptionWasher({ items, showFullDescription }) {
 		return `${spec.value}${spec.unit ? ` ${spec.unit}` : ""}`;
 	};
 
+
 	return (
 	<div className={cx("wrapper")}>
 		<div className={cx("description", { expanded: showFullDescription })}>
