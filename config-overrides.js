@@ -12,7 +12,7 @@ module.exports = override(
       "~": path.resolve(__dirname, "src"),
     };
     if (config.output && config.output.path) {
-      config.output.path = path.resolve(__dirname, 'dist');
+      config.output.path = path.resolve(__dirname, 'build');
     }
     return config;
   }
