@@ -97,7 +97,7 @@ function Login() {
 
 	const checkRegistrationStatus = async (email) => {
 		try {
-			const response = await request.post("/api/user/register", {
+			const response = await request.post("api/user/register", {
 				email: email,
 				checkOnly: true,
 			});
@@ -125,7 +125,9 @@ function Login() {
 		}
 
 		try {
-			const response = await request.post("/api/user/register", registerData);
+			// Add 1.5 second delay
+			await new Promise(resolve => setTimeout(resolve, 1500));
+			const response = await request.post("api/user/register", registerData);
 
 			if (response.data.success && response.data.requireVerification) {
 				setRegistrationEmail(response.data.email);
@@ -157,7 +159,9 @@ function Login() {
 		}
 
 		try {
-			const response = await request.post("/api/user/login", loginData);
+			// Add 1.5 second delay
+			await new Promise(resolve => setTimeout(resolve, 1500));
+			const response = await request.post("api/user/login", loginData);
 
 			if (response.data.token) {
 				localStorage.setItem("userToken", response.data.token);
@@ -198,7 +202,9 @@ function Login() {
 		}
 
 		try {
-			await request.post("/api/user/forgot-password", {
+			// Add 1.5 second delay
+			await new Promise(resolve => setTimeout(resolve, 1500));
+			await request.post("api/user/forgot-password", {
 				email: forgotPasswordEmail
 			});
 			setSuccessMessage("Mã xác thực đã được gửi đến email của bạn");
@@ -219,7 +225,7 @@ function Login() {
 		setSuccessMessage("");
 
 		try {
-			await request.post("/api/user/verify-reset-pin", {
+			await request.post("api/user/verify-reset-pin", {
 				email: forgotPasswordEmail,
 				resetPin: verificationCode
 			});
@@ -246,7 +252,7 @@ function Login() {
 		}
 
 		try {
-			await request.post("/api/user/reset-password", {
+			await request.post("api/user/reset-password", {
 				email: forgotPasswordEmail,
 				resetPin: verificationCode,
 				newPassword: newPassword
@@ -271,11 +277,14 @@ function Login() {
 
 	const handleVerificationSubmit = async (e) => {
 		e.preventDefault();
+		setIsLoading(true);
 		setErrorMessage("");
 		setSuccessMessage("");
 
 		try {
-			await request.post("/api/user/verify-email", {
+			// Add 1.5 second delay
+			await new Promise(resolve => setTimeout(resolve, 1500));
+			await request.post("api/user/verify-email", {
 				email: registrationEmail,
 				pin: verificationCode,
 			});
@@ -297,6 +306,8 @@ function Login() {
 		} catch (error) {
 			setErrorMessage(error.response?.data?.message || "Mã xác thực không hợp lệ");
 			await checkRegistrationStatus(registrationEmail);
+		} finally {
+			setIsLoading(false);
 		}
 	};
 
@@ -307,7 +318,7 @@ function Login() {
 		setSuccessMessage("");
 
 		try {
-			await request.post("/api/user/verify-email", {
+			await request.post("api/user/verify-email", {
 				email: registrationEmail,
 				pin: verificationCode,
 			});

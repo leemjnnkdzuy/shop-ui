@@ -2,61 +2,61 @@ import React, { Fragment, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { publicRoutes } from "~/routes";
 import { DefaultLayout } from "~/components/Layout/";
-import { AuthProvider } from '~/contexts/AuthContext';
+import { AuthProvider } from "~/contexts/AuthContext";
 
 let Router;
 
-if (process.env.NODE_ENV === 'development') {
-  Router = require('react-router-dom').BrowserRouter;
+if (process.env.NODE_ENV === "development") {
+	Router = require("react-router-dom").BrowserRouter;
 } else {
-  Router = require('react-router-dom').HashRouter;
+	Router = require("react-router-dom").HashRouter;
 }
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+	const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
 
-  return null;
+	return null;
 };
 
 function App() {
-  return (
-    <AuthProvider>
-      <Router>
-        <ScrollToTop />
-        <div className="App">
-          <Routes>
-            {publicRoutes.map((route, index) => {
-              const Page = route.component;
-              
-              let Layout = DefaultLayout;
+	return (
+		<AuthProvider>
+			<Router>
+				<ScrollToTop />
+				<div className="App">
+					<Routes>
+						{publicRoutes.map((route, index) => {
+							const Page = route.component;
 
-              if (route.Layout === null) {
-                Layout = Fragment;
-              } else if (route.Layout) {
-                Layout = route.Layout;
-              }
+							let Layout = DefaultLayout;
 
-              return (
-                <Route
-                  key={index}
-                  path={route.path}
-                  element={
-                    <Layout>
-                      <Page />
-                    </Layout>
-                  }
-                />
-              );
-            })}
-          </Routes>
-        </div>
-      </Router>
-    </AuthProvider>
-  );
+							if (route.Layout === null) {
+								Layout = Fragment;
+							} else if (route.Layout) {
+								Layout = route.Layout;
+							}
+
+							return (
+								<Route
+									key={index}
+									path={route.path}
+									element={
+										<Layout>
+											<Page />
+										</Layout>
+									}
+								/>
+							);
+						})}
+					</Routes>
+				</div>
+			</Router>
+		</AuthProvider>
+	);
 }
 
 export default App;
