@@ -7,7 +7,7 @@ const check = 1;
 if (check === 2) {
     URL = "http://localhost:3001/";
 } else {
-    URL = "https://server-six-bay.vercel.app/";
+    URL = "https://pixelshop-api.leemjnnkdzuy.live/";
 }
 
 const request = axios.create({
