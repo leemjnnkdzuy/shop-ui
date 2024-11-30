@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     background: var(--color-primary);
-    height: 730px;
+    height: auto;
     width: 100%;
     border-top: 2px solid #e0e0e0;
     color: #ffffff;
@@ -16,7 +16,7 @@
     margin-top: 50px;
     display: flex;
     width: 1400px;
-    height: 100%;
+    height: auto;
     user-select: none;
     justify-content: space-between;
 }
@@ -58,38 +58,42 @@
 .technology-container{
     display: flex;
     width: 100%;
-    height: 180px;
+    height: auto;
     margin-top: 50px;
     flex-direction: column;
     text-align: center;
 }
 
-.technology-title{
+.technology-container-title{
     font-size: 24px;
     font-weight: 700;    
     width: 100%;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 .technology-content{
     display: block;
     margin-top: 10px;
     height: 100px;
     width: 100%;
+    margin-bottom: 20px;
 }
+
+.technology-icon-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
 .technology-icon{
     display: inline;
-    margin: 30px;
-    filter: drop-shadow(0 0px 10px rgba(110, 110, 110, 0.2));
+    margin: 20px; 
+}
 
- 
-    transform: scale(1);
-    transition: transform 0.5s;
-    
-}
-.technology-icon:hover{
-    transform: scale(1.01);
-    transition: transform 0.5s;
-}
 
 
 .container-end{
