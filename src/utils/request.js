@@ -4,7 +4,7 @@ let URL = "";
 
 const check = 1;
 
-if (check === 2) {
+if (check === 1) {
     URL = "http://localhost:3001/";
 } else {
     URL = "https://server-six-bay.vercel.app/";

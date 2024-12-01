@@ -1,45 +1,70 @@
 .wrapper {
+    height: auto;
+    width: 100%;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 8px 16px;
     cursor: pointer;
-    padding: 10px;
 
     &:hover {
-        background-color: rgb(230, 230, 230);
+        background-color: rgba(0, 0, 0, 0.05);
     }
 }
 
 .avatar {
     width: 50px;
     height: 50px;
-    margin-left: 10px;
     object-fit: cover;
+    margin-right: 12px;
 }
 
 .info {
-    margin-left: 10px;
+    flex: 1;
+    display: flex;
+}
+
+.info-tag{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
 }
 
 .name {
-    margin-left: 10px;
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 4px;
 }
-.price{
-    margin-left: 10px;
+
+.price {
+    display: flex;
+    gap: 8px;
+}
+
+.price-current {
+    color: #24b12b;
+    font-weight: 300;
+    font-size: 1rem;
 }
 
 .price-discount{
     display: inline;
     font-size: 1.1rem;
-    color: #888888;
+    color: #000000;
 }
 
 .price-before{
     display: inline;
-    color: #888888;
+    color: #d70018;
     margin-left: 10px;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     text-decoration: line-through;
+}
+
+.info-tag-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    right: 0;
+    width: 30%;
 }
