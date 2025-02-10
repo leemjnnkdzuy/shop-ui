@@ -2,13 +2,7 @@ import axios from "axios";
 
 let URL = "";
 
-const check = 1;
-
-if (check === 2) {
-    URL = "http://localhost:3001/";
-} else {
-    URL = "https://server-six-bay.vercel.app/";
-}
+URL = "https://server-six-bay.vercel.app/";
 
 const request = axios.create({
     baseURL: URL,
