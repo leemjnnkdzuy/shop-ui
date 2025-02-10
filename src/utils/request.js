@@ -2,7 +2,7 @@ import axios from "axios";
 
 let URL = "";
 
-URL = "https://server-six-bay.vercel.app/";
+URL = "https://pixelshop-api-cf28d2825764.herokuapp.com/";
 
 const request = axios.create({
     baseURL: URL,
