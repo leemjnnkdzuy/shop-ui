@@ -159,16 +159,16 @@ const AddDustCollectorBody = () => {
 
 		try {
 			const response = await request.post("api/dustCollectorItem", data, {
-	headers: {
-		"Content-Type": "multipart/form-data",
-	},
-	onUploadProgress: (progressEvent) => {
-		const percentCompleted = Math.round(
-			(progressEvent.loaded * 100) / progressEvent.total
-		);
-		console.log("Upload progress:", percentCompleted);
-	},
-});
+				headers: {
+					"Content-Type": "multipart/form-data",
+				},
+				onUploadProgress: (progressEvent) => {
+					const percentCompleted = Math.round(
+						(progressEvent.loaded * 100) / progressEvent.total
+					);
+					console.log("Upload progress:", percentCompleted);
+				},
+			});
 
 			if (response.status === 201) {
 				setSuccessMessage("Case added successfully");
@@ -239,36 +239,184 @@ const AddDustCollectorBody = () => {
 				/>
 				<input type="file" name="ThumbnailImage" onChange={handleFileChange} />
 				<input type="file" name="ListPicture" multiple onChange={handleFileChange} />
-				
+
 				{/* Dust Collector specific fields */}
-				<input type="number" name="Power" placeholder="Power (W)" step="any" onChange={handleChange} />
-				<input type="number" name="SuctionPower" placeholder="Suction Power" step="any" onChange={handleChange} />
-				<input type="number" name="Voltage" placeholder="Voltage" step="any" onChange={handleChange} />
-				<input type="number" name="Capacity" placeholder="Capacity" step="any" onChange={handleChange} />
-				<input type="text" name="FilterType" placeholder="Filter Type" onChange={handleChange} />
-				<input type="number" name="NoiseLevel" placeholder="Noise Level (dB)" step="any" onChange={handleChange} />
-				<input type="number" name="CordLength" placeholder="Cord Length (m)" step="any" onChange={handleChange} />
-				<input type="number" name="HoseLength" placeholder="Hose Length (m)" step="any" onChange={handleChange} />
-				<input type="number" name="Weight" placeholder="Weight (kg)" step="any" onChange={handleChange} />
-				<input type="text" name="Material" placeholder="Material" onChange={handleChange} />
-				<input type="text" name="PowerSource" placeholder="Power Source" onChange={handleChange} />
-				<input type="text" name="Bagless" placeholder="Bagless" onChange={handleChange} />
-				<input type="number" name="NumberOfFilters" placeholder="Number of Filters" onChange={handleChange} />
-				<input type="text" name="FilterWashable" placeholder="Filter Washable" onChange={handleChange} />
-				<input type="text" name="TankMaterial" placeholder="Tank Material" onChange={handleChange} />
-				<input type="text" name="Warranty" placeholder="Warranty" onChange={handleChange} />
-				<input type="number" name="MaxRuntime" placeholder="Max Runtime (minutes)" onChange={handleChange} />
-				<input type="number" name="RechargeTime" placeholder="Recharge Time (hours)" onChange={handleChange} />
-				<input type="text" name="BatteryType" placeholder="Battery Type" onChange={handleChange} />
-				<input type="number" name="BatteryCapacity" placeholder="Battery Capacity (mAh)" onChange={handleChange} />
-				<input type="text" name="AttachmentsIncluded" placeholder="Attachments Included (comma-separated)" onChange={handleChange} />
-				<input type="text" name="SmartTechnology" placeholder="Smart Technology" onChange={handleChange} />
-				<input type="text" name="HEPAFilter" placeholder="HEPA Filter" onChange={handleChange} />
-				<input type="text" name="AutomaticCordRewind" placeholder="Automatic Cord Rewind" onChange={handleChange} />
-				<input type="text" name="Maneuverability" placeholder="Maneuverability" onChange={handleChange} />
-				<input type="text" name="NoiseReduction" placeholder="Noise Reduction" onChange={handleChange} />
-				<input type="text" name="EcoMode" placeholder="Eco Mode" onChange={handleChange} />
-				<input type="text" name="MadeIn" placeholder="Made In" onChange={handleChange} />
+				<input
+					type="number"
+					name="Power"
+					placeholder="Power (W)"
+					step="any"
+					onChange={handleChange}
+				/>
+				<input
+					type="number"
+					name="SuctionPower"
+					placeholder="Suction Power"
+					step="any"
+					onChange={handleChange}
+				/>
+				<input
+					type="number"
+					name="Voltage"
+					placeholder="Voltage"
+					step="any"
+					onChange={handleChange}
+				/>
+				<input
+					type="number"
+					name="Capacity"
+					placeholder="Capacity"
+					step="any"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="FilterType"
+					placeholder="Filter Type"
+					onChange={handleChange}
+				/>
+				<input
+					type="number"
+					name="NoiseLevel"
+					placeholder="Noise Level (dB)"
+					step="any"
+					onChange={handleChange}
+				/>
+				<input
+					type="number"
+					name="CordLength"
+					placeholder="Cord Length (m)"
+					step="any"
+					onChange={handleChange}
+				/>
+				<input
+					type="number"
+					name="HoseLength"
+					placeholder="Hose Length (m)"
+					step="any"
+					onChange={handleChange}
+				/>
+				<input
+					type="number"
+					name="Weight"
+					placeholder="Weight (kg)"
+					step="any"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="Material"
+					placeholder="Material"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="PowerSource"
+					placeholder="Power Source"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="Bagless"
+					placeholder="Bagless"
+					onChange={handleChange}
+				/>
+				<input
+					type="number"
+					name="NumberOfFilters"
+					placeholder="Number of Filters"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="FilterWashable"
+					placeholder="Filter Washable"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="TankMaterial"
+					placeholder="Tank Material"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="Warranty"
+					placeholder="Warranty"
+					onChange={handleChange}
+				/>
+				<input
+					type="number"
+					name="MaxRuntime"
+					placeholder="Max Runtime (minutes)"
+					onChange={handleChange}
+				/>
+				<input
+					type="number"
+					name="RechargeTime"
+					placeholder="Recharge Time (hours)"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="BatteryType"
+					placeholder="Battery Type"
+					onChange={handleChange}
+				/>
+				<input
+					type="number"
+					name="BatteryCapacity"
+					placeholder="Battery Capacity (mAh)"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="AttachmentsIncluded"
+					placeholder="Attachments Included (comma-separated)"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="SmartTechnology"
+					placeholder="Smart Technology"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="HEPAFilter"
+					placeholder="HEPA Filter"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="AutomaticCordRewind"
+					placeholder="Automatic Cord Rewind"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="Maneuverability"
+					placeholder="Maneuverability"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="NoiseReduction"
+					placeholder="Noise Reduction"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="EcoMode"
+					placeholder="Eco Mode"
+					onChange={handleChange}
+				/>
+				<input
+					type="text"
+					name="MadeIn"
+					placeholder="Made In"
+					onChange={handleChange}
+				/>
 
 				<button type="submit">Add Dust Collector</button>
 			</form>

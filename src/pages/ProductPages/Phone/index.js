@@ -10,107 +10,106 @@ import ProductBody from "~/components/Layout/components/ProductBody";
 import images from "~/assets/images";
 import { useState, useEffect } from "react";
 
-import { default as request } from '~/utils/request';
+import { default as request } from "~/utils/request";
 
 const cx = classNames.bind(style);
 
 function Phone() {
+	const banners = [
+		phonebanner.banner1,
+		phonebanner.banner2,
+		phonebanner.banner3,
+		phonebanner.banner4,
+		phonebanner.banner5,
+	];
 
-    const banners = [
-        phonebanner.banner1,
-        phonebanner.banner2,
-        phonebanner.banner3,
-        phonebanner.banner4,
-        phonebanner.banner5,
-    ];
+	const brands = [
+		{
+			id: 1,
+			name: "Apple",
+			image: phoneicons.iphone,
+		},
+		{
+			id: 2,
+			name: "Samsung",
+			image: phoneicons.Samsung,
+		},
+		{
+			id: 5,
+			name: "Xiaomi",
+			image: phoneicons.Xiaomi,
+		},
+		{
+			id: 6,
+			name: "Oppo",
+			image: phoneicons.Oppo,
+		},
+		{
+			id: 7,
+			name: "Vivo",
+			image: phoneicons.Vivo,
+		},
+		{
+			id: 8,
+			name: "Realme",
+			image: phoneicons.Realme,
+		},
+		{
+			id: 9,
+			name: "Tecno",
+			image: phoneicons.Tecno,
+		},
+		{
+			id: 10,
+			name: "ZTE",
+			image: phoneicons.ZTE,
+		},
+		{
+			id: 11,
+			name: "Honor",
+			image: phoneicons.Honor,
+		},
+	];
 
-    const brands = [
-        {
-            id: 1,
-            name: "Apple",
-            image: phoneicons.iphone
-        },
-        {
-            id: 2,
-            name: "Samsung",
-            image: phoneicons.Samsung
-        },
-        {
-            id: 5,
-            name: "Xiaomi",
-            image: phoneicons.Xiaomi
-        },
-        {
-            id: 6,
-            name: "Oppo",
-            image: phoneicons.Oppo
-        },
-        {
-            id: 7,
-            name: "Vivo",
-            image: phoneicons.Vivo
-        },
-        {
-            id: 8,
-            name: "Realme",
-            image: phoneicons.Realme
-        },
-        {
-            id: 9,
-            name: "Tecno",
-            image: phoneicons.Tecno
-        },
-        {
-            id: 10,
-            name: "ZTE",
-            image: phoneicons.ZTE
-        },
-        {
-            id: 11,
-            name: "Honor",
-            image: phoneicons.Honor
-        },
-    ];
+	const [phoneItems, setPhoneItems] = useState([]);
+	const [loading, setLoading] = useState(true);
 
-    const [phoneItems, setPhoneItems] = useState([]);
-    const [loading, setLoading] = useState(true);
+	useEffect(() => {
+		const fetchPhoneItems = async () => {
+			try {
+				const response = await request.get("api/phoneItem/getThumnailItems");
+				setPhoneItems(response.data);
+				setLoading(false);
+			} catch (error) {
+				await new Promise((resolve) => setTimeout(resolve, 3000));
+			}
+		};
 
-    useEffect(() => {
-        const fetchPhoneItems = async () => {
-            try {
-                const response = await request.get('api/phoneItem/getThumnailItems');
-                setPhoneItems(response.data);
-                setLoading(false);
-            } catch (error) {
-                await new Promise(resolve => setTimeout(resolve, 3000));
-            }
-        };
+		fetchPhoneItems();
+	}, []);
 
-        fetchPhoneItems();
-    }, []);
-
-    return (
-        <div className={cx("wrapper")}>
-            <div className={cx("banner-body")}>
-                <BannerProduct ListBanner={banners} />
-            </div>
-            <div className={cx("brand-choice")}>
-                <BrandList brands={brands}/>
-            </div>
-            <div className={cx("inner")}>
-                <div className={cx("sidebar")}>
-                    <PhoneSidebarProduct />
-                </div>
-                <div className={cx("content")}>
-                    {loading ? (
-                        <img src={images.loading} alt="loading" />
-                    ) : (
-                        <ProductBody productList={phoneItems} />
-                    )}
-                </div>
-            </div>
-        </div>
-    );
+	return (
+		<div className={cx("wrapper")}>
+			<div className={cx("banner-body")}>
+				<BannerProduct ListBanner={banners} />
+			</div>
+			<div className={cx("brand-choice")}>
+				<BrandList brands={brands} />
+			</div>
+			<div className={cx("inner")}>
+				<div className={cx("sidebar")}>
+					<PhoneSidebarProduct />
+				</div>
+				<div className={cx("content")}>
+					{loading ? (
+						<img src={images.loading} alt="loading" />
+					) : (
+						<ProductBody productList={phoneItems} />
+					)}
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default Phone;

@@ -255,9 +255,19 @@ const AddWatchBody = () => {
 					placeholder="Connectivity"
 					onChange={handleChange}
 				/>
-				<input type="text" name="OS" placeholder="Operating System" onChange={handleChange} />
+				<input
+					type="text"
+					name="OS"
+					placeholder="Operating System"
+					onChange={handleChange}
+				/>
 				<input type="text" name="RAM" placeholder="RAM" onChange={handleChange} />
-				<input type="text" name="Storage" placeholder="Storage" onChange={handleChange} />
+				<input
+					type="text"
+					name="Storage"
+					placeholder="Storage"
+					onChange={handleChange}
+				/>
 				<input
 					type="text"
 					name="FitnessTracking"

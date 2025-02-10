@@ -8,54 +8,49 @@ import ProductBody from "~/components/Layout/components/ProductBody";
 import images from "~/assets/images";
 import { useState, useEffect } from "react";
 
-import { default as request } from '~/utils/request';
-
+import { default as request } from "~/utils/request";
 
 const cx = classNames.bind(style);
 
 function PC() {
-    const banners = [
-        linhkienbanner.banner1,
-        linhkienbanner.banner2,
-    ];
-  
-    const [linhkienItems, setLinhkienItems] = useState([]);
-    const [loading, setLoading] = useState(true);
+	const banners = [linhkienbanner.banner1, linhkienbanner.banner2];
 
-    useEffect(() => {
-        const fetchLinhkienItems = async () => {
-            try {
-                const response = await request.get('api/pcItem/getThumnailItems');
-                setLinhkienItems(response.data);
-                setLoading(false);
-            } catch (error) {
-                await new Promise(resolve => setTimeout(resolve, 3000));
-            }
-        };
+	const [linhkienItems, setLinhkienItems] = useState([]);
+	const [loading, setLoading] = useState(true);
 
-        fetchLinhkienItems();
-    }, []);
+	useEffect(() => {
+		const fetchLinhkienItems = async () => {
+			try {
+				const response = await request.get("api/pcItem/getThumnailItems");
+				setLinhkienItems(response.data);
+				setLoading(false);
+			} catch (error) {
+				await new Promise((resolve) => setTimeout(resolve, 3000));
+			}
+		};
 
+		fetchLinhkienItems();
+	}, []);
 
-    return (
-        <div className={cx("wrapper")}>
-            <div className={cx("banner-body")}>
-                <BannerProduct ListBanner={banners} />
-            </div>
-            <div className={cx("inner")}>
-                <div className={cx("sidebar")}>
-                    <LinhKienSidebarProduct />
-                </div>
-                <div className={cx("content")}>
-                    {loading ? (
-                        <img src={images.loading} alt="loading" />
-                    ) : (
-                        <ProductBody productList={linhkienItems} />
-                    )}
-                </div>
-            </div>
-        </div>
-    );
+	return (
+		<div className={cx("wrapper")}>
+			<div className={cx("banner-body")}>
+				<BannerProduct ListBanner={banners} />
+			</div>
+			<div className={cx("inner")}>
+				<div className={cx("sidebar")}>
+					<LinhKienSidebarProduct />
+				</div>
+				<div className={cx("content")}>
+					{loading ? (
+						<img src={images.loading} alt="loading" />
+					) : (
+						<ProductBody productList={linhkienItems} />
+					)}
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default PC;

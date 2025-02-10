@@ -8,47 +8,43 @@ import dustCollectorbanner from "~/assets/brand/dustCollector/dustCollectorbanne
 
 import { useState, useEffect } from "react";
 
-import { default as request } from '~/utils/request';
+import { default as request } from "~/utils/request";
 
 const cx = classNames.bind(style);
 
 function DustCollector() {
-    const banners = [
-        dustCollectorbanner.banner1,
-        dustCollectorbanner.banner2,
-    ];
+	const banners = [dustCollectorbanner.banner1, dustCollectorbanner.banner2];
 
-    const [dustCollectorItems, setDustCollectorItems] = useState([]);
+	const [dustCollectorItems, setDustCollectorItems] = useState([]);
 
-    useEffect(() => {
-        const fetchDustCollectorItems = async () => {
-            try {
-                const response = await request.get('api/dustCollectorItem/getThumbnailItems');
-                setDustCollectorItems(response.data);
-            } catch (error) {
-                await new Promise(resolve => setTimeout(resolve, 3000));
-            }
-        };
+	useEffect(() => {
+		const fetchDustCollectorItems = async () => {
+			try {
+				const response = await request.get("api/dustCollectorItem/getThumbnailItems");
+				setDustCollectorItems(response.data);
+			} catch (error) {
+				await new Promise((resolve) => setTimeout(resolve, 3000));
+			}
+		};
 
-        fetchDustCollectorItems();
-    }, []);
+		fetchDustCollectorItems();
+	}, []);
 
-
-    return (
-        <div className={cx("wrapper")}>
-            <div className={cx("banner-body")}>
-                <BannerProduct ListBanner={banners} />
-            </div>
-            <div className={cx("inner")}>
-                <div className={cx("sidebar")}>
-                    <DustCollectorSidebarProduct onFilter={(filter) => console.log(filter)} />
-                </div>
-                <div className={cx("content")}>
-                    <ProductBody productList={dustCollectorItems} />
-                </div>
-            </div>
-        </div>
-    );
+	return (
+		<div className={cx("wrapper")}>
+			<div className={cx("banner-body")}>
+				<BannerProduct ListBanner={banners} />
+			</div>
+			<div className={cx("inner")}>
+				<div className={cx("sidebar")}>
+					<DustCollectorSidebarProduct onFilter={(filter) => console.log(filter)} />
+				</div>
+				<div className={cx("content")}>
+					<ProductBody productList={dustCollectorItems} />
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default DustCollector;

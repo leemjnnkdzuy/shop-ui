@@ -159,8 +159,9 @@ function Product() {
 	};
 
 	const handleBuyNow = async () => {
-		const token = localStorage.getItem("userToken") || sessionStorage.getItem("userToken");
-		
+		const token =
+			localStorage.getItem("userToken") || sessionStorage.getItem("userToken");
+
 		if (!token) {
 			setNotificationMessage("Vui lòng đăng nhập để mua hàng");
 			setNotificationType("error");
@@ -168,12 +169,12 @@ function Product() {
 			setTimeout(() => setShowNotification(false), 2000);
 			return;
 		}
-	
+
 		try {
 			if (!Items) {
 				throw new Error("Không tìm thấy thông tin sản phẩm");
 			}
-	
+
 			const productData = {
 				id: productId,
 				name: Items.Name,
@@ -182,14 +183,13 @@ function Product() {
 				img: `${URL}public/${Items.ListPicture[0]}`,
 				description: Items.Description,
 			};
-	
-			navigate('/Payment', { 
-				state: { 
+
+			navigate("/Payment", {
+				state: {
 					cartItems: [productData],
-					directPurchase: true 
-				}
+					directPurchase: true,
+				},
 			});
-	
 		} catch (error) {
 			setNotificationMessage("Có lỗi xảy ra khi xử lý. Vui lòng thử lại");
 			setNotificationType("error");
@@ -399,7 +399,7 @@ function Product() {
 						items={Items}
 						showFullDescription={showFullDescription}
 						onToggleDescription={toggleDescription}
-					/>	
+					/>
 				);
 			case "tabletItem":
 				return (
@@ -450,7 +450,7 @@ function Product() {
 						onToggleDescription={toggleDescription}
 					/>
 				);
-			
+
 			default:
 				return null;
 		}

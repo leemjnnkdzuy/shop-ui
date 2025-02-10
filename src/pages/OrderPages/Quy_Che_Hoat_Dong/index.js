@@ -269,90 +269,109 @@ function Quy_Che_Hoat_Dong() {
 					</div>
 					<div>
 						<h5>III. CHÍNH SÁCH ĐỔI TRẢ ĐỒNG HỒ THỜI TRANG, VÒNG ĐEO TAY THÔNG MINH</h5>
-							<table className={cx("policy-table")}>
-								<thead>
-									<tr>
-										<th>THÁNG 1</th>
-										<th>TỪ THÁNG THỨ 2 ĐẾN THỜI HẠN BẢO HÀNH</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td colSpan="2">
-											<strong>Sản phẩm lỗi do NSX</strong> (Bao gồm các lỗi kĩ thuật liên quan đến bộ máy, không bao gồm pin)
-										</td>
-									</tr>
-									<tr>
-										<td>
-											Miễn phí 1 đổi 1 sản phẩm cùng model
-											<br/><br/>
-											Hoặc KH được đổi sang sản phẩm khác model bằng hoặc cao tiền hơn, thanh toán thêm phần chênh lệch.
-											<br/><br/>
-											Phí đổi trả tính như sau:
-											<br/>+ Nếu sản phẩm KH đã mua hết hàng (trên toàn hệ thống): Không mất phí đổi trả
-											<br/>+ Nếu sản phẩm KH đã mua còn hàng: pixelshop sẽ kiểm tra tình trạng máy và thông báo đến Khách hàng 
-											về giá trị thu lại sản phẩm ngay tại cửa hàng.
-										</td>
-										<td>
-											Gửi bảo hành theo chính sách Hãng
-											<br/><br/>
-											Trường hợp không sửa chữa được hoặc bảo hành trễ hẹn so với cam kết (tối đa 30 ngày): 
-											KH được đổi sản phẩm mới, thanh toán thêm phần chênh lệch.
-											<br/><br/>
-											Sản phẩm cũ được pixelshop kiểm tra tình trạng và thông báo đến Khách hàng về 
-											giá trị thu lại sản phẩm ngay tại cửa hàng.
-										</td>
-									</tr>
-									<tr>
-										<td colSpan="2"><strong>Sản phẩm không lỗi</strong></td>
-									</tr>
-									<tr>
-										<td colSpan="2">Không áp dụng đổi trả</td>
-									</tr>
-									<tr>
-										<td colSpan="2"><strong>Sản phẩm lỗi do người sử dụng</strong></td>
-									</tr>
-									<tr>
-										<td colSpan="2">pixelshop hỗ trợ chuyển TTBH hãng sửa chữa (có tính phí).</td>
-									</tr>
-								</tbody>
-							</table>
+						<table className={cx("policy-table")}>
+							<thead>
+								<tr>
+									<th>THÁNG 1</th>
+									<th>TỪ THÁNG THỨ 2 ĐẾN THỜI HẠN BẢO HÀNH</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colSpan="2">
+										<strong>Sản phẩm lỗi do NSX</strong> (Bao gồm các lỗi kĩ thuật liên quan đến bộ
+										máy, không bao gồm pin)
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Miễn phí 1 đổi 1 sản phẩm cùng model
+										<br />
+										<br />
+										Hoặc KH được đổi sang sản phẩm khác model bằng hoặc cao tiền hơn, thanh toán
+										thêm phần chênh lệch.
+										<br />
+										<br />
+										Phí đổi trả tính như sau:
+										<br />+ Nếu sản phẩm KH đã mua hết hàng (trên toàn hệ thống): Không mất phí đổi
+										trả
+										<br />+ Nếu sản phẩm KH đã mua còn hàng: pixelshop sẽ kiểm tra tình trạng máy và
+										thông báo đến Khách hàng về giá trị thu lại sản phẩm ngay tại cửa hàng.
+									</td>
+									<td>
+										Gửi bảo hành theo chính sách Hãng
+										<br />
+										<br />
+										Trường hợp không sửa chữa được hoặc bảo hành trễ hẹn so với cam kết (tối đa 30
+										ngày): KH được đổi sản phẩm mới, thanh toán thêm phần chênh lệch.
+										<br />
+										<br />
+										Sản phẩm cũ được pixelshop kiểm tra tình trạng và thông báo đến Khách hàng về
+										giá trị thu lại sản phẩm ngay tại cửa hàng.
+									</td>
+								</tr>
+								<tr>
+									<td colSpan="2">
+										<strong>Sản phẩm không lỗi</strong>
+									</td>
+								</tr>
+								<tr>
+									<td colSpan="2">Không áp dụng đổi trả</td>
+								</tr>
+								<tr>
+									<td colSpan="2">
+										<strong>Sản phẩm lỗi do người sử dụng</strong>
+									</td>
+								</tr>
+								<tr>
+									<td colSpan="2">pixelshop hỗ trợ chuyển TTBH hãng sửa chữa (có tính phí).</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 					<div>
 						<h5>IV. CHÍNH SÁCH ĐỔI TRẢ MÁY IN</h5>
-							<table className={cx("policy-table")}>
-								<thead>
-									<tr>
-										<th>THÁNG 1</th>
-										<th>TỪ THÁNG THỨ 2 ĐẾN THỜI HẠN BẢO HÀNH</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td colSpan="2"><strong>Sản phẩm lỗi do NSX</strong></td>
-									</tr>
-									<tr>
-										<td>1 đổi 1 sản phẩm cùng mã (Chỉ đổi máy, không đổi hộp mực)</td>
-										<td>Gửi bảo hành theo chính sách hãng</td>
-									</tr>
-									<tr>
-										<td colSpan="2"><strong>Sản phẩm không lỗi</strong></td>
-									</tr>
-									<tr>
-										<td colSpan="2">Không áp dụng đổi trả</td>
-									</tr>
-									<tr>
-										<td colSpan="2"><strong>Sản phẩm lỗi do người sử dụng</strong></td>
-									</tr>
-									<tr>
-										<td colSpan="2">
-											Không áp dụng đổi trả, bảo hành. Pixel Shop hỗ trợ chuyển TTBH Hãng sửa chữa (có tính phí), bao gồm:
-											<br/>+ Vỡ, nứt thân máy, trầy xước, gãy chốt hộp mực, khách hàng tự mở máy để sửa chữa
-											<br/>+ Máy không còn nguyên 100% hình dạng ban đầu
-										</td>
-									</tr>
-								</tbody>
-							</table>
+						<table className={cx("policy-table")}>
+							<thead>
+								<tr>
+									<th>THÁNG 1</th>
+									<th>TỪ THÁNG THỨ 2 ĐẾN THỜI HẠN BẢO HÀNH</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colSpan="2">
+										<strong>Sản phẩm lỗi do NSX</strong>
+									</td>
+								</tr>
+								<tr>
+									<td>1 đổi 1 sản phẩm cùng mã (Chỉ đổi máy, không đổi hộp mực)</td>
+									<td>Gửi bảo hành theo chính sách hãng</td>
+								</tr>
+								<tr>
+									<td colSpan="2">
+										<strong>Sản phẩm không lỗi</strong>
+									</td>
+								</tr>
+								<tr>
+									<td colSpan="2">Không áp dụng đổi trả</td>
+								</tr>
+								<tr>
+									<td colSpan="2">
+										<strong>Sản phẩm lỗi do người sử dụng</strong>
+									</td>
+								</tr>
+								<tr>
+									<td colSpan="2">
+										Không áp dụng đổi trả, bảo hành. Pixel Shop hỗ trợ chuyển TTBH Hãng sửa chữa (có
+										tính phí), bao gồm:
+										<br />+ Vỡ, nứt thân máy, trầy xước, gãy chốt hộp mực, khách hàng tự mở máy để
+										sửa chữa
+										<br />+ Máy không còn nguyên 100% hình dạng ban đầu
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 					<div>
 						<h5>V. CHÍNH SÁCH BẢO HÀNH PHỤ KIỆN</h5>
@@ -810,8 +829,8 @@ function Quy_Che_Hoat_Dong() {
 							<h6>
 								- Mọi tranh chấp phát sinh giữa Website TMĐT pixelshop.com.vn và thành viên sẽ
 								được giải quyết trên cơ sở thương lượng. Trường hợp không đạt được thỏa thuận
-								như mong muốn, một trong hai bên có quyền đưa vụ việc ra T��a án nhân dân có thẩm
-								quyền tại Thành phố Hồ Chí Minh để giải quyết.
+								như mong muốn, một trong hai bên có quyền đưa vụ việc ra T��a án nhân dân có
+								thẩm quyền tại Thành phố Hồ Chí Minh để giải quyết.
 							</h6>
 							<h6>
 								- Quy chế của Website TMĐT pixelshop.com.vn chính thức có hiệu lực thi hành kể

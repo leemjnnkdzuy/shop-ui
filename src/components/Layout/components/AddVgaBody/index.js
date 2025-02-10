@@ -112,13 +112,7 @@ const AddVgaBody = () => {
 						data.append("ThumbnailImage", formData[key][0]);
 					}
 				}
-			} else if (
-				[
-					"Color",
-					 "Outputs",
-					"Features",
-				].includes(key)
-			) {
+			} else if (["Color", "Outputs", "Features"].includes(key)) {
 				const values = formData[key].split(",").map((item) => item.trim());
 				values.forEach((value) => {
 					data.append(key, value);
@@ -210,12 +204,7 @@ const AddVgaBody = () => {
 				/>
 				<input type="file" name="ThumbnailImage" onChange={handleFileChange} />
 				<input type="file" name="ListPicture" multiple onChange={handleFileChange} />
-				<input
-					type="text"
-					name="Memory"
-					placeholder="Memory"
-					onChange={handleChange}
-				/>
+				<input type="text" name="Memory" placeholder="Memory" onChange={handleChange} />
 				<input
 					type="text"
 					name="MemoryType"
@@ -242,12 +231,7 @@ const AddVgaBody = () => {
 					placeholder="CUDA Cores"
 					onChange={handleChange}
 				/>
-				<input
-					type="number"
-					name="TDP"
-					placeholder="TDP"
-					onChange={handleChange}
-				/>
+				<input type="number" name="TDP" placeholder="TDP" onChange={handleChange} />
 				<input
 					type="text"
 					name="CoolingSolution"

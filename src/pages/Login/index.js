@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import request from "~/utils/request";
 import Popup from "~/components/Layout/components/Popup";
 import images from "~/assets/images";
-import { AuthContext } from '~/contexts/AuthContext';
+import { AuthContext } from "~/contexts/AuthContext";
 
 const cx = classNames.bind(style);
 
@@ -126,7 +126,7 @@ function Login() {
 
 		try {
 			// Add 1.5 second delay
-			await new Promise(resolve => setTimeout(resolve, 1500));
+			await new Promise((resolve) => setTimeout(resolve, 1500));
 			const response = await request.post("api/user/register", registerData);
 
 			if (response.data.success && response.data.requireVerification) {
@@ -134,7 +134,7 @@ function Login() {
 				setSuccessMessage(response.data.message);
 				setEmailSent(true);
 
-				await new Promise(resolve => setTimeout(resolve, 3000));
+				await new Promise((resolve) => setTimeout(resolve, 3000));
 				setEmailSent(false);
 				setShowPinForm(true);
 			}
@@ -160,13 +160,13 @@ function Login() {
 
 		try {
 			// Add 1.5 second delay
-			await new Promise(resolve => setTimeout(resolve, 1500));
+			await new Promise((resolve) => setTimeout(resolve, 1500));
 			const response = await request.post("api/user/login", loginData);
 
 			if (response.data.token) {
 				localStorage.setItem("userToken", response.data.token);
 				setSuccessMessage("Đăng nhập thành công!");
-				
+
 				// Update the authUser in AuthContext
 				setAuthUser(response.data.user);
 
@@ -175,7 +175,8 @@ function Login() {
 				}, 1500);
 			}
 		} catch (error) {
-			const errorMsg = error.response?.data?.error || "Thông tin đăng nhập không chính xác";
+			const errorMsg =
+				error.response?.data?.error || "Thông tin đăng nhập không chính xác";
 
 			if (error.response?.data?.requireVerification) {
 				setErrorMessage("");
@@ -203,9 +204,9 @@ function Login() {
 
 		try {
 			// Add 1.5 second delay
-			await new Promise(resolve => setTimeout(resolve, 1500));
+			await new Promise((resolve) => setTimeout(resolve, 1500));
 			await request.post("api/user/forgot-password", {
-				email: forgotPasswordEmail
+				email: forgotPasswordEmail,
 			});
 			setSuccessMessage("Mã xác thực đã được gửi đến email của bạn");
 			setShowPinForm(true);
@@ -227,7 +228,7 @@ function Login() {
 		try {
 			await request.post("api/user/verify-reset-pin", {
 				email: forgotPasswordEmail,
-				resetPin: verificationCode
+				resetPin: verificationCode,
 			});
 			setSuccessMessage("Mã xác thực hợp lệ");
 			setShowResetPassword(true);
@@ -255,7 +256,7 @@ function Login() {
 			await request.post("api/user/reset-password", {
 				email: forgotPasswordEmail,
 				resetPin: verificationCode,
-				newPassword: newPassword
+				newPassword: newPassword,
 			});
 			setSuccessMessage("Đặt lại mật khẩu thành công");
 			setTimeout(() => {
@@ -267,9 +268,7 @@ function Login() {
 				setSuccessMessage("");
 			}, 2000);
 		} catch (error) {
-			setErrorMessage(
-				error.response?.data?.error || "Không thể đặt lại mật khẩu"
-			);
+			setErrorMessage(error.response?.data?.error || "Không thể đặt lại mật khẩu");
 		} finally {
 			setIsLoading(false);
 		}
@@ -283,7 +282,7 @@ function Login() {
 
 		try {
 			// Add 1.5 second delay
-			await new Promise(resolve => setTimeout(resolve, 1500));
+			await new Promise((resolve) => setTimeout(resolve, 1500));
 			await request.post("api/user/verify-email", {
 				email: registrationEmail,
 				pin: verificationCode,
@@ -501,9 +500,7 @@ function Login() {
 	const loginVerificationForm = (
 		<form onSubmit={handleLoginVerificationSubmit}>
 			<h1>Xác thực Email</h1>
-			<div className={cx("social-icons")}>
-				{/* ...existing code... */}
-			</div>
+			<div className={cx("social-icons")}>{/* ...existing code... */}</div>
 			<span>Nhập mã xác thực đã được gửi đến email của bạn</span>
 			<input
 				type="text"
@@ -520,11 +517,13 @@ function Login() {
 		</form>
 	);
 
-	const loginForm = showForgotPassword ? forgotPasswordForm
-    : showLoginPinForm ? loginVerificationForm
-    : (
-        <form onSubmit={handleLoginSubmit}>
-            <h1>Đăng Nhập</h1>
+	const loginForm = showForgotPassword ? (
+		forgotPasswordForm
+	) : showLoginPinForm ? (
+		loginVerificationForm
+	) : (
+		<form onSubmit={handleLoginSubmit}>
+			<h1>Đăng Nhập</h1>
 			<div className={cx("social-icons")}>
 				<div className={cx("icon")}>
 					<img src={icons.google} alt="google" />
@@ -548,7 +547,7 @@ function Login() {
 				value={loginData.password}
 				onChange={handleLoginChange}
 			/>
-			<div 
+			<div
 				className={cx("forget-password")}
 				onClick={() => setShowForgotPassword(true)}
 			>
@@ -557,17 +556,15 @@ function Login() {
 			<button type="submit">
 				<div className={cx("text-button")}>Đăng Nhập</div>
 			</button>
-        </form>
-    );
+		</form>
+	);
 
 	return (
 		<div className={cx("wrapper")}>
 			{isLoading && <Loading />}
 			<div className={cx("container", { active: isActive })} id="container">
 				<div className={cx("form-container", "sign-up")}>{registrationForm}</div>
-				<div className={cx("form-container", "sign-in")}>
-					{loginForm}
-				</div>
+				<div className={cx("form-container", "sign-in")}>{loginForm}</div>
 				<div className={cx("toggle-container")}>
 					<div className={cx("toggle")}>
 						<div className={cx("toggle-panel", "toggle-left")}>
